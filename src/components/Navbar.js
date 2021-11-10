@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import { animateScroll as scroll } from "react-scroll";
+// import { animateScroll as scroll } from "react-scroll";
 import { ImFacebook2, ImLinkedin } from "react-icons/im";
 import { MdOutlinePhoneIphone, MdMail } from "react-icons/md";
 import { AiFillHome, AiFillFolderOpen } from "react-icons/ai";
