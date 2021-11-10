@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
@@ -10,13 +10,29 @@ import { FaCode } from "react-icons/fa";
 import { RiMailOpenFill } from "react-icons/ri";
 
 const Navbar = () => {
+  const [showPhone, setShowPhone] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
+
+  const handlePhone = () => {
+    setShowPhone(!showPhone);
+    setShowEmail(false);
+  };
+  const handleEmail = () => {
+    setShowPhone(false);
+    setShowEmail(!showEmail);
+  };
+
   return (
     <Wrapper className="main-nav">
       <section className="media-icons">
         <ImFacebook2 className="icon" />
         <ImLinkedin className="icon" />
-        <MdOutlinePhoneIphone className="icon" />
-        <MdMail className="icon" />
+        <MdOutlinePhoneIphone className="icon" onClick={handlePhone} />
+        <MdMail className="icon" onClick={handleEmail} />
+        <div className="media-info">
+          {showPhone && <p>798 194 305</p>}
+          {showEmail && <p>jarekjanas95@gmail.com</p>}
+        </div>
       </section>
       <section className="nav-list">
         <Link to="home" smooth={true} duration={1000}>
@@ -34,6 +50,10 @@ const Navbar = () => {
         <Link to="home" smooth={true} duration={1000}>
           <RiMailOpenFill className="icon" /> Kontakt
         </Link>
+        <div className="languages">
+          <button>PL</button>
+          <button>EN</button>
+        </div>
       </section>
       <footer className="footer">
         <p>
@@ -54,7 +74,7 @@ const Wrapper = styled.div`
   background: rgb(7, 8, 18);
   color: white;
   z-index: 999;
-  opacity: 0.85;
+  opacity: 0.8;
   .main-nav {
     display: flex;
     flex-direction: column;
@@ -70,8 +90,31 @@ const Wrapper = styled.div`
     font-size: 1.5rem;
     width: 80%;
     margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
     .icon {
       cursor: pointer;
+      transition: 0.1s linear;
+    }
+    .media-info {
+      width: 100%;
+      margin: 0vh auto;
+      text-align: center;
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      transform: translateX(-50%);
+      p {
+        font-size: 1rem;
+        font-family: "Saira Stencil One", sans-serif;
+        opacity: 0;
+        animation: showP 1s linear forwards;
+        @keyframes showP {
+          100% {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
   .footer {
@@ -105,9 +148,35 @@ const Wrapper = styled.div`
       display: flex;
       justify-items: center;
       align-items: center;
-
+      transition: 0.4s;
+      :hover {
+        margin-left: 4vw;
+      }
       .icon {
         margin-right: 1vw;
+      }
+    }
+    .languages {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 3vh;
+      width: 60%;
+      button {
+        font-size: 1rem;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        color: white;
+        padding: 0.5rem;
+        font-family: "Saira Stencil One", sans-serif;
+        font-size: 0.9rem;
+        transition: 0.4s;
+        cursor: pointer;
+        :hover {
+          background: white;
+          color: black;
+        }
       }
     }
   }
