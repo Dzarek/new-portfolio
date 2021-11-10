@@ -4,7 +4,7 @@ import headerImg from "../images/headerImg.png";
 
 const Home = () => {
   return (
-    <Wrapper className="main-page">
+    <Wrapper>
       <header className="headerContainer">
         <video
           src={headerVideo}
@@ -29,6 +29,9 @@ const Home = () => {
 };
 
 const Wrapper = styled.div`
+  width: 80vw;
+  min-height: 100vh;
+  position: relative;
   .headerContainer {
     width: 100%;
     height: 100vh;
@@ -46,7 +49,7 @@ const Wrapper = styled.div`
       width: 100%;
       height: 100%;
       z-index: 1;
-      position: relative;
+      position: absolute;
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.6);

@@ -10,4 +10,6 @@
     width: 80vw;
     min-height: 100vh;
     position: relative;
+    background: rgb(9, 8, 17);
+    z-index: 1;
 }
