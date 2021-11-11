@@ -9,7 +9,15 @@
 .main-page {
     width: 80vw;
     min-height: 100vh;
-    position: relative;
-    background: rgb(9, 8, 17);
+    background: rgb(9, 8, 20);
     z-index: 1;
+    padding: 10vh 0;
+    position: relative;
+    font-family: "Mirza", sans-serif;
+
+}
+
+.skillItem {
+    background: rgb(190, 23, 23);
+    background: rgb(197, 103, 40);
 }

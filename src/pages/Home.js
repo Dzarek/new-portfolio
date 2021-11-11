@@ -36,11 +36,10 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100vh;
     video {
-      /* margin-left: -20vw; */
       width: 100vw;
       height: 100vh;
       object-fit: fill;
-      z-index: 0;
+      z-index: -1;
       position: fixed;
       top: 0;
       left: 0;
@@ -59,7 +58,7 @@ const Wrapper = styled.div`
         bottom: 0;
         left: 150%;
         transform: translateX(-50%);
-        opacity: 0.5;
+        opacity: 0.4;
         animation: imgMove 2s forwards;
         @keyframes imgMove {
           100% {
@@ -74,7 +73,6 @@ const Wrapper = styled.div`
         left: 10%;
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         justify-content: space-around;
         font-family: "Mirza", sans-serif;
         h2 {
