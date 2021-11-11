@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import aboutImg from "../images/aboutImg.jpg";
 // import { GiSkills } from "react-icons/gi";
 import { FaGraduationCap } from "react-icons/fa";
@@ -39,7 +40,11 @@ const About = () => {
               Specjalizuje się w tworzeniu stron internetowych i aplikacji w
               języku JavaScript.
             </p>
-            <button>Pobierz CV</button>
+            <button>
+              <Link to="../images/JarosławJanasCV.pdf" target="_blank" download>
+                Pobierz CV
+              </Link>
+            </button>
           </div>
           {/* </div> */}
           {/* <div className="borderBetween"></div> */}
@@ -332,15 +337,21 @@ const Wrapper = styled.div`
         /* border: 2px solid white; */
         border: 2px solid rgb(197, 103, 40);
         /* color: white; */
-        color: rgb(197, 103, 40);
+        /* color: rgb(197, 103, 40); */
         transition: 0.4s;
         border-radius: 10px;
         cursor: pointer;
+        a {
+          text-decoration: none;
+          color: rgb(197, 103, 40);
+        }
         :hover {
           /* background: white; */
           background: rgb(197, 103, 40);
           /* color: black; */
-          color: white;
+          a {
+            color: white;
+          }
         }
       }
     }

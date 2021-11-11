@@ -1,5 +1,6 @@
 import "./App.css";
 import styled from "styled-components";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -9,8 +10,10 @@ function App() {
     <Wrapper className="App">
       <Navbar className="navbar" />
       <div className="appContent">
-        <Home />
-        <About />
+        <Router>
+          <Home />
+          <About />
+        </Router>
       </div>
     </Wrapper>
   );

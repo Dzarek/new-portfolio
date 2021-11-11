@@ -29,6 +29,7 @@ const Navbar = () => {
         <ImLinkedin className="icon" />
         <MdOutlinePhoneIphone className="icon" onClick={handlePhone} />
         <MdMail className="icon" onClick={handleEmail} />
+
         <div className="media-info">
           {showPhone && <p>798 194 305</p>}
           {showEmail && <p>jarekjanas95@gmail.com</p>}
@@ -107,13 +108,6 @@ const Wrapper = styled.div`
       p {
         font-size: 1rem;
         font-family: "Saira Stencil One", sans-serif;
-        opacity: 0;
-        animation: showP 1s linear forwards;
-        @keyframes showP {
-          100% {
-            opacity: 1;
-          }
-        }
       }
     }
   }
