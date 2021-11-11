@@ -38,7 +38,7 @@ const Navbar = () => {
         <Link to="home" smooth={true} duration={1000}>
           <AiFillHome className="icon" /> Strona Główna
         </Link>
-        <Link to="home" smooth={true} duration={1000}>
+        <Link to="aboutMe" smooth={true} duration={1000}>
           <BsPersonFill className="icon" /> O mnie
         </Link>
         <Link to="home" smooth={true} duration={1000}>
@@ -151,6 +151,7 @@ const Wrapper = styled.div`
       transition: 0.4s;
       :hover {
         margin-left: 4vw;
+        /* color: rgb(197, 103, 40); */
       }
       .icon {
         margin-right: 1vw;

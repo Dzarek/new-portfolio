@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import aboutImg from "../images/aboutImg.jpg";
-import { GiSkills } from "react-icons/gi";
+// import { GiSkills } from "react-icons/gi";
+import { FaGraduationCap } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   //wiek
   function calculate_age(dob) {
     var diff_ms = Date.now() - dob.getTime();
@@ -11,13 +20,13 @@ const About = () => {
   }
 
   return (
-    <Wrapper className="main-page">
+    <Wrapper id="aboutMe" className="main-page">
       <div className="title">
         <h1>Curriculum Vitae</h1>
         <h2>Kim jestem?</h2>
       </div>
       <div className="main-info">
-        <div className="pictureAndCv">
+        <div data-aos="fade-left" className="pictureAndCv">
           <img src={aboutImg} alt="about me" />
           <div className="personal-info">
             {/* <div className="personal-info-text"> */}
@@ -35,8 +44,8 @@ const About = () => {
           {/* </div> */}
           {/* <div className="borderBetween"></div> */}
         </div>
-        <div className="personal-info-list">
-          <h4>Informacje:</h4>
+        <div data-aos="fade-left" className="personal-info-list">
+          <h4 className="subTitle">Informacje:</h4>
           <p>
             Imię i Nazwisko: <span>Jarosław Janas</span>
           </p>
@@ -66,14 +75,14 @@ const About = () => {
           </p>
         </div>
         <div className="skills">
-          <h4 className="skills-title">Moje Umiejętności</h4>
+          <h4 className="subTitle">Moje Umiejętności</h4>
           <div className="skills-container">
             <section className="personal-skills">
               <h5>Personalne</h5>
               <div className="one-skill">
                 <p>Praca Zespołowa</p>
                 <div className="container">
-                  <div className="skillItem teamWork">
+                  <div data-aos="teamWork" className="skillItem teamWork">
                     <p>85%</p>
                   </div>
                 </div>
@@ -81,7 +90,7 @@ const About = () => {
               <div className="one-skill">
                 <p>Kreatywność</p>
                 <div className="container">
-                  <div className="skillItem creative">
+                  <div data-aos="creative" className="skillItem creative">
                     <p>75%</p>
                   </div>
                 </div>
@@ -89,7 +98,7 @@ const About = () => {
               <div className="one-skill">
                 <p>Zaangażowanie</p>
                 <div className="container">
-                  <div className="skillItem passion">
+                  <div data-aos="passion" className="skillItem passion">
                     <p>95%</p>
                   </div>
                 </div>
@@ -101,7 +110,10 @@ const About = () => {
               <div className="one-skill">
                 <p>HTML & CSS</p>
                 <div className="container">
-                  <div className="skillItem htmlCssSkill">
+                  <div
+                    data-aos="htmlCssSkill"
+                    className="skillItem htmlCssSkill"
+                  >
                     <p>75%</p>
                   </div>
                 </div>
@@ -109,7 +121,7 @@ const About = () => {
               <div className="one-skill">
                 <p>JAVASCRIPT</p>
                 <div className="container">
-                  <div className="skillItem jsSkill">
+                  <div data-aos="jsSkill" className="skillItem jsSkill">
                     <p>65%</p>
                   </div>
                 </div>
@@ -117,12 +129,108 @@ const About = () => {
               <div className="one-skill">
                 <p>REACT</p>
                 <div className="container">
-                  <div className="skillItem reactSkill">
+                  <div data-aos="reactSkill" className="skillItem reactSkill">
                     <p>55%</p>
                   </div>
                 </div>
               </div>
             </section>
+          </div>
+        </div>
+        <h4 className="subTitle">Doświadczenie i Edukacja</h4>
+        <div data-aos="fade-left" className="experienceAndEducation">
+          <div className="EandE">
+            <div className="oneEandE">
+              <div className="borderEandE">
+                <p>
+                  <MdWork />
+                </p>
+              </div>
+              <div className="infoEandE">
+                <h6>2019-OBECNIE</h6>
+                <h4>
+                  Recepcjonista Hotelu - Aparthotel Miodowa, Blue Aparthotel
+                </h4>
+                <p>
+                  przyjmowanie rezerwacji, obsługa gości hotelowych,
+                  reprezentowanie obiektu
+                </p>
+              </div>
+            </div>
+            <div className="oneEandE">
+              <div className="borderEandE">
+                <p>
+                  <MdWork />
+                </p>
+              </div>
+              <div className="infoEandE">
+                <h6>2018-2019</h6>
+                <h4>Doradca Klienta - Salon Play</h4>
+                <p>
+                  sprzedaż abonamentów i telefonów klientom sieci Play, dbanie o
+                  wizerunek sieci i wygląd salonu Play
+                </p>
+              </div>
+            </div>
+            <div className="oneEandE">
+              <div className="borderEandE">
+                <p>
+                  <MdWork />
+                </p>
+              </div>
+              <div className="infoEandE">
+                <h6>2018-2018</h6>
+                <h4>
+                  Żołnierz Wojska Polskiego - 22 Karpacki Batalion Piechoty
+                  Górskiej w Kłodzku
+                </h4>
+                <p>
+                  służba wojskowa i kształcenie się w zakresie działań Sił
+                  Zbrojnych RP, stopień kaprala
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="EandE">
+            <div className="oneEandE">
+              <div className="borderEandE">
+                <p>
+                  <FaGraduationCap />
+                </p>
+              </div>
+              <div className="infoEandE">
+                <h6>2020-OBECNIE</h6>
+                <h4>Programista - Kursy na platformie e-learningowej UDEMY</h4>
+                <p>HTML, CSS, JAVASRIPT, REACT, NODE, GATSBY</p>
+              </div>
+            </div>
+            <div className="oneEandE">
+              <div className="borderEandE">
+                <p>
+                  <FaGraduationCap />
+                </p>
+              </div>
+              <div className="infoEandE">
+                <h6>2017-2019</h6>
+                <h4>Magister - Uniwersytet Pedagogiczny im. KEN w Krakowie</h4>
+                <p>
+                  pedagogika, edukacja dla bezpieczeństwa i zarządzanie
+                  kryzysowe
+                </p>
+              </div>
+            </div>
+            <div className="oneEandE">
+              <div className="borderEandE">
+                <p>
+                  <FaGraduationCap />
+                </p>
+              </div>
+              <div className="infoEandE">
+                <h6>2014-2017</h6>
+                <h4>Licencjat - Uniwersytet Pedagogiczny im. KEN w Krakowie</h4>
+                <p>bezpieczeństwo narodowe</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -131,12 +239,12 @@ const About = () => {
 };
 
 const Wrapper = styled.div`
-  min-height: 300vh;
+  min-height: 400vh;
   padding: 10vh 0;
 
   .title {
     position: absolute;
-    top: 5%;
+    top: 10vh;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -162,6 +270,15 @@ const Wrapper = styled.div`
         color: rgb(100, 2, 2);
       } */
     }
+  }
+  .subTitle {
+    width: 100%;
+    margin-bottom: 3vh;
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Saira Stencil One", sans-serif;
   }
   .main-info {
     position: absolute;
@@ -212,14 +329,18 @@ const Wrapper = styled.div`
         padding: 0.7rem 2rem;
         margin: 0 auto;
         background: transparent;
-        border: 2px solid white;
-        color: white;
+        /* border: 2px solid white; */
+        border: 2px solid rgb(197, 103, 40);
+        /* color: white; */
+        color: rgb(197, 103, 40);
         transition: 0.4s;
         border-radius: 10px;
         cursor: pointer;
         :hover {
-          background: white;
-          color: black;
+          /* background: white; */
+          background: rgb(197, 103, 40);
+          /* color: black; */
+          color: white;
         }
       }
     }
@@ -238,21 +359,15 @@ const Wrapper = styled.div`
       align-items: center;
       min-height: 45vh;
       text-align: center;
-      h4 {
-        width: 100%;
-        margin-bottom: 3vh;
-        font-size: 1.7rem;
-        letter-spacing: 3px;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: "Saira Stencil One", sans-serif;
-      }
+
       p {
         text-align: left;
         padding-left: 3vw;
         width: 45%;
         font-size: 1.4rem;
         color: #aaa;
+        color: rgb(197, 103, 40);
+        font-weight: 500;
         letter-spacing: 2px;
         span {
           color: white;
@@ -263,14 +378,15 @@ const Wrapper = styled.div`
     }
     .skills {
       margin-top: 5vh;
+      margin-bottom: 5vh;
       width: 100%;
-      .skills-title {
+      /* .skills-title {
         font-size: 1.7rem;
         letter-spacing: 3px;
         text-align: center;
         text-transform: uppercase;
         font-family: "Saira Stencil One", sans-serif;
-      }
+      } */
       .skills-container {
         width: 90%;
         background: rgb(23, 22, 36);
@@ -320,6 +436,7 @@ const Wrapper = styled.div`
               background: #000;
               height: 0.7rem;
               border-radius: 5px;
+              /* overflow-x: hidden; */
             }
             .skillItem {
               border-radius: 5px;
@@ -334,7 +451,7 @@ const Wrapper = styled.div`
                 transform: translateX(50%);
               }
             }
-            .teamWork {
+            /* .teamWork {
               width: 85%;
             }
             .creative {
@@ -351,6 +468,114 @@ const Wrapper = styled.div`
             }
             .reactSkill {
               width: 55%;
+            } */
+            [data-aos="teamWork"] {
+              width: 0;
+              transition-property: width;
+              &.aos-animate {
+                width: 85%;
+              }
+            }
+            [data-aos="creative"] {
+              width: 0;
+              transition-property: width;
+              &.aos-animate {
+                width: 75%;
+              }
+            }
+            [data-aos="passion"] {
+              width: 0;
+              transition-property: width;
+              &.aos-animate {
+                width: 95%;
+              }
+            }
+            [data-aos="htmlCssSkill"] {
+              width: 0;
+              transition-property: width;
+              &.aos-animate {
+                width: 75%;
+              }
+            }
+            [data-aos="jsSkill"] {
+              width: 0;
+              transition-property: width;
+              &.aos-animate {
+                width: 65%;
+              }
+            }
+            [data-aos="reactSkill"] {
+              width: 0;
+              transition-property: width;
+              &.aos-animate {
+                width: 55%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .experienceAndEducation {
+      margin-top: 5vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      .EandE {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .oneEandE {
+          margin: 2vh auto;
+          width: 100%;
+          height: 25vh;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .borderEandE {
+            width: 2px;
+            height: 80%;
+            background: #eee;
+            margin-right: 2rem;
+            position: relative;
+            p {
+              position: absolute;
+              left: 50%;
+              top: 0%;
+              transform: translateX(-50%);
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: rgb(197, 103, 40);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.3rem;
+            }
+          }
+          .infoEandE {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h4 {
+              margin: 1rem 0;
+              font-size: 1.5rem;
+              /* text-transform: uppercase; */
+            }
+            h6 {
+              font-size: 1.1rem;
+              /* background: rgb(197, 103, 40); */
+              background: #222;
+              width: 35%;
+              padding: 3px;
+              text-align: center;
+              border-radius: 10px;
+            }
+            p {
+              font-size: 1rem;
             }
           }
         }

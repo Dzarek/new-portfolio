@@ -4,7 +4,7 @@ import headerImg from "../images/headerImg.png";
 
 const Home = () => {
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <header className="headerContainer">
         <video
           src={headerVideo}
