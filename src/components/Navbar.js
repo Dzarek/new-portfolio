@@ -42,10 +42,10 @@ const Navbar = () => {
         <Link to="aboutMe" smooth={true} duration={1000}>
           <BsPersonFill className="icon" /> O mnie
         </Link>
-        <Link to="home" smooth={true} duration={1000}>
+        <Link to="offer" smooth={true} duration={1000}>
           <FaCode className="icon" /> Oferta
         </Link>
-        <Link to="home" smooth={true} duration={1000}>
+        <Link to="portfolio" smooth={true} duration={1000}>
           <AiFillFolderOpen className="icon" /> Portfolio
         </Link>
         <Link to="home" smooth={true} duration={1000}>

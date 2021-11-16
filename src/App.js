@@ -4,6 +4,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Offer from "./pages/Offer";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Router>
           <Home />
           <About />
+          <Offer />
+          <Portfolio />
         </Router>
       </div>
     </Wrapper>

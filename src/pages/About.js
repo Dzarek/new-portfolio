@@ -244,10 +244,10 @@ const About = () => {
 };
 
 const Wrapper = styled.div`
-  min-height: 400vh;
+  min-height: 370vh;
   padding: 10vh 0;
 
-  .title {
+  /* .title {
     position: absolute;
     top: 10vh;
     left: 50%;
@@ -271,12 +271,9 @@ const Wrapper = styled.div`
       transform: translate(-50%, -50%);
       font-size: 3rem;
       letter-spacing: 5px;
-      /* span {
-        color: rgb(100, 2, 2);
-      } */
     }
-  }
-  .subTitle {
+  } */
+  /* .subTitle {
     width: 100%;
     margin-bottom: 3vh;
     font-size: 1.7rem;
@@ -284,7 +281,7 @@ const Wrapper = styled.div`
     text-align: center;
     text-transform: uppercase;
     font-family: "Saira Stencil One", sans-serif;
-  }
+  } */
   .main-info {
     position: absolute;
     top: 40vh;

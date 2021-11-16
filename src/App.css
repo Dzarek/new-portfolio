@@ -18,6 +18,44 @@
 }
 
 .skillItem {
-    /* background: rgb(190, 23, 23); */
     background: rgb(197, 103, 40);
+}
+
+.title {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-transform: uppercase;
+    font-family: "Saira Stencil One", sans-serif;
+}
+
+.title h1 {
+    opacity: 0.1;
+    z-index: 1;
+    position: relative;
+    font-size: 5rem;
+    width: 80vw;
+    text-align: center;
+}
+
+.title h2 {
+    z-index: 2;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+
+.subTitle {
+    width: 100%;
+    margin-bottom: 3vh;
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Saira Stencil One", sans-serif;
 }
