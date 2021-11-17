@@ -2,8 +2,17 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 // import { animateScroll as scroll } from "react-scroll";
-import { ImFacebook2, ImLinkedin } from "react-icons/im";
-import { MdOutlinePhoneIphone, MdMail } from "react-icons/md";
+// import {
+//   Link,
+//   Button,
+//   Element,
+//   Events,
+//   animateScroll as scroll,
+//   scrollSpy,
+//   scroller,
+// } from "react-scroll";
+
+import { ImFacebook2, ImLinkedin, ImMail3, ImPhone } from "react-icons/im";
 import { AiFillHome, AiFillFolderOpen } from "react-icons/ai";
 import { BsPersonFill } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
@@ -25,30 +34,64 @@ const Navbar = () => {
   return (
     <Wrapper className="main-nav">
       <section className="media-icons">
-        <ImFacebook2 className="icon" />
-        <ImLinkedin className="icon" />
-        <MdOutlinePhoneIphone className="icon" onClick={handlePhone} />
-        <MdMail className="icon" onClick={handleEmail} />
+        <a href="https://pl-pl.facebook.com/jarek.janas.90">
+          <ImFacebook2 className="icon" />
+        </a>
+        <a href="https://pl.linkedin.com/in/jaros%C5%82aw-janas-7b55a3218?trk=people-guest_people_search-card">
+          <ImLinkedin className="icon" />
+        </a>
 
+        <ImPhone className="icon" onClick={handlePhone} />
+        <ImMail3 className="icon" onClick={handleEmail} />
         <div className="media-info">
           {showPhone && <p>798 194 305</p>}
           {showEmail && <p>jarekjanas95@gmail.com</p>}
         </div>
       </section>
       <section className="nav-list">
-        <Link to="home" smooth={true} duration={1000}>
+        <Link
+          to="home"
+          smooth={true}
+          duration={1000}
+          activeClass="active"
+          spy={true}
+        >
           <AiFillHome className="icon" /> Strona Główna
         </Link>
-        <Link to="aboutMe" smooth={true} duration={1000}>
+        <Link
+          to="aboutMe"
+          smooth={true}
+          duration={1000}
+          activeClass="active"
+          spy={true}
+        >
           <BsPersonFill className="icon" /> O mnie
         </Link>
-        <Link to="offer" smooth={true} duration={1000}>
+        <Link
+          to="offer"
+          smooth={true}
+          duration={1000}
+          activeClass="active"
+          spy={true}
+        >
           <FaCode className="icon" /> Oferta
         </Link>
-        <Link to="portfolio" smooth={true} duration={1000}>
+        <Link
+          to="portfolio"
+          smooth={true}
+          duration={1000}
+          activeClass="active"
+          spy={true}
+        >
           <AiFillFolderOpen className="icon" /> Portfolio
         </Link>
-        <Link to="home" smooth={true} duration={1000}>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={1000}
+          activeClass="active"
+          spy={true}
+        >
           <RiMailOpenFill className="icon" /> Kontakt
         </Link>
         <div className="languages">
@@ -76,6 +119,7 @@ const Wrapper = styled.div`
   color: white;
   z-index: 999;
   opacity: 0.8;
+
   .main-nav {
     display: flex;
     flex-direction: column;
@@ -93,9 +137,17 @@ const Wrapper = styled.div`
     margin: 0 auto;
     flex-wrap: wrap;
     position: relative;
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .icon {
       cursor: pointer;
       transition: 0.1s linear;
+      color: white;
+      font-size: 1.5rem;
     }
     .media-info {
       width: 100%;
@@ -143,6 +195,9 @@ const Wrapper = styled.div`
       justify-items: center;
       align-items: center;
       transition: 0.4s;
+      &.active {
+        margin-left: 6vw;
+      }
       :hover {
         margin-left: 4vw;
         /* color: rgb(197, 103, 40); */

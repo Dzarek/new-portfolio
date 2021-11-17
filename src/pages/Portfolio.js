@@ -1,16 +1,32 @@
 import styled from "styled-components";
-import { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { FaGithub } from "react-icons/fa";
-import { ImEnter } from "react-icons/im";
+import { useState } from "react";
 import { projects } from "../data";
-// import SingleProject from "../components/SingleProject";
+import SingleProject from "../components/SingleProject";
+
+const allCategories = [
+  ...new Set(projects.map((item) => item.category)),
+  "wszystkie",
+];
+
+const websiteCategory = projects.filter(
+  (item) => item.category === "strony www"
+);
 
 const Offer = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
+  const [menuItems, setMenuItems] = useState(websiteCategory);
+  const [categories, setCategories] = useState(allCategories);
+  const [activeBtn, setActiveBtn] = useState("strony www");
+
+  const filterItems = (category) => {
+    if (category === "wszystkie") {
+      setMenuItems(projects);
+      setActiveBtn(category);
+      return;
+    }
+    const newItems = projects.filter((item) => item.category === category);
+    setMenuItems(newItems);
+    setActiveBtn(category);
+  };
   return (
     <Wrapper id="portfolio" className="main-page">
       <div className="title">
@@ -18,46 +34,27 @@ const Offer = () => {
         <h2>Portfolio</h2>
       </div>
       <div className="portfolioCategory">
-        <button>Strony WWW</button>
-        <button>Aplikacje</button>
-        <button>Gry</button>
-        <button>Wszystkie</button>
-      </div>
-      <div className="projects">
-        {/* <SingleProject className="singleProject" /> */}
-        {projects.map((item) => {
-          const { title, img, id, info, technology, githubLink, siteLink } =
-            item;
+        {categories.map((category, index) => {
           return (
-            <div data-aos="fade-down" key={id} className="singleProject">
-              <img src={img} alt={title} />
-              <div className="description">
-                <h3 className="titlePortfolio">{title}</h3>
-                <p className="info">{info}</p>
-                <div className="technology">
-                  {technology.map((item) => {
-                    return <h4>{item}</h4>;
-                  })}
-                </div>
-                <div className="seeProject">
-                  <a href={githubLink}>
-                    <FaGithub />
-                  </a>
-                  <a href={siteLink}>
-                    <ImEnter />
-                  </a>
-                </div>
-              </div>
-            </div>
+            <button
+              key={index}
+              onClick={() => filterItems(category)}
+              className={activeBtn === category ? "activeBtn" : null}
+            >
+              {category}
+            </button>
           );
         })}
+      </div>
+      <div className="projects">
+        <SingleProject className="singleProject" items={menuItems} />
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  min-height: 400vh;
+  min-height: 100vh;
   .portfolioCategory {
     display: flex;
     justify-content: space-around;
@@ -67,7 +64,6 @@ const Wrapper = styled.div`
     margin: 30vh auto 15vh;
     button {
       padding: 10px;
-      /* background: rgb(197, 103, 40); */
       background: transparent;
       color: white;
       border: 2px solid rgb(197, 103, 40);
@@ -77,11 +73,13 @@ const Wrapper = styled.div`
       cursor: pointer;
       font-weight: 400;
       font-family: "Saira Stencil One", sans-serif;
-
       transition: 0.4s;
       :hover {
-        background: rgb(197, 103, 40);
+        background: #333;
       }
+    }
+    .activeBtn {
+      background: rgb(197, 103, 40);
     }
   }
   .projects {
@@ -110,9 +108,11 @@ const Wrapper = styled.div`
         left: 0;
         top: 0;
         border-radius: 5px;
+        filter: brightness(0.3);
       }
       :hover img {
-        filter: blur(2px);
+        filter: brightness(1);
+        box-shadow: 0 0 3px 1px white;
       }
       .description {
         width: 70%;
@@ -130,9 +130,12 @@ const Wrapper = styled.div`
         padding: 20px;
         align-items: center;
         opacity: 0.9;
+        box-shadow: 0 0 3px 1px black;
+
         .titlePortfolio {
           font-size: 2rem;
           text-transform: uppercase;
+          color: #333;
         }
         .info {
           font-size: 1.2rem;
@@ -142,6 +145,7 @@ const Wrapper = styled.div`
           justify-content: space-around;
           align-items: center;
           align-self: flex-start;
+          margin-bottom: 10%;
           h4 {
             background: #333;
             border-radius: 5px;
@@ -154,10 +158,17 @@ const Wrapper = styled.div`
           display: flex;
           justify-content: space-around;
           align-items: center;
+          position: absolute;
+          right: 10%;
+          bottom: 10%;
           a {
             font-size: 2rem;
             color: rgb(197, 103, 40);
-            margin: 0 5px;
+            margin: 0 10px;
+            transition: 0.3s;
+            :hover {
+              color: #333;
+            }
           }
         }
       }

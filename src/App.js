@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Offer from "./pages/Offer";
 import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <About />
           <Offer />
           <Portfolio />
+          <Contact />
         </Router>
       </div>
     </Wrapper>

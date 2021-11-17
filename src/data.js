@@ -19,7 +19,7 @@ export const projects = [
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/dorotaszydelkuje2",
     siteLink: "https://www.dorotaszydelkuje.com",
-    category: "website",
+    category: "strony www",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const projects = [
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
     siteLink: "https://robert-telefony.netlify.app/",
-    category: "website",
+    category: "strony www",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const projects = [
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/jjapartments",
     siteLink: "https://jjapartments.netlify.app/",
-    category: "website",
+    category: "strony www",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ export const projects = [
     technology: ["Gatsby"],
     githubLink: "https://github.com/Dzarek/jaroslaw-gotuje",
     siteLink: "https://jaroslaw-gotuje.netlify.app/",
-    category: "website",
+    category: "strony www",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ export const projects = [
     technology: ["JavaScript"],
     githubLink: "https://github.com/Dzarek/buyList",
     siteLink: "https://buylist.netlify.app/",
-    category: "app",
+    category: "aplikacje",
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ export const projects = [
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/CocktailsChill",
     siteLink: "https://cocktails-chill.netlify.app/",
-    category: "app",
+    category: "aplikacje",
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ export const projects = [
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/pogoda",
     siteLink: "https://dzarek.github.io/pogoda/",
-    category: "app",
+    category: "aplikacje",
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ export const projects = [
     technology: ["JavaScript"],
     githubLink: "https://github.com/Dzarek/serialoweQuizowanie",
     siteLink: "https://dzarek.github.io/serialoweQuizowanie/",
-    category: "game",
+    category: "gry",
   },
   {
     id: 9,
@@ -99,7 +99,7 @@ export const projects = [
     technology: ["JavaScript"],
     githubLink: "https://github.com/Dzarek/ninjaGame",
     siteLink: "https://dzarek.github.io/ninjaGame/",
-    category: "game",
+    category: "gry",
   },
   {
     id: 10,
@@ -109,7 +109,7 @@ export const projects = [
     technology: ["JavaScript"],
     githubLink: "https://github.com/Dzarek/wisielecGame",
     siteLink: "https://dzarek.github.io/wisielecGame/",
-    category: "game",
+    category: "gry",
   },
   {
     id: 11,
@@ -119,6 +119,6 @@ export const projects = [
     technology: ["JavaScript"],
     githubLink: "https://github.com/Dzarek/memoryGame",
     siteLink: "https://dzarek.github.io/memoryGame/",
-    category: "game",
+    category: "gry",
   },
 ];

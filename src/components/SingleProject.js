@@ -1,34 +1,41 @@
-import React from "react";
-import { FaGithub } from "react-icons/fa";
-import { ImEnter } from "react-icons/im";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { ImGithub } from "react-icons/im";
+import { FaShareSquare } from "react-icons/fa";
 
-import dorotaImg from "../images/9a.jpg";
-
-const SingleProject = () => {
+const SingleProject = ({ items }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
-    <div className="singleProject">
-      <img src={dorotaImg} alt="Dorota Szydełkuje" />
-      <div className="description">
-        <h3 className="titlePortfolio">Dorota Szydełkuje</h3>
-        <p className="info">
-          Strona internetowa stworzona dla osoby, która zajmuje się
-          szydełkowaniem. Można tam zamówić produkty wykonane z włóczki takie
-          jak: zabawki, pufy, koce itd.
-        </p>
-        <div className="technology">
-          <h4>React</h4>
-          <h4>Css</h4>
-        </div>
-        <div className="seeProject">
-          <a href="https://www.dorotaszydelkuje.com/">
-            <FaGithub />
-          </a>
-          <a href="https://www.dorotaszydelkuje.com/">
-            <ImEnter />
-          </a>
-        </div>
-      </div>
-    </div>
+    <>
+      {items.map((item) => {
+        const { title, img, id, info, technology, githubLink, siteLink } = item;
+        return (
+          <div data-aos="fade-down" key={id} className="singleProject">
+            <img src={img} alt={title} />
+            <div className="description">
+              <h3 className="titlePortfolio">{title}</h3>
+              <p className="info">{info}</p>
+              <div className="technology">
+                {technology.map((item) => {
+                  return <h4>{item}</h4>;
+                })}
+              </div>
+              <div className="seeProject">
+                <a href={githubLink}>
+                  <ImGithub />
+                </a>
+                <a href={siteLink}>
+                  <FaShareSquare />
+                </a>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </>
   );
 };
 

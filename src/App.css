@@ -59,3 +59,18 @@
     text-transform: uppercase;
     font-family: "Saira Stencil One", sans-serif;
 }
+
+/* .portfolioCategory button {
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border: 2px solid rgb(197, 103, 40);
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: "Saira Stencil One", sans-serif;
+
+    transition: 0.4s;
+} */
