@@ -1,36 +1,36 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { projects } from "../data";
-import SingleProject from "../components/SingleProject";
+import { projectsEn } from "../data";
+import SingleProjectEn from "../components/SingleProject";
 
 const allCategories = [
-  ...new Set(projects.map((item) => item.category)),
-  "wszystkie",
+  ...new Set(projectsEn.map((item) => item.category)),
+  "all",
 ];
 
-const websiteCategory = projects.filter(
-  (item) => item.category === "strony www"
+const websiteCategory = projectsEn.filter(
+  (item) => item.category === "website"
 );
 
-const Portfolio = () => {
+const PortfolioEn = () => {
   const [menuItems, setMenuItems] = useState(websiteCategory);
   const [categories] = useState(allCategories);
-  const [activeBtn, setActiveBtn] = useState("strony www");
+  const [activeBtn, setActiveBtn] = useState("website");
 
   const filterItems = (category) => {
-    if (category === "wszystkie") {
-      setMenuItems(projects);
+    if (category === "all") {
+      setMenuItems(projectsEn);
       setActiveBtn(category);
       return;
     }
-    const newItems = projects.filter((item) => item.category === category);
+    const newItems = projectsEn.filter((item) => item.category === category);
     setMenuItems(newItems);
     setActiveBtn(category);
   };
   return (
     <Wrapper id="portfolio" className="main-page">
       <div className="title">
-        <h1>Moje Projekty</h1>
+        <h1>My Projects</h1>
         <h2>Portfolio</h2>
       </div>
       <div className="portfolioCategory">
@@ -47,7 +47,7 @@ const Portfolio = () => {
         })}
       </div>
       <div className="projects">
-        <SingleProject className="singleProject" items={menuItems} />
+        <SingleProjectEn className="singleProject" items={menuItems} />
       </div>
     </Wrapper>
   );
@@ -186,4 +186,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export default Portfolio;
+export default PortfolioEn;

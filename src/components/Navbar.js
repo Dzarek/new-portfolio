@@ -18,7 +18,7 @@ import { BsPersonFill } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { RiMailOpenFill } from "react-icons/ri";
 
-const Navbar = () => {
+const Navbar = ({ setLanguage, language }) => {
   const [showPhone, setShowPhone] = useState(false);
   const [showEmail, setShowEmail] = useState(false);
 
@@ -56,7 +56,8 @@ const Navbar = () => {
           activeClass="active"
           spy={true}
         >
-          <AiFillHome className="icon" /> Strona Główna
+          <AiFillHome className="icon" />{" "}
+          {language === "polish" ? `Strona Główna` : `Home`}
         </Link>
         <Link
           to="aboutMe"
@@ -65,7 +66,8 @@ const Navbar = () => {
           activeClass="active"
           spy={true}
         >
-          <BsPersonFill className="icon" /> O mnie
+          <BsPersonFill className="icon" />
+          {language === "polish" ? `O mnie` : `About Me`}
         </Link>
         <Link
           to="offer"
@@ -74,7 +76,8 @@ const Navbar = () => {
           activeClass="active"
           spy={true}
         >
-          <FaCode className="icon" /> Oferta
+          <FaCode className="icon" />
+          {language === "polish" ? `Oferta` : `Service`}
         </Link>
         <Link
           to="portfolio"
@@ -92,17 +95,21 @@ const Navbar = () => {
           activeClass="active"
           spy={true}
         >
-          <RiMailOpenFill className="icon" /> Kontakt
+          <RiMailOpenFill className="icon" />
+          {language === "polish" ? `Kontakt` : `Contact`}
         </Link>
         <div className="languages">
-          <button>PL</button>
-          <button>EN</button>
+          <button onClick={() => setLanguage("polish")}>PL</button>
+          <button onClick={() => setLanguage("english")}>EN</button>
         </div>
       </section>
       <footer className="footer">
         <p>
           &copy; {new Date().getFullYear()} Jarosław Janas <br /> Front-End
-          Developer <br /> Wszelkie Prawa Zastrzeżone
+          Developer <br />
+          {language === "polish"
+            ? `Wszelkie Prawa Zastrzeżone`
+            : `All Right Reserved`}
         </p>
       </footer>
     </Wrapper>
