@@ -238,6 +238,9 @@ const About = () => {
 const Wrapper = styled.div`
   min-height: 370vh;
   padding: 10vh 0;
+  @media screen and (max-width: 800px) {
+    min-height: 670vh;
+  }
 
   .main-info {
     position: absolute;
@@ -262,6 +265,12 @@ const Wrapper = styled.div`
         border-radius: 20px;
         border: 2px solid rgb(9, 100, 100);
         margin-bottom: 3vh;
+      }
+      @media screen and (max-width: 800px) {
+        flex-direction: column-reverse;
+        img {
+          width: 90%;
+        }
       }
     }
     .personal-info {
@@ -300,6 +309,13 @@ const Wrapper = styled.div`
           }
         }
       }
+      @media screen and (max-width: 800px) {
+        width: 90%;
+        height: auto;
+        button {
+          margin: -2vh auto 7vh;
+        }
+      }
     }
     .personal-info-list {
       width: 80%;
@@ -326,11 +342,26 @@ const Wrapper = styled.div`
           margin-left: 4px;
         }
       }
+      @media screen and (max-width: 800px) {
+        width: 95%;
+        flex-direction: column;
+        p {
+          width: auto;
+          text-align: center;
+          font-size: 1.3rem;
+          letter-spacing: 0;
+          width: 100%;
+          margin: 2vh auto;
+        }
+      }
     }
     .skills {
       margin-top: 5vh;
       margin-bottom: 5vh;
       width: 100%;
+      @media screen and (max-width: 800px) {
+        width: 100vw;
+      }
       .skills-container {
         width: 90%;
         background: rgb(23, 22, 36);
@@ -341,14 +372,11 @@ const Wrapper = styled.div`
         padding: 2vh 2vw;
         position: relative;
         min-height: 60vh;
-        .iconBg {
-          font-size: 50vh;
-          color: rgb(9, 8, 20);
-          z-index: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+        @media screen and (max-width: 800px) {
+          width: 100%;
+          flex-direction: column;
+          padding: 20px;
+          height: auto;
         }
         section {
           width: 45%;
@@ -358,12 +386,19 @@ const Wrapper = styled.div`
           justify-content: center;
           z-index: 1;
           height: 50vh;
+          @media screen and (max-width: 800px) {
+            width: 100%;
+            height: auto;
+          }
           h5 {
             margin-bottom: 7vh;
             font-size: 1.6rem;
             letter-spacing: 1px;
             text-align: center;
             text-transform: uppercase;
+            @media screen and (max-width: 800px) {
+              margin-top: 5vh;
+            }
           }
           .one-skill {
             width: 100%;
@@ -380,6 +415,9 @@ const Wrapper = styled.div`
               background: #000;
               height: 0.7rem;
               border-radius: 5px;
+              @media screen and (max-width: 800px) {
+                width: 100%;
+              }
             }
             .skillItem {
               border-radius: 5px;
@@ -446,12 +484,26 @@ const Wrapper = styled.div`
       justify-content: space-between;
       align-items: center;
       width: 80%;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        flex-direction: column;
+        .EandE:nth-of-type(1) {
+          padding-bottom: 10vh;
+          border-bottom: 2px solid white;
+        }
+        .EandE:nth-of-type(2) {
+          padding-top: 10vh;
+        }
+      }
       .EandE {
         width: 45%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        @media screen and (max-width: 800px) {
+          width: 100%;
+        }
         .oneEandE {
           margin: 2vh auto;
           width: 100%;
@@ -459,6 +511,11 @@ const Wrapper = styled.div`
           display: flex;
           align-items: center;
           justify-content: space-between;
+          @media screen and (max-width: 800px) {
+            min-height: 30vh;
+            margin: 3vh auto;
+            width: 90%;
+          }
           .borderEandE {
             width: 2px;
             height: 80%;
@@ -499,6 +556,14 @@ const Wrapper = styled.div`
             }
             p {
               font-size: 1rem;
+            }
+            @media screen and (max-width: 800px) {
+              h4 {
+                font-size: 1.3rem;
+              }
+              h6 {
+                width: 55%;
+              }
             }
           }
         }

@@ -48,6 +48,13 @@ const Offer = () => {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  .title {
+    h1 {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
   .offerContent {
     display: flex;
     justify-content: space-around;
@@ -55,6 +62,11 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     width: 70vw;
     margin: 30vh auto 0;
+    @media screen and (max-width: 800px) {
+      width: 95vw;
+      flex-direction: column;
+      /* margin: 20vh auto 0; */
+    }
   }
   .singleOffer {
     display: flex;
@@ -79,6 +91,23 @@ const Wrapper = styled.div`
       font-size: 1.4rem;
       text-transform: uppercase;
       color: rgb(197, 103, 40);
+    }
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      min-height: 30vh;
+      margin: 5vh auto;
+      :hover {
+        transform: none;
+      }
+      .icon {
+        font-size: 2.5rem;
+      }
+      h3 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
     }
   }
 `;

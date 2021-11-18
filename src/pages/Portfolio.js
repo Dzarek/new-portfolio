@@ -55,6 +55,10 @@ const Portfolio = () => {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  @media screen and (max-width: 800px) {
+    margin-top: -10vh;
+  }
+
   .portfolioCategory {
     display: flex;
     justify-content: space-around;
@@ -81,6 +85,15 @@ const Wrapper = styled.div`
     .activeBtn {
       background: rgb(197, 103, 40);
     }
+    @media screen and (max-width: 800px) {
+      width: 95vw;
+      button {
+        width: 40%;
+        font-size: 0.9rem;
+        margin: 2vh auto;
+        padding: 10px 5px;
+      }
+    }
   }
   .projects {
     display: flex;
@@ -89,6 +102,9 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     width: 65vw;
     margin: 10vh auto 0;
+    @media screen and (max-width: 800px) {
+      width: 100vw;
+    }
     .singleProject {
       display: flex;
       flex-direction: column;
@@ -100,6 +116,11 @@ const Wrapper = styled.div`
       border-radius: 5px;
       margin-right: 20vw;
       margin-bottom: 15vh;
+      @media screen and (max-width: 800px) {
+        width: 95vw;
+        margin-right: 0vw;
+        height: auto;
+      }
       img {
         transition: 0.5s;
         width: 100%;
@@ -109,6 +130,13 @@ const Wrapper = styled.div`
         top: 0;
         border-radius: 5px;
         filter: brightness(0.3);
+        @media screen and (max-width: 800px) {
+          filter: brightness(1);
+          width: 100vw;
+          position: static;
+          height: 40vh;
+          border-radius: 5px 5px 0 0;
+        }
       }
       :hover img {
         filter: brightness(1);
@@ -131,7 +159,13 @@ const Wrapper = styled.div`
         align-items: center;
         opacity: 0.9;
         box-shadow: 0 0 3px 1px black;
-
+        @media screen and (max-width: 800px) {
+          position: static;
+          width: 100vw;
+          height: auto;
+          transform: translateY(0);
+          border-radius: 0 0 5px 5px;
+        }
         .titlePortfolio {
           font-size: 2rem;
           text-transform: uppercase;
@@ -139,6 +173,9 @@ const Wrapper = styled.div`
         }
         .info {
           font-size: 1.2rem;
+          @media screen and (max-width: 800px) {
+            margin: 3vh auto;
+          }
         }
         .technology {
           display: flex;
@@ -181,6 +218,15 @@ const Wrapper = styled.div`
         position: absolute;
         top: 50%;
         left: -30%;
+      }
+      @media screen and (max-width: 800px) {
+        margin-right: 0;
+        .description {
+          position: static;
+          width: 100vw;
+          height: auto;
+          transform: translateY(0);
+        }
       }
     }
   }

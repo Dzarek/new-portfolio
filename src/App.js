@@ -53,6 +53,10 @@ const Wrapper = styled.div`
   .appContent {
     width: 80vw;
     margin-left: 20vw;
+    @media screen and (max-width: 800px) {
+      width: 100vw;
+      margin-left: 0;
+    }
   }
 `;
 
