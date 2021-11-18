@@ -14,7 +14,7 @@ const websiteCategory = projects.filter(
 
 const Offer = () => {
   const [menuItems, setMenuItems] = useState(websiteCategory);
-  const [categories, setCategories] = useState(allCategories);
+  const [categories] = useState(allCategories);
   const [activeBtn, setActiveBtn] = useState("strony www");
 
   const filterItems = (category) => {
