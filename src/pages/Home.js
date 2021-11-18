@@ -58,7 +58,7 @@ const Wrapper = styled.div`
         bottom: 0;
         left: 150%;
         transform: translateX(-50%);
-        opacity: 0.4;
+        opacity: 0.6;
         animation: imgMove 2s forwards;
         @keyframes imgMove {
           100% {
