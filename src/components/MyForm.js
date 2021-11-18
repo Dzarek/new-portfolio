@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
+import Cookie from "./CookiePage";
+import { Link } from "react-scroll";
+import { IoCloseCircle } from "react-icons/io5";
 
 class MyForm extends Component {
   state = {
     status: "",
+    cookieVisible: false,
   };
 
   sendEmail = (e) => {
@@ -31,47 +34,65 @@ class MyForm extends Component {
   render() {
     const { status } = this.state;
     return (
-      <Wrapper onSubmit={this.sendEmail}>
-        <h1>
-          Napisz do mnie! <br /> Jestem zawsze otwarty na nowe projekty.
-        </h1>
-        <div className="inputContainer">
-          <input
-            type="text"
-            name="name"
-            placeholder="Imię i nazwisko"
+      <>
+        <Wrapper onSubmit={this.sendEmail}>
+          <h1>
+            Napisz do mnie! <br /> Jestem zawsze otwarty na nowe projekty.
+          </h1>
+          <div className="inputContainer">
+            <input
+              type="text"
+              name="name"
+              placeholder="Imię i nazwisko"
+              required
+            />
+            <input type="email" name="email" placeholder="E-mail" required />
+          </div>
+          <br />
+          <textarea
+            placeholder="Twoja wiadomość..."
+            name="message"
             required
-          />
-          <input type="email" name="email" placeholder="E-mail" required />
-        </div>
-        <br />
-        <textarea
-          placeholder="Twoja wiadomość..."
-          name="message"
-          required
-        ></textarea>
-        <label className="labelCheck" htmlFor="accept">
-          <p>
-            <input type="checkbox" id="accept" name="accept" required />
-            Wyrażam zgodę na przetwarzanie danych osobowych w celu odpowiedzi na
-            mojego e-maila{" "}
-            <span>
-              {" "}
-              <NavLink className="cookieLink" to="/cookie">
-                (Polityka Prywatności)
-              </NavLink>
-            </span>
-          </p>
-        </label>
-        {status === "SUCCESS" ? (
-          <p style={{ fontSize: "30px" }}>Wiadomość wysłana! </p>
-        ) : (
-          <button>Wyślij</button>
+          ></textarea>
+          <div className="labelCookieContainer">
+            <label className="labelCheck" htmlFor="accept">
+              <p>
+                <input type="checkbox" id="accept" name="accept" required />
+                Wyrażam zgodę na przetwarzanie danych osobowych w celu
+                odpowiedzi na mojego e-maila.
+              </p>
+            </label>
+            <Link
+              onClick={() => this.setState({ cookieVisible: true })}
+              to="cookie"
+              smooth={true}
+              duration={1000}
+              className="cookieLink"
+            >
+              (Polityka Prywatności)
+            </Link>
+          </div>
+          {status === "SUCCESS" ? (
+            <p style={{ fontSize: "30px" }}>Wiadomość wysłana! </p>
+          ) : (
+            <button>Wyślij</button>
+          )}
+          {status === "ERROR" && (
+            <p style={{ fontSize: "30px" }}>ups... coś poszło nie tak!</p>
+          )}
+        </Wrapper>
+        {this.state.cookieVisible && (
+          <WrapperModal id="cookie">
+            <button
+              className="btnCloseCookie"
+              onClick={() => this.setState({ cookieVisible: false })}
+            >
+              <IoCloseCircle />
+            </button>
+            <Cookie />
+          </WrapperModal>
         )}
-        {status === "ERROR" && (
-          <p style={{ fontSize: "30px" }}>ups... coś poszło nie tak!</p>
-        )}
-      </Wrapper>
+      </>
     );
   }
 }
@@ -115,17 +136,23 @@ const Wrapper = styled.form`
     color: white;
     font-family: "Mirza", sans-serif;
   }
-  label {
-    margin: 3vh auto;
-    font-size: 1.2rem;
-    @media (orientation: portrait) and (max-width: 800px) {
-      font-size: 1rem;
+  .labelCookieContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    label {
+      margin: 3vh auto 0;
+      font-size: 1.2rem;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1rem;
+      }
+      input {
+        margin-right: 10px;
+      }
     }
-    input {
-      margin-right: 10px;
-    }
-    span a {
+    .cookieLink {
       color: rgb(197, 103, 40);
+      cursor: pointer;
     }
   }
   button {
@@ -145,5 +172,30 @@ const Wrapper = styled.form`
     }
   }
 `;
+const WrapperModal = styled.div`
+  width: 80vw;
+  position: absolute;
+  top: 120vh;
+  left: 0;
+  background: #000;
+  background: rgb(9, 8, 20);
+  background: rgb(23, 22, 36);
 
+  color: white;
+  padding: 20px;
+  .btnCloseCookie {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    color: white;
+    font-size: 3rem;
+    background: transparent;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+    :hover {
+      transform: scale(1.2);
+    }
+  }
+`;
 export default MyForm;

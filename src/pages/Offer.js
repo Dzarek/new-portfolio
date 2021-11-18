@@ -67,7 +67,6 @@ const Wrapper = styled.div`
     color: white;
     border-radius: 10px;
     background: rgb(23, 22, 36);
-    /* background: #000; */
     text-align: center;
     transition: 0.3s;
     :hover {

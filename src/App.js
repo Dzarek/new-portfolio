@@ -1,14 +1,13 @@
 import "./App.css";
 import styled from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Offer from "./pages/Offer";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-// import Cookie from "./components/CookiePage";
-// import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -16,14 +15,19 @@ function App() {
       <Router>
         <Navbar className="navbar" />
         <div className="appContent">
-          {/* <Switch> */}
           <Home />
           <About />
           <Offer />
           <Portfolio />
           <Contact />
-          {/* <Route exact path="/cookie" component={Cookie} /> */}
-          {/* </Switch> */}
+          {/* <Routes> */}
+          {/* <Route path="/" element={<Home />} />
+            <Route path="/" element={<About />} />
+            <Route path="/" element={<Offer />} />
+            <Route path="/" element={<Portfolio />} />
+            <Route path="/" element={<Contact />} /> */}
+          {/* <Route path="/cookie" element={<Cookie />} /> */}
+          {/* </Routes> */}
         </div>
       </Router>
     </Wrapper>

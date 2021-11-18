@@ -1,9 +1,10 @@
 import React from "react";
+import styled from "styled-components";
 
 const Cookie = () => {
   return (
     <>
-      <div className="privateCookie">
+      <Wrapper className="privateCookie">
         <h1>Polityka Prywatności i Cookies</h1>
         <h2>Polityka Prywatności</h2>
         <p>
@@ -155,14 +156,26 @@ const Cookie = () => {
           Szczegółowe informacje o możliwości i sposobach obsługi plików cookies
           dostępne są w ustawieniach oprogramowania (przeglądarki internetowej).
         </p>
+        <br />
         <span>
           Treść Polityki cookies na tej stronie powstała dzięki uprzejmości IAB
           Polska, które udostępniło jej wzór (© IAB Polska) na stronie
           www.wszystkoociasteczkach.pl.
         </span>
-      </div>
+      </Wrapper>
     </>
   );
 };
+
+const Wrapper = styled.div`
+  h1 {
+    text-align: center;
+    margin: 5vh auto;
+  }
+  h2 {
+    text-align: center;
+    margin: 3vh auto;
+  }
+`;
 
 export default Cookie;

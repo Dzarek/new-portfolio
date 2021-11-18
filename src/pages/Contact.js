@@ -64,11 +64,12 @@ const Wrapper = styled.div`
         justify-content: space-around;
         align-items: center;
         background: #111;
-        background: rgb(23, 22, 36);
         border-radius: 10px;
         color: white;
         padding: 10px;
         font-size: 1.2rem;
+        border: 1px solid white;
+
         .icon {
           font-size: 1.6rem;
           color: rgb(197, 103, 40);
