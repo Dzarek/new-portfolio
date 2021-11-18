@@ -7,20 +7,25 @@ import About from "./pages/About";
 import Offer from "./pages/Offer";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+// import Cookie from "./components/CookiePage";
+// import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <Wrapper className="App">
-      <Navbar className="navbar" />
-      <div className="appContent">
-        <Router>
+      <Router>
+        <Navbar className="navbar" />
+        <div className="appContent">
+          {/* <Switch> */}
           <Home />
           <About />
           <Offer />
           <Portfolio />
           <Contact />
-        </Router>
-      </div>
+          {/* <Route exact path="/cookie" component={Cookie} /> */}
+          {/* </Switch> */}
+        </div>
+      </Router>
     </Wrapper>
   );
 }

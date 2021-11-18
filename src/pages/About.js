@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import aboutImg from "../images/aboutImg.jpg";
-// import { GiSkills } from "react-icons/gi";
 import { FaGraduationCap } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Aos from "aos";
@@ -30,7 +29,6 @@ const About = () => {
         <div data-aos="fade-left" className="pictureAndCv">
           <img src={aboutImg} alt="about me" />
           <div className="personal-info">
-            {/* <div className="personal-info-text"> */}
             <h3>
               Nazywam się Jarosław Janas i jestem <br /> Front-End Developerem.
             </h3>
@@ -46,17 +44,12 @@ const About = () => {
               </Link>
             </button>
           </div>
-          {/* </div> */}
-          {/* <div className="borderBetween"></div> */}
         </div>
         <div data-aos="fade-left" className="personal-info-list">
           <h4 className="subTitle">Informacje:</h4>
           <p>
             Imię i Nazwisko: <span>Jarosław Janas</span>
           </p>
-          {/* <p>
-            Nazwisko: <span>Janas</span>
-          </p> */}
           <p>
             Wiek: <span>{calculate_age(new Date(1995, 7, 21))} lat</span>
           </p>
@@ -109,7 +102,6 @@ const About = () => {
                 </div>
               </div>
             </section>
-            {/* <GiSkills className="iconBg" /> */}
             <section className="professional-skills">
               <h5>Zawodowe</h5>
               <div className="one-skill">
@@ -247,41 +239,6 @@ const Wrapper = styled.div`
   min-height: 370vh;
   padding: 10vh 0;
 
-  /* .title {
-    position: absolute;
-    top: 10vh;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    text-transform: uppercase;
-    font-family: "Saira Stencil One", sans-serif;
-    h1 {
-      opacity: 0.1;
-      z-index: 1;
-      position: relative;
-      font-size: 5rem;
-      width: 80vw;
-      text-align: center;
-    }
-    h2 {
-      z-index: 2;
-      position: absolute;
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 3rem;
-      letter-spacing: 5px;
-    }
-  } */
-  /* .subTitle {
-    width: 100%;
-    margin-bottom: 3vh;
-    font-size: 1.7rem;
-    letter-spacing: 3px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Saira Stencil One", sans-serif;
-  } */
   .main-info {
     position: absolute;
     top: 40vh;
@@ -313,11 +270,8 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      /* align-items: center; */
       font-family: "Mirza", sans-serif;
-      /* .personal-info-text { */
       h3 {
-        /* margin-bottom: 3vh; */
         font-size: 1.7rem;
       }
       p {
@@ -331,10 +285,7 @@ const Wrapper = styled.div`
         padding: 0.7rem 2rem;
         margin: 0 auto;
         background: transparent;
-        /* border: 2px solid white; */
         border: 2px solid rgb(197, 103, 40);
-        /* color: white; */
-        /* color: rgb(197, 103, 40); */
         transition: 0.4s;
         border-radius: 10px;
         cursor: pointer;
@@ -343,21 +294,13 @@ const Wrapper = styled.div`
           color: rgb(197, 103, 40);
         }
         :hover {
-          /* background: white; */
           background: rgb(197, 103, 40);
-          /* color: black; */
           a {
             color: white;
           }
         }
       }
     }
-    /* .borderBetween {
-      width: 90%;
-      height: 2px;
-      background: #ddd;
-      margin: 5vh auto 2vh;
-    } */
     .personal-info-list {
       width: 80%;
       margin: 10vh auto;
@@ -388,13 +331,6 @@ const Wrapper = styled.div`
       margin-top: 5vh;
       margin-bottom: 5vh;
       width: 100%;
-      /* .skills-title {
-        font-size: 1.7rem;
-        letter-spacing: 3px;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: "Saira Stencil One", sans-serif;
-      } */
       .skills-container {
         width: 90%;
         background: rgb(23, 22, 36);
@@ -444,13 +380,11 @@ const Wrapper = styled.div`
               background: #000;
               height: 0.7rem;
               border-radius: 5px;
-              /* overflow-x: hidden; */
             }
             .skillItem {
               border-radius: 5px;
               height: 100%;
               color: white;
-              /* background-color: darkorange; */
               position: relative;
               p {
                 position: absolute;
@@ -459,24 +393,7 @@ const Wrapper = styled.div`
                 transform: translateX(50%);
               }
             }
-            /* .teamWork {
-              width: 85%;
-            }
-            .creative {
-              width: 75%;
-            }
-            .passion {
-              width: 95%;
-            }
-            .htmlCssSkill {
-              width: 75%;
-            }
-            .jsSkill {
-              width: 65%;
-            }
-            .reactSkill {
-              width: 55%;
-            } */
+
             [data-aos="teamWork"] {
               width: 0;
               transition-property: width;
@@ -571,11 +488,9 @@ const Wrapper = styled.div`
             h4 {
               margin: 1rem 0;
               font-size: 1.5rem;
-              /* text-transform: uppercase; */
             }
             h6 {
               font-size: 1.1rem;
-              /* background: rgb(197, 103, 40); */
               background: #222;
               width: 35%;
               padding: 3px;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import headerVideo from "../images/headerVideo.mp4";
 import headerImg from "../images/headerImg.png";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -20,7 +21,14 @@ const Home = () => {
             <h2>WITAJ !</h2>
             <h2>Jestem Jarosław Janas</h2>
             <h4>Front-End Developer</h4>
-            <button className="hireBtn">zatrudni mnie</button>
+            <Link
+              className="hireBtn"
+              to="contact"
+              smooth={true}
+              duration={1000}
+            >
+              <button>zatrudni mnie</button>
+            </Link>
           </div>
         </div>
       </header>
@@ -82,6 +90,7 @@ const Wrapper = styled.div`
           font-size: 2rem;
           margin-top: 3vh;
         }
+
         .hireBtn {
           margin: 15vh auto 0;
           padding: 1vw 1.5vw;
@@ -94,9 +103,21 @@ const Wrapper = styled.div`
           color: white;
           transition: 0.3s;
           cursor: pointer;
+          button {
+            background: transparent;
+            border: none;
+            color: white;
+            text-transform: uppercase;
+            font-family: "Mirza", sans-serif;
+            font-size: 1.3rem;
+            transition: 0.3s;
+            cursor: pointer;
+          }
           :hover {
             background: white;
-            color: black;
+            button {
+              color: black;
+            }
           }
         }
       }

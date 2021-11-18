@@ -145,9 +145,12 @@ const Wrapper = styled.div`
     }
     .icon {
       cursor: pointer;
-      transition: 0.1s linear;
+      transition: 0.1s;
       color: white;
       font-size: 1.5rem;
+      :hover {
+        margin-bottom: 5px;
+      }
     }
     .media-info {
       width: 100%;
@@ -186,7 +189,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     a {
       width: 100%;
-      padding: 1vh;
+      padding: 5px;
       margin: 2vh 0 2vh 2vw;
       font-family: "Saira Stencil One", sans-serif;
       font-size: 1.2rem;
@@ -196,11 +199,11 @@ const Wrapper = styled.div`
       align-items: center;
       transition: 0.4s;
       &.active {
-        margin-left: 6vw;
+        margin-left: 4vw;
+        color: rgb(197, 103, 40);
       }
       :hover {
         margin-left: 4vw;
-        /* color: rgb(197, 103, 40); */
       }
       .icon {
         margin-right: 1vw;
