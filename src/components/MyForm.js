@@ -205,7 +205,7 @@ const WrapperModal = styled.div`
   padding: 20px;
   @media screen and (max-width: 800px) {
     width: 100vw;
-    top: 180vh;
+    top: 150vh;
     padding-top: 10vh;
   }
   .btnCloseCookie {

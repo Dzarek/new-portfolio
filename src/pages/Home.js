@@ -130,6 +130,9 @@ const Wrapper = styled.div`
           color: white;
           transition: 0.3s;
           cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           @media screen and (max-width: 800px) {
             margin: 55vh auto 0;
             padding: 10px;

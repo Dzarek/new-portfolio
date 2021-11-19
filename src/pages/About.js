@@ -298,6 +298,9 @@ const Wrapper = styled.div`
         transition: 0.4s;
         border-radius: 10px;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         a {
           text-decoration: none;
           color: rgb(197, 103, 40);
@@ -553,6 +556,9 @@ const Wrapper = styled.div`
               padding: 3px;
               text-align: center;
               border-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             }
             p {
               font-size: 1rem;

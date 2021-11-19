@@ -100,9 +100,15 @@ const Wrapper = styled.form`
   height: 66vh;
   width: 90%;
   margin: 0 auto;
+  @media screen and (max-width: 800px) {
+    height: auto;
+  }
   h1 {
     text-align: center;
     margin-bottom: 5vh;
+    @media screen and (max-width: 800px) {
+      font-size: 1.7rem;
+    }
   }
   .inputContainer {
     width: 100%;
@@ -118,6 +124,11 @@ const Wrapper = styled.form`
       border: 1px solid white;
       color: white;
       font-family: "Mirza", sans-serif;
+      @media screen and (max-width: 800px) {
+        font-size: 1.2rem;
+        width: 47%;
+        padding: 8px 10px;
+      }
     }
   }
   textarea {
@@ -130,6 +141,11 @@ const Wrapper = styled.form`
     border: 1px solid white;
     color: white;
     font-family: "Mirza", sans-serif;
+    @media screen and (max-width: 800px) {
+      font-size: 1.2rem;
+      padding: 8px 10px;
+      min-height: 30vh;
+    }
   }
   .labelCookieContainer {
     display: flex;
@@ -165,6 +181,10 @@ const Wrapper = styled.form`
     :hover {
       background: rgb(197, 103, 40);
     }
+    @media screen and (max-width: 800px) {
+      width: 50%;
+      background: rgb(197, 103, 40);
+    }
   }
 `;
 const WrapperModal = styled.div`
@@ -178,6 +198,11 @@ const WrapperModal = styled.div`
 
   color: white;
   padding: 20px;
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+    top: 180vh;
+    padding-top: 10vh;
+  }
   .btnCloseCookie {
     position: absolute;
     top: 5%;
@@ -190,6 +215,11 @@ const WrapperModal = styled.div`
     cursor: pointer;
     :hover {
       transform: scale(1.2);
+    }
+    @media screen and (max-width: 800px) {
+      top: 10px;
+      right: 50%;
+      transform: translateX(50%);
     }
   }
 `;
