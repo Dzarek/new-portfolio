@@ -302,10 +302,9 @@ const Wrapper = styled.div`
         justify-content: center;
         align-items: center; */
       a {
-        font-family: "Mirza", sans-serif;
+        font-family: "Saira Stencil One", sans-serif;
         font-size: 1.3rem;
         padding: 0.7rem 2rem;
-
         margin: 0 auto;
         background: transparent;
         border: 2px solid rgb(197, 103, 40);
@@ -339,7 +338,7 @@ const Wrapper = styled.div`
         a {
           width: 150px;
           height: 50px;
-          line-height: 50px;
+          line-height: 1;
           padding: 0;
           margin: -2vh auto 7vh;
         }
@@ -581,9 +580,6 @@ const Wrapper = styled.div`
               padding: 3px;
               text-align: center;
               border-radius: 10px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
             }
             p {
               font-size: 1rem;
