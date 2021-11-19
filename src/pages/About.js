@@ -38,11 +38,11 @@ const About = () => {
               Specjalizuje się w tworzeniu stron internetowych i aplikacji w
               języku JavaScript.
             </p>
-            <button>
-              <Link to="../images/JarosławJanasCV.pdf" target="_blank" download>
-                Pobierz CV
-              </Link>
-            </button>
+            {/* <button> */}
+            <Link to="../images/JarosławJanasCV.pdf" target="_blank" download>
+              Pobierz CV
+            </Link>
+            {/* </button> */}
           </div>
         </div>
         <div data-aos="fade-left" className="personal-info-list">
@@ -288,7 +288,7 @@ const Wrapper = styled.div`
         text-align: justify;
         margin: 3vh auto 10vh;
       }
-      button {
+      /* button {
         font-family: "Mirza", sans-serif;
         font-size: 1.3rem;
         padding: 0.7rem 2rem;
@@ -300,22 +300,47 @@ const Wrapper = styled.div`
         cursor: pointer;
         display: flex;
         justify-content: center;
+        align-items: center; */
+      a {
+        font-family: "Mirza", sans-serif;
+        font-size: 1.3rem;
+        padding: 0.7rem 2rem;
+
+        margin: 0 auto;
+        background: transparent;
+        border: 2px solid rgb(197, 103, 40);
+        transition: 0.4s;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        a {
-          text-decoration: none;
-          color: rgb(197, 103, 40);
-        }
+        text-decoration: none;
+        color: rgb(197, 103, 40);
         :hover {
+          background: rgb(197, 103, 40);
+          color: white;
+        }
+      }
+      /* :hover {
           background: rgb(197, 103, 40);
           a {
             color: white;
           }
-        }
-      }
+        } */
+      /* } */
       @media screen and (max-width: 800px) {
         width: 90%;
         height: auto;
-        button {
+
+        /* button {
+          margin: -2vh auto 7vh;
+        } */
+        a {
+          width: 150px;
+          height: 50px;
+          line-height: 50px;
+          padding: 0;
           margin: -2vh auto 7vh;
         }
       }
