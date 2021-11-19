@@ -27,7 +27,9 @@ const Home = () => {
               smooth={true}
               duration={1000}
             >
-              <button>zatrudni mnie</button>
+              <button>
+                <p>zatrudni mnie</p>
+              </button>
             </Link>
           </div>
         </div>
@@ -135,10 +137,7 @@ const Wrapper = styled.div`
           align-items: center;
           @media screen and (max-width: 800px) {
             margin: 55vh auto 0;
-            padding: 0px 20px;
-            /* vertical-align: middle; */
-            line-height: 4rem;
-            height: 4rem;
+            padding: 0;
           }
           button {
             background: transparent;
@@ -149,6 +148,15 @@ const Wrapper = styled.div`
             font-size: 1.3rem;
             transition: 0.3s;
             cursor: pointer;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* @media screen and (max-width: 800px) {
+              display: inline-block;
+              vertical-align: middle;
+              line-height: normal;
+            } */
           }
           :hover {
             background: white;
