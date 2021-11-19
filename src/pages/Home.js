@@ -135,7 +135,11 @@ const Wrapper = styled.div`
           align-items: center;
           @media screen and (max-width: 800px) {
             margin: 55vh auto 0;
-            padding: 10px;
+            padding: 0px 20px;
+            /* display: inline-block;
+            vertical-align: middle;
+            line-height: normal; */
+            height: 4rem;
           }
           button {
             background: transparent;

@@ -89,6 +89,9 @@ const Wrapper = styled.div`
         font-size: 0.9rem;
         margin: 2vh auto;
         padding: 10px 5px;
+        :hover {
+          background: rgb(197, 103, 40);
+        }
       }
     }
   }
