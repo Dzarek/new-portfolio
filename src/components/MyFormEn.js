@@ -119,13 +119,13 @@ const Wrapper = styled.form`
       border-radius: 10px;
       width: 45%;
       padding: 10px 20px;
-      font-size: 1.3rem;
+      font-size: 1rem;
       background: #111;
       border: 1px solid white;
       color: white;
-      font-family: "Mirza", sans-serif;
+      font-family: "Saira Stencil One", sans-serif;
       @media screen and (max-width: 800px) {
-        font-size: 1.2rem;
+        font-size: 1rem;
         width: 47%;
         padding: 8px 10px;
       }
@@ -136,13 +136,13 @@ const Wrapper = styled.form`
     min-height: 25vh;
     padding: 10px 20px;
     border-radius: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     background: #111;
     border: 1px solid white;
     color: white;
-    font-family: "Mirza", sans-serif;
+    font-family: "Saira Stencil One", sans-serif;
     @media screen and (max-width: 800px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
       padding: 8px 10px;
       min-height: 30vh;
     }
@@ -200,7 +200,7 @@ const WrapperModal = styled.div`
   padding: 20px;
   @media screen and (max-width: 800px) {
     width: 100vw;
-    top: 180vh;
+    top: 150vh;
     padding-top: 10vh;
   }
   .btnCloseCookie {

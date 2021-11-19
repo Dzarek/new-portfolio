@@ -73,9 +73,9 @@ const Wrapper = styled.div`
         border-radius: 10px;
         color: white;
         padding: 10px;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         border: 1px solid white;
-
+        font-family: "Saira Stencil One", sans-serif;
         .icon {
           font-size: 1.6rem;
           color: rgb(197, 103, 40);
@@ -88,7 +88,7 @@ const Wrapper = styled.div`
         div {
           width: 80%;
           padding: 15px;
-          font-size: 1.3rem;
+          font-size: 1rem;
           flex-direction: row;
           height: auto;
           justify-content: center;

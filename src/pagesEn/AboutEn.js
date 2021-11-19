@@ -238,7 +238,13 @@ const Wrapper = styled.div`
   min-height: 370vh;
   padding: 10vh 0;
   @media screen and (max-width: 800px) {
+    min-height: 650vh;
+  }
+  @media screen and (max-width: 400px) {
     min-height: 670vh;
+  }
+  @media screen and (max-width: 320px) {
+    min-height: 700vh;
   }
 
   .main-info {
@@ -287,8 +293,9 @@ const Wrapper = styled.div`
         text-align: justify;
         margin: 3vh auto 10vh;
       }
-      button {
-        font-family: "Mirza", sans-serif;
+
+      a {
+        font-family: "Saira Stencil One", sans-serif;
         font-size: 1.3rem;
         padding: 0.7rem 2rem;
         margin: 0 auto;
@@ -297,21 +304,25 @@ const Wrapper = styled.div`
         transition: 0.4s;
         border-radius: 10px;
         cursor: pointer;
-        a {
-          text-decoration: none;
-          color: rgb(197, 103, 40);
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(197, 103, 40);
         :hover {
           background: rgb(197, 103, 40);
-          a {
-            color: white;
-          }
+          color: white;
         }
       }
+
       @media screen and (max-width: 800px) {
         width: 90%;
         height: auto;
-        button {
+        a {
+          width: 150px;
+          height: 50px;
+          line-height: 1;
+          padding: 0;
           margin: -2vh auto 7vh;
         }
       }
@@ -546,12 +557,13 @@ const Wrapper = styled.div`
               font-size: 1.5rem;
             }
             h6 {
-              font-size: 1.1rem;
+              font-size: 0.9rem;
               background: #222;
-              width: 35%;
+              width: 40%;
               padding: 3px;
               text-align: center;
               border-radius: 10px;
+              font-family: "Saira Stencil One", sans-serif;
             }
             p {
               font-size: 1rem;
