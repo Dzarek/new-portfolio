@@ -55,9 +55,6 @@ const Portfolio = () => {
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  @media screen and (max-width: 800px) {
-    margin-top: -10vh;
-  }
 
   .portfolioCategory {
     display: flex;
@@ -104,6 +101,7 @@ const Wrapper = styled.div`
     margin: 10vh auto 0;
     @media screen and (max-width: 800px) {
       width: 100vw;
+      margin-bottom: -20vh;
     }
     .singleProject {
       display: flex;

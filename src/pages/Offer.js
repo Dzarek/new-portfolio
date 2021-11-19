@@ -65,7 +65,7 @@ const Wrapper = styled.div`
     @media screen and (max-width: 800px) {
       width: 95vw;
       flex-direction: column;
-      /* margin: 20vh auto 0; */
+      margin: 30vh auto -5vh;
     }
   }
   .singleOffer {

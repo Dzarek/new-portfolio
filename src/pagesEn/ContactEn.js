@@ -43,18 +43,24 @@ const ContactEn = () => {
 };
 const Wrapper = styled.div`
   min-height: 100vh;
+
   .contactContainer {
     margin: 30vh auto 0;
     width: 80vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media screen and (max-width: 800px) {
+      width: 100vw;
+      flex-direction: column;
+    }
     .phoneAndMail {
       width: 30%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+
       div {
         width: 65%;
         height: 20vh;
@@ -75,10 +81,35 @@ const Wrapper = styled.div`
           color: rgb(197, 103, 40);
         }
       }
+      @media screen and (max-width: 800px) {
+        width: 100vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        div {
+          width: 80%;
+          padding: 15px;
+          font-size: 1.3rem;
+          flex-direction: row;
+          height: auto;
+          justify-content: center;
+          h2 {
+            display: none;
+          }
+          .icon {
+            font-size: 1.2rem;
+            margin-right: 20px;
+          }
+        }
+      }
     }
     .form {
       width: 50%;
       margin-right: 5vw;
+      @media screen and (max-width: 800px) {
+        width: 100vw;
+        margin-right: 0;
+        margin-top: 10vh;
+      }
     }
   }
 `;

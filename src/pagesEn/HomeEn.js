@@ -40,6 +40,9 @@ const Wrapper = styled.div`
   width: 80vw;
   min-height: 100vh;
   position: relative;
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+  }
   .headerContainer {
     width: 100%;
     height: 100vh;
@@ -73,6 +76,14 @@ const Wrapper = styled.div`
             left: 65%;
           }
         }
+        @media screen and (max-width: 800px) {
+          height: 60vh;
+          @keyframes imgMove {
+            100% {
+              left: 50%;
+            }
+          }
+        }
       }
       .info {
         color: white;
@@ -90,6 +101,22 @@ const Wrapper = styled.div`
           font-size: 2rem;
           margin-top: 3vh;
         }
+        @media screen and (max-width: 800px) {
+          width: 90%;
+          margin: 0 auto;
+          align-items: center;
+          text-align: center;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 10vh;
+          h2 {
+            font-size: 2rem;
+          }
+          h4 {
+            font-size: 1.7rem;
+            margin-top: 3vh;
+          }
+        }
 
         .hireBtn {
           margin: 15vh auto 0;
@@ -103,6 +130,10 @@ const Wrapper = styled.div`
           color: white;
           transition: 0.3s;
           cursor: pointer;
+          @media screen and (max-width: 800px) {
+            margin: 55vh auto 0;
+            padding: 10px;
+          }
           button {
             background: transparent;
             border: none;
