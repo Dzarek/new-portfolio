@@ -135,7 +135,7 @@ const Wrapper = styled.div`
           filter: brightness(1);
           width: 100vw;
           position: static;
-          height: 40vh;
+          height: 35vh;
           border-radius: 5px 5px 0 0;
         }
       }
@@ -190,6 +190,8 @@ const Wrapper = styled.div`
             padding: 5px 10px;
             margin: 0 5px;
             text-transform: uppercase;
+            font-family: "Saira Stencil One", sans-serif;
+            font-size: 0.8rem;
           }
         }
         .seeProject {

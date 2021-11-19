@@ -27,9 +27,7 @@ const Home = () => {
               smooth={true}
               duration={1000}
             >
-              <button>
-                <p>zatrudni mnie</p>
-              </button>
+              zatrudni mnie
             </Link>
           </div>
         </div>
@@ -124,7 +122,7 @@ const Wrapper = styled.div`
           margin: 15vh auto 0;
           padding: 1vw 1.5vw;
           text-transform: uppercase;
-          font-family: "Mirza", sans-serif;
+          font-family: "Saira Stencil One", sans-serif;
           font-size: 1.3rem;
           border-radius: 10px;
           border: 1px solid white;
@@ -137,32 +135,12 @@ const Wrapper = styled.div`
           align-items: center;
           @media screen and (max-width: 800px) {
             margin: 55vh auto 0;
-            padding: 0;
-          }
-          button {
-            background: transparent;
-            border: none;
-            color: white;
-            text-transform: uppercase;
-            font-family: "Mirza", sans-serif;
-            font-size: 1.3rem;
-            transition: 0.3s;
-            cursor: pointer;
             padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* @media screen and (max-width: 800px) {
-              display: inline-block;
-              vertical-align: middle;
-              line-height: normal;
-            } */
+            font-size: 1rem;
           }
           :hover {
             background: white;
-            button {
-              color: black;
-            }
+            color: black;
           }
         }
       }

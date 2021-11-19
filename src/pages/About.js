@@ -38,11 +38,10 @@ const About = () => {
               Specjalizuje się w tworzeniu stron internetowych i aplikacji w
               języku JavaScript.
             </p>
-            {/* <button> */}
+
             <Link to="../images/JarosławJanasCV.pdf" target="_blank" download>
               Pobierz CV
             </Link>
-            {/* </button> */}
           </div>
         </div>
         <div data-aos="fade-left" className="personal-info-list">
@@ -239,7 +238,13 @@ const Wrapper = styled.div`
   min-height: 370vh;
   padding: 10vh 0;
   @media screen and (max-width: 800px) {
+    min-height: 650vh;
+  }
+  @media screen and (max-width: 400px) {
     min-height: 670vh;
+  }
+  @media screen and (max-width: 320px) {
+    min-height: 700vh;
   }
 
   .main-info {
@@ -288,19 +293,7 @@ const Wrapper = styled.div`
         text-align: justify;
         margin: 3vh auto 10vh;
       }
-      /* button {
-        font-family: "Mirza", sans-serif;
-        font-size: 1.3rem;
-        padding: 0.7rem 2rem;
-        margin: 0 auto;
-        background: transparent;
-        border: 2px solid rgb(197, 103, 40);
-        transition: 0.4s;
-        border-radius: 10px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center; */
+
       a {
         font-family: "Saira Stencil One", sans-serif;
         font-size: 1.3rem;
@@ -321,20 +314,10 @@ const Wrapper = styled.div`
           color: white;
         }
       }
-      /* :hover {
-          background: rgb(197, 103, 40);
-          a {
-            color: white;
-          }
-        } */
-      /* } */
+
       @media screen and (max-width: 800px) {
         width: 90%;
         height: auto;
-
-        /* button {
-          margin: -2vh auto 7vh;
-        } */
         a {
           width: 150px;
           height: 50px;
@@ -574,12 +557,13 @@ const Wrapper = styled.div`
               font-size: 1.5rem;
             }
             h6 {
-              font-size: 1.1rem;
+              font-size: 0.9rem;
               background: #222;
-              width: 35%;
+              width: 40%;
               padding: 3px;
               text-align: center;
               border-radius: 10px;
+              font-family: "Saira Stencil One", sans-serif;
             }
             p {
               font-size: 1rem;
