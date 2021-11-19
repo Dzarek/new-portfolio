@@ -27,7 +27,7 @@ const HomeEn = () => {
               smooth={true}
               duration={1000}
             >
-              <button>hire me</button>
+              hire me
             </Link>
           </div>
         </div>

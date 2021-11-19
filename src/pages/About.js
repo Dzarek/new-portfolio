@@ -240,6 +240,9 @@ const Wrapper = styled.div`
   @media screen and (max-width: 800px) {
     min-height: 650vh;
   }
+  @media screen and (max-width: 500px) and (max-height: 900px) {
+    min-height: 640vh;
+  }
   @media screen and (max-width: 400px) {
     min-height: 670vh;
   }

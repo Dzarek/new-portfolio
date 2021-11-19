@@ -37,11 +37,9 @@ const AboutEn = () => {
               to be a better Web-Developer every day. My specialization is
               creating websites and applications in JavaScript language.
             </p>
-            <button>
-              <Link to="../images/JarosławJanasCV.pdf" target="_blank" download>
-                Download CV
-              </Link>
-            </button>
+            <Link to="../images/JarosławJanasCV.pdf" target="_blank" download>
+              Download CV
+            </Link>
           </div>
         </div>
         <div data-aos="fade-left" className="personal-info-list">
