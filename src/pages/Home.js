@@ -136,8 +136,8 @@ const Wrapper = styled.div`
           @media screen and (max-width: 800px) {
             margin: 55vh auto 0;
             padding: 0px 20px;
-            vertical-align: middle;
-            line-height: normal;
+            /* vertical-align: middle; */
+            line-height: 4rem;
             height: 4rem;
           }
           button {
