@@ -263,6 +263,7 @@ const Wrapper = styled.div`
         flex-direction: column-reverse;
         img {
           width: 90%;
+          height: 50vh;
         }
       }
     }
