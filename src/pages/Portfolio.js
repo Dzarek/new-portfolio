@@ -54,7 +54,7 @@ const Portfolio = () => {
 };
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  /* min-height: 100vh; */
 
   .portfolioCategory {
     display: flex;

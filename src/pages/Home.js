@@ -27,7 +27,7 @@ const Home = () => {
               smooth={true}
               duration={1000}
             >
-              zatrudni mnie
+              zatrudnij mnie
             </Link>
           </div>
         </div>

@@ -48,6 +48,7 @@ const Offer = () => {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  position: relative;
   .title {
     h1 {
       width: 100%;
@@ -56,6 +57,7 @@ const Wrapper = styled.div`
     }
   }
   .offerContent {
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
