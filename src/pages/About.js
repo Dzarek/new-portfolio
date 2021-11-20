@@ -21,8 +21,6 @@ const About = () => {
 
   return (
     <Wrapper id="aboutMe" className="main-page">
-      {/* <div className="main-page"> */}
-      {/* <Wrapper id="aboutMe"> */}
       <div className="title">
         <h1>Curriculum Vitae</h1>
         <h2>Kim jestem?</h2>
@@ -233,7 +231,6 @@ const About = () => {
         </div>
       </div>
     </Wrapper>
-    // {/* </div> */}
   );
 };
 

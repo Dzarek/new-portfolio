@@ -233,21 +233,11 @@ const AboutEn = () => {
 };
 
 const Wrapper = styled.div`
-  min-height: 370vh;
-  padding: 10vh 0;
-  @media screen and (max-width: 800px) {
-    min-height: 650vh;
-  }
-  @media screen and (max-width: 400px) {
-    min-height: 670vh;
-  }
-  @media screen and (max-width: 320px) {
-    min-height: 700vh;
-  }
-
+  padding-bottom: 30vh;
+  position: relative;
   .main-info {
-    position: absolute;
-    top: 40vh;
+    position: relative;
+    top: 30vh;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -283,6 +273,7 @@ const Wrapper = styled.div`
       flex-direction: column;
       justify-content: center;
       font-family: "Mirza", sans-serif;
+      position: relative;
       h3 {
         font-size: 1.7rem;
       }
@@ -334,7 +325,7 @@ const Wrapper = styled.div`
       align-items: center;
       min-height: 45vh;
       text-align: center;
-
+      position: relative;
       p {
         text-align: left;
         padding-left: 3vw;
@@ -367,6 +358,7 @@ const Wrapper = styled.div`
       margin-top: 5vh;
       margin-bottom: 5vh;
       width: 100%;
+      position: relative;
       @media screen and (max-width: 800px) {
         width: 100vw;
       }
@@ -492,6 +484,7 @@ const Wrapper = styled.div`
       justify-content: space-between;
       align-items: center;
       width: 80%;
+      position: relative;
       @media screen and (max-width: 800px) {
         width: 100%;
         flex-direction: column;
@@ -580,5 +573,4 @@ const Wrapper = styled.div`
     }
   }
 `;
-
 export default AboutEn;

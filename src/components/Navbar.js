@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-// import { animateScroll as scroll } from "react-scroll";
-// import {
-//   Link,
-//   Button,
-//   Element,
-//   Events,
-//   animateScroll as scroll,
-//   scrollSpy,
-//   scroller,
-// } from "react-scroll";
 
 import { ImFacebook2, ImLinkedin, ImMail3, ImPhone } from "react-icons/im";
 import { AiFillHome, AiFillFolderOpen } from "react-icons/ai";
@@ -72,6 +62,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
+              offset={30}
             >
               <BsPersonFill className="icon" />
               {language === "polish" ? `O mnie` : `About Me`}
@@ -141,26 +132,6 @@ const Navbar = ({ setLanguage, language }) => {
 };
 
 const Wrapper = styled.div`
-  /* width: 20vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgb(7, 8, 18);
-  color: white;
-  z-index: 999;
-  opacity: 0.8; */
-  /* @media screen and (max-width: 800px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 80vw;
-    opacity: 1;
-    transition: 0.3s;
-    /* transform: translateX(-100vw); */
-  /* }  */
-
   .main-nav {
     display: flex;
     flex-direction: column;
@@ -180,7 +151,6 @@ const Wrapper = styled.div`
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      /* width: 80vw; */
       width: 100vw;
       opacity: 1;
       transition: 0.7s;
@@ -270,14 +240,12 @@ const Wrapper = styled.div`
           margin-left: 4vw;
           color: rgb(197, 103, 40);
           @media screen and (max-width: 800px) {
-            /* margin-left: 10vw; */
             margin-left: 0vw;
           }
         }
         :hover {
           margin-left: 4vw;
           @media screen and (max-width: 800px) {
-            /* margin-left: 10vw; */
             margin-left: 0vw;
           }
         }

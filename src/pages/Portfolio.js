@@ -54,8 +54,6 @@ const Portfolio = () => {
 };
 
 const Wrapper = styled.div`
-  /* min-height: 100vh; */
-
   .portfolioCategory {
     display: flex;
     justify-content: space-around;
