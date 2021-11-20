@@ -16,8 +16,8 @@ class MyForm extends Component {
 
     emailjs
       .sendForm(
-        "service_bluxqcj",
-        "template_rxmr3mj",
+        "service_d3t62hr",
+        "template_7efmahi",
         e.target,
         "user_hMGLIzZtMljfB9Ssj5uYj"
       )

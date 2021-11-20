@@ -194,7 +194,7 @@ const AboutEn = () => {
                 </p>
               </div>
               <div className="infoEandE">
-                <h6>2020-OBECNIE</h6>
+                <h6>2020-NOW</h6>
                 <h4>
                   Front-End Developer - Courses on the UDEMY e-learning platform
                 </h4>

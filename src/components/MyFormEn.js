@@ -16,8 +16,8 @@ class MyFormEn extends Component {
 
     emailjs
       .sendForm(
-        "service_bluxqcj",
-        "template_rxmr3mj",
+        "service_d3t62hr",
+        "template_7efmahi",
         e.target,
         "user_hMGLIzZtMljfB9Ssj5uYj"
       )
@@ -37,7 +37,7 @@ class MyFormEn extends Component {
       <>
         <Wrapper onSubmit={this.sendEmail}>
           <h1>
-            Write to me! <br /> I am always open to discussing new projects,.
+            Write to me! <br /> I am always open to discussing new projects.
           </h1>
           <div className="inputContainer">
             <input type="text" name="name" placeholder="Name" required />

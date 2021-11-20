@@ -13,8 +13,8 @@ const OfferEn = () => {
   return (
     <Wrapper id="offer" className="main-page">
       <div className="title">
-        <h1>Co oferuje?</h1>
-        <h2>Oferta</h2>
+        <h1>What I Do?</h1>
+        <h2>Service</h2>
       </div>
       <div data-aos="fade-down" className="offerContent">
         <div className="singleOffer">
