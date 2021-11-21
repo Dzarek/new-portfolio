@@ -39,7 +39,7 @@ const About = () => {
               języku JavaScript.
             </p>
 
-            <Link to="../images/JarosławJanasCV.pdf" target="_blank" download>
+            <Link to="../images/CV - Jarek.pdf" target="_blank" download>
               Pobierz CV
             </Link>
           </div>
@@ -160,11 +160,14 @@ const About = () => {
                 </p>
               </div>
               <div className="infoEandE">
-                <h6>2018-2019</h6>
-                <h4>Doradca Klienta - Salon Play</h4>
+                <h6>2018-2018</h6>
+                <h4>
+                  Żołnierz Wojska Polskiego - 22 Karpacki Batalion Piechoty
+                  Górskiej w Kłodzku
+                </h4>
                 <p>
-                  sprzedaż abonamentów i telefonów klientom sieci Play, dbanie o
-                  wizerunek sieci i wygląd salonu Play
+                  służba wojskowa i kształcenie się w zakresie działań Sił
+                  Zbrojnych RP, stopień kaprala
                 </p>
               </div>
             </div>
@@ -175,14 +178,12 @@ const About = () => {
                 </p>
               </div>
               <div className="infoEandE">
-                <h6>2018-2018</h6>
-                <h4>
-                  Żołnierz Wojska Polskiego - 22 Karpacki Batalion Piechoty
-                  Górskiej w Kłodzku
-                </h4>
+                <h6>2017-2018</h6>
+                <h4>Menager Hostelu - Hostel Heynow</h4>
                 <p>
-                  służba wojskowa i kształcenie się w zakresie działań Sił
-                  Zbrojnych RP, stopień kaprala
+                  administracja hostelu, rekrutacja pracowników, zarządzanie
+                  personelem, ustalanie grafiku zmian, przyjmowanie rezerwacji
+                  oraz obsługa gości, operowanie systemami rezerwacyjnymi
                 </p>
               </div>
             </div>
@@ -516,7 +517,7 @@ const Wrapper = styled.div`
           align-items: center;
           justify-content: space-between;
           @media screen and (max-width: 800px) {
-            min-height: 30vh;
+            min-height: 35vh;
             margin: 3vh auto;
             width: 90%;
           }

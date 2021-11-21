@@ -37,7 +37,11 @@ const AboutEn = () => {
               to be a better Web-Developer every day. My specialization is
               creating websites and applications in JavaScript language.
             </p>
-            <Link to="../images/JarosławJanasCV.pdf" target="_blank" download>
+            <Link
+              to="../images/CV - Jarek - Angielski.pdf"
+              target="_blank"
+              download
+            >
               Download CV
             </Link>
           </div>
@@ -158,11 +162,15 @@ const AboutEn = () => {
                 </p>
               </div>
               <div className="infoEandE">
-                <h6>2018-2019</h6>
-                <h4>Customer Advisor - Salon Play</h4>
+                <h6>2018-2018</h6>
+                <h4>
+                  Soldier of Polish Army - 22nd Mountain Infantry Battalion,
+                  Kłodzko
+                </h4>
                 <p>
-                  sale of subscriptions and mobile phones to customers of the
-                  Play network, taking care of the positive image of Play store
+                  military service for the country, improvement in: strategy,
+                  military leadership, shooting, rescue and defense against
+                  weapons of mass destruction
                 </p>
               </div>
             </div>
@@ -173,15 +181,12 @@ const AboutEn = () => {
                 </p>
               </div>
               <div className="infoEandE">
-                <h6>2018-2018</h6>
-                <h4>
-                  Soldier of Polish Army - 22nd Mountain Infantry Battalion,
-                  Kłodzko
-                </h4>
+                <h6>2017-2018</h6>
+                <h4>Hostel Menager</h4>
                 <p>
-                  military service for the country, improvement in: strategy,
-                  military leadership, shooting, rescue and defense against
-                  weapons of mass destruction
+                  hostel administrations, marketing, recruitment and management
+                  of new employees, operating reservation systems, taking care
+                  of the positive image of the hostel
                 </p>
               </div>
             </div>
