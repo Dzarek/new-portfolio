@@ -33,7 +33,7 @@ const About = () => {
               Nazywam się Jarosław Janas i jestem <br /> Front-End Developerem.
             </h3>
             <p>
-              Swoją pracę z kodem rozpoczołem w 2020 roku. Programowanie sprawia
+              Swoją pracę z kodem rozpocząłem w 2020 roku. Programowanie sprawia
               mi ogromną przyjemność i chcę być w tym lepszy każdego dnia.
               Specjalizuje się w tworzeniu stron internetowych i aplikacji w
               języku JavaScript.
