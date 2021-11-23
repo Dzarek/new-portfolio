@@ -82,57 +82,73 @@ const AboutEn = () => {
                 <p>Teamwork</p>
                 <div className="container">
                   <div data-aos="teamWork" className="skillItem teamWork">
-                    <p>85%</p>
+                    {/* <p>85%</p> */}
                   </div>
+                  <p>0%</p>
+                  <p>100%</p>
                 </div>
               </div>
               <div className="one-skill">
                 <p>Creativity</p>
                 <div className="container">
                   <div data-aos="creative" className="skillItem creative">
-                    <p>75%</p>
+                    {/* <p>75%</p> */}
                   </div>
+                  <p>0%</p>
+                  <p>100%</p>
                 </div>
               </div>
               <div className="one-skill">
                 <p>Self-motivation</p>
                 <div className="container">
                   <div data-aos="passion" className="skillItem passion">
-                    <p>95%</p>
+                    {/* <p>95%</p> */}
                   </div>
+                  <p>0%</p>
+                  <p>100%</p>
                 </div>
               </div>
             </section>
             <section className="professional-skills">
               <h5>Professional</h5>
               <div className="one-skill">
-                <p>HTML & CSS</p>
+                <p>HTML & CSS*</p>
                 <div className="container">
                   <div
                     data-aos="htmlCssSkill"
                     className="skillItem htmlCssSkill"
                   >
-                    <p>75%</p>
+                    {/* <p>75%</p> */}
                   </div>
+                  <p>0%</p>
+                  <p>100%</p>
                 </div>
               </div>
               <div className="one-skill">
-                <p>JAVASCRIPT</p>
+                <p>JAVASCRIPT*</p>
                 <div className="container">
                   <div data-aos="jsSkill" className="skillItem jsSkill">
-                    <p>65%</p>
+                    {/* <p>65%</p> */}
                   </div>
+                  <p>0%</p>
+                  <p>100%</p>
                 </div>
               </div>
               <div className="one-skill">
-                <p>REACT</p>
+                <p>REACT*</p>
                 <div className="container">
                   <div data-aos="reactSkill" className="skillItem reactSkill">
-                    <p>55%</p>
+                    {/* <p>55%</p> */}
                   </div>
+                  <p>0%</p>
+                  <p>100%</p>
                 </div>
               </div>
             </section>
+            <p className="skillsInfoStar">
+              *Why are skill bars getting smaller and bigger? Every day I know
+              more, but programming languages are also evolving.
+            </p>
           </div>
         </div>
         <h4 className="subTitle">Experience & Education</h4>
@@ -374,6 +390,7 @@ const Wrapper = styled.div`
         margin: 10vh auto;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         align-items: center;
         padding: 2vh 2vw;
         position: relative;
@@ -383,6 +400,9 @@ const Wrapper = styled.div`
           flex-direction: column;
           padding: 20px;
           height: auto;
+        }
+        .skillsInfoStar {
+          width: 100%;
         }
         section {
           width: 45%;
@@ -413,7 +433,7 @@ const Wrapper = styled.div`
             flex-direction: column;
             justify-content: center;
             p {
-              margin-bottom: 1.2rem;
+              margin-bottom: 1.3rem;
               font-size: 1.4rem;
             }
             .container {
@@ -424,18 +444,30 @@ const Wrapper = styled.div`
               @media screen and (max-width: 800px) {
                 width: 100%;
               }
+              p:nth-of-type(1) {
+                position: absolute;
+                left: 0;
+                top: -150%;
+                font-size: 0.8rem;
+              }
+              p:nth-of-type(2) {
+                position: absolute;
+                right: 0;
+                top: -150%;
+                font-size: 0.8rem;
+              }
             }
             .skillItem {
               border-radius: 5px;
               height: 100%;
               color: white;
               position: relative;
-              p {
+              /* p {
                 position: absolute;
                 right: 0;
                 top: -300%;
                 transform: translateX(50%);
-              }
+              } */
             }
 
             [data-aos="teamWork"] {
@@ -459,7 +491,7 @@ const Wrapper = styled.div`
                 width: 95%;
               }
             }
-            [data-aos="htmlCssSkill"] {
+            /* [data-aos="htmlCssSkill"] {
               width: 0;
               transition-property: width;
               &.aos-animate {
@@ -478,6 +510,48 @@ const Wrapper = styled.div`
               transition-property: width;
               &.aos-animate {
                 width: 55%;
+              }
+            } */
+          }
+          .htmlCssSkill {
+            animation: htmlCssUpAndDown 5s linear infinite;
+            @keyframes htmlCssUpAndDown {
+              0% {
+                width: 85%;
+              }
+              80% {
+                width: 50%;
+              }
+              100% {
+                width: 85%;
+              }
+            }
+          }
+          .jsSkill {
+            animation: jsUpAndDown 5s linear infinite;
+            @keyframes jsUpAndDown {
+              0% {
+                width: 50%;
+              }
+              80% {
+                width: 20%;
+              }
+              100% {
+                width: 50%;
+              }
+            }
+          }
+          .reactSkill {
+            animation: reactUpAndDown 5s linear infinite;
+            @keyframes reactUpAndDown {
+              0% {
+                width: 70%;
+              }
+              80% {
+                width: 30%;
+              }
+              100% {
+                width: 70%;
               }
             }
           }
