@@ -441,6 +441,7 @@ const Wrapper = styled.div`
               background: #000;
               height: 0.7rem;
               border-radius: 5px;
+              position: relative;
               @media screen and (max-width: 800px) {
                 width: 100%;
               }
