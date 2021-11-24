@@ -9,6 +9,7 @@ import serialQuizImg from "./images/serialQuizImg.jpg";
 import ninjaVsZombieImg from "./images/ninjaVsZomnieImg.jpg";
 import wisielecImg from "./images/wisielecImg.jpg";
 import memoryImg from "./images/memoryImg.jpg";
+import movieSearchImg from "./images/movieSearchImg.jpg";
 
 export const projects = [
   {
@@ -121,6 +122,16 @@ export const projects = [
     siteLink: "https://dzarek.github.io/memoryGame/",
     category: "gry",
   },
+  {
+    id: 12,
+    title: "Wyszukiwarka Filmów",
+    img: movieSearchImg,
+    info: "Nie wiesz co oglądać dzisiejszego wieczoru? Sprawdź jakie filmy są teraz na topie!",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/movieSearch",
+    siteLink: "https://dzarek-movie-search.netlify.app/",
+    category: "app",
+  },
 ];
 export const projectsEn = [
   {
@@ -232,5 +243,15 @@ export const projectsEn = [
     githubLink: "https://github.com/Dzarek/memoryGame",
     siteLink: "https://dzarek.github.io/memoryGame/",
     category: "game",
+  },
+  {
+    id: 12,
+    title: "Movie Search",
+    img: movieSearchImg,
+    info: "If you don't know what watching this evening you can check this list!",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/movieSearch",
+    siteLink: "https://dzarek-movie-search.netlify.app/",
+    category: "app",
   },
 ];
