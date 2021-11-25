@@ -130,7 +130,7 @@ export const projects = [
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/movieSearch",
     siteLink: "https://dzarek-movie-search.netlify.app/",
-    category: "app",
+    category: "aplikacje",
   },
 ];
 export const projectsEn = [
