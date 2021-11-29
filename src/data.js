@@ -4,7 +4,7 @@ import jjApartmentsImg from "./images/jjApartmentsImg.jpg";
 import jaroslawGotujeImg from "./images/jaroslawGotujeImg.jpg";
 import buyListImg from "./images/buyListImg.jpg";
 import cocktailsChillImg from "./images/cocktailsChillImg.jpg";
-import wheatherImg from "./images/wheatherImg.jpg";
+import weatherImg from "./images/weatherImg.jpg";
 import serialQuizImg from "./images/serialQuizImg.jpg";
 import ninjaVsZombieImg from "./images/ninjaVsZomnieImg.jpg";
 import wisielecImg from "./images/wisielecImg.jpg";
@@ -75,11 +75,11 @@ export const projects = [
   {
     id: 7,
     title: "Aplikacja Pogodowa",
-    img: wheatherImg,
+    img: weatherImg,
     info: "Aplikacja do sprawdzania pogody prawie dla każdego miasta na świecie.",
     technology: ["React"],
-    githubLink: "https://github.com/Dzarek/pogoda",
-    siteLink: "https://dzarek.github.io/pogoda/",
+    githubLink: "https://github.com/Dzarek/dzarek-pogoda",
+    siteLink: "https://dzarek-pogoda.netlify.app",
     category: "aplikacje",
   },
   {
@@ -197,11 +197,11 @@ export const projectsEn = [
   {
     id: 7,
     title: "Weather App",
-    img: wheatherImg,
+    img: weatherImg,
     info: "The weather checker app for almost every city in the world.",
     technology: ["React"],
-    githubLink: "https://github.com/Dzarek/pogoda",
-    siteLink: "https://dzarek.github.io/pogoda/",
+    githubLink: "https://github.com/Dzarek/dzarek-pogoda",
+    siteLink: "https://dzarek-pogoda.netlify.app",
     category: "app",
   },
   {
