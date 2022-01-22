@@ -145,6 +145,7 @@ const Wrapper = styled.div`
             margin: 55vh auto 0;
             padding: 10px 20px;
             font-size: 1rem;
+            background: rgba(0, 0, 0, 0.3);
           }
           :hover {
             background: white;

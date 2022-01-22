@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import aboutImg from "../images/aboutImg.jpg";
 import { FaGraduationCap } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import resume from "../JarosławJanasCV.pdf";
+
 const About = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -38,9 +40,14 @@ const About = () => {
               języku JavaScript.
             </p>
 
-            <Link to="../images/CV - Jarek.pdf" target="_blank" download>
+            {/* <Link to="../JarosławJanasCV.pdf" target="_blank" download>
               Pobierz CV
-            </Link>
+            </Link> */}
+
+            <a href={resume} download="Jarosław Janas CV.pdf">
+              {" "}
+              Pobierz CV{" "}
+            </a>
           </div>
         </div>
         <div data-aos="fade-left" className="personal-info-list">
@@ -276,6 +283,7 @@ const Wrapper = styled.div`
         border-radius: 20px;
         border: 2px solid rgb(9, 100, 100);
         margin-bottom: 3vh;
+        object-fit: cover;
       }
       @media screen and (max-width: 800px) {
         flex-direction: column-reverse;

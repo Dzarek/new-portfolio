@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import aboutImg from "../images/aboutImg.jpg";
 import { FaGraduationCap } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import resume from "../JarosławJanasCVEN.pdf";
+
 const AboutEn = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -37,13 +39,17 @@ const AboutEn = () => {
               to be a better Web-Developer every day. My specialization is
               creating websites and applications in JavaScript language.
             </p>
-            <Link
+            {/* <Link
               to="../images/CV - Jarek - Angielski.pdf"
               target="_blank"
               download
             >
               Download CV
-            </Link>
+            </Link> */}
+            <a href={resume} download="Jarosław Janas CVEN.pdf">
+              {" "}
+              Download CV
+            </a>
           </div>
         </div>
         <div data-aos="fade-left" className="personal-info-list">
@@ -279,6 +285,7 @@ const Wrapper = styled.div`
         border-radius: 20px;
         border: 2px solid rgb(9, 100, 100);
         margin-bottom: 3vh;
+        object-fit: cover;
       }
       @media screen and (max-width: 800px) {
         flex-direction: column-reverse;
