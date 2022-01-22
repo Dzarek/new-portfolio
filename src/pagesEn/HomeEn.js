@@ -66,21 +66,28 @@ const Wrapper = styled.div`
       img {
         height: 90vh;
         position: absolute;
-        bottom: 0;
-        left: 150%;
+        bottom: -2%;
+        /* left: 150%; */
+        left: 65%;
         transform: translateX(-50%);
-        opacity: 0.6;
-        animation: imgMove 2s forwards;
+        /* opacity: 0.6; */
+        opacity: 0;
+        animation: imgMove 5s forwards;
+        filter: brightness(0.8) saturate(0.8);
+        transform: translateX(-50%) rotate(-3deg);
         @keyframes imgMove {
           100% {
             left: 65%;
+            opacity: 0.6;
           }
         }
         @media screen and (max-width: 800px) {
-          height: 60vh;
+          height: 70vh;
+          left: 50%;
           @keyframes imgMove {
             100% {
               left: 50%;
+              opacity: 0.6;
             }
           }
         }

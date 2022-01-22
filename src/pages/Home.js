@@ -74,7 +74,7 @@ const Wrapper = styled.div`
         /* opacity: 0.6; */
         opacity: 0;
         animation: imgMove 5s forwards;
-        filter: brightness(0.5) saturate(0.7);
+        filter: brightness(0.8) saturate(0.8);
         transform: translateX(-50%) rotate(-3deg);
         @keyframes imgMove {
           100% {
