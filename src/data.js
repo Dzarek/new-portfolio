@@ -1,6 +1,6 @@
 import dorotaSzydelkujeImg from "./images/dorotaSzydelkujeImg.jpg";
 import robertTelefonyImg from "./images/robertTelefonyImg.jpg";
-import jjApartmentsImg from "./images/jjApartmentsImg.jpg";
+import hotelMiodzioImg from "./images/hotelMiodzioImg.jpg";
 import jaroslawGotujeImg from "./images/jaroslawGotujeImg.jpg";
 import buyListImg from "./images/buyListImg.jpg";
 import cocktailsChillImg from "./images/cocktailsChillImg.jpg";
@@ -14,32 +14,32 @@ import movieSearchImg from "./images/movieSearchImg.jpg";
 export const projects = [
   {
     id: 1,
+    title: "Telefony Gorlice",
+    img: robertTelefonyImg,
+    info: "Strona internetowa salonu GSM, w którym można kupić, sprzedać lub oddać do serwisu swój smartfon.",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/RobertTelefony",
+    siteLink: "https://www.telefony-gorlice.pl/",
+    category: "strony www",
+  },
+  {
+    id: 2,
+    title: "Hotel Miodzio",
+    img: hotelMiodzioImg,
+    info: "Strona internetowa hotelu *** do wynajęcia. Umożliwia sprawdzenie pokoi i ich filtrowanie,oglądnięcie galerii zdjęć oraz zarezerwowanie pokoju poprzez przekierowanie do booking.com",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/hotelMiodzio",
+    siteLink: "https://miodzio-hotel.netlify.app/",
+    category: "strony www",
+  },
+  {
+    id: 3,
     title: "Dorota Szydełkuje",
     img: dorotaSzydelkujeImg,
     info: "Strona internetowa stworzona dla osoby, która zajmuje się szydełkowaniem. Można tam zamówić produkty wykonane z włóczki takie jak: zabawki, pufy, koce itd.",
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/dorotaszydelkuje2",
     siteLink: "https://www.dorotaszydelkuje.com",
-    category: "strony www",
-  },
-  {
-    id: 2,
-    title: "Robert Kamiński - Telefony Komórkowe",
-    img: robertTelefonyImg,
-    info: "Strona internetowa salonu GSM, w którym można kupić, sprzedać lub oddać do serwisu swój smartfon.",
-    technology: ["React"],
-    githubLink: "https://github.com/Dzarek/RobertTelefony",
-    siteLink: "https://robert-telefony.netlify.app/",
-    category: "strony www",
-  },
-  {
-    id: 3,
-    title: "JJ Apartments",
-    img: jjApartmentsImg,
-    info: "Strona internetowa hotelu/apartamentów do wynajęcia. Umożliwia sprawdzenie pokoi i ich filtrowanie,oglądnięcie galerii zdjęć oraz zarezerwowanie pokoju poprzez przekierowanie do booking.com",
-    technology: ["React"],
-    githubLink: "https://github.com/Dzarek/jjapartments",
-    siteLink: "https://jjapartments.netlify.app/",
     category: "strony www",
   },
   {
