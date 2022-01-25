@@ -10,6 +10,7 @@ import ninjaVsZombieImg from "./images/ninjaVsZomnieImg.jpg";
 import wisielecImg from "./images/wisielecImg.jpg";
 import memoryImg from "./images/memoryImg.jpg";
 import movieSearchImg from "./images/movieSearchImg.jpg";
+import fotografImg from "./images/fotografIMG.jpg";
 
 export const projects = [
   {
@@ -34,6 +35,16 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Fotograf - Jan Kowalski",
+    img: fotografImg,
+    info: "Strona internetowa fotografa z galerią zdjęć w układzie Mansory i zmianą trybu dzienny/nocny.",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/fotografExample",
+    siteLink: "https://fotograf-jankowalski.netlify.app/",
+    category: "strony www",
+  },
+  {
+    id: 4,
     title: "Dorota Szydełkuje",
     img: dorotaSzydelkujeImg,
     info: "Strona internetowa stworzona dla osoby, która zajmuje się szydełkowaniem. Można tam zamówić produkty wykonane z włóczki takie jak: zabawki, pufy, koce itd.",
@@ -43,7 +54,7 @@ export const projects = [
     category: "strony www",
   },
   {
-    id: 4,
+    id: 44,
     title: "Jarosław Gotuje",
     img: jaroslawGotujeImg,
     info: "Strona internetowa z przepisami kulinarnymi mistrza kuchni - Jarosława",
@@ -156,6 +167,16 @@ export const projectsEn = [
   },
   {
     id: 3,
+    title: "Photographer - Jan Kowalski",
+    img: fotografImg,
+    info: "Website created for a photographer with gallery in Mansory type and day/night view.",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/fotografExample",
+    siteLink: "https://fotograf-jankowalski.netlify.app/",
+    category: "website",
+  },
+  {
+    id: 4,
     title: "Dorota Szydełkuje",
     img: dorotaSzydelkujeImg,
     info: "Website created for a person who does crocheting. There you can order yarn products such as toys, pouffes, blankets, etc.",
@@ -165,7 +186,7 @@ export const projectsEn = [
     category: "website",
   },
   {
-    id: 4,
+    id: 44,
     title: "Jarosław Gotuje",
     img: jaroslawGotujeImg,
     info: "Website with recipes of the master chef - Jarosław",
