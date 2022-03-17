@@ -20,7 +20,7 @@ export const projects = [
     info: "Strona internetowa salonu GSM, w którym można kupić, sprzedać lub oddać do serwisu swój smartfon.",
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
-    siteLink: "https://www.telefony-gorlice.pl/",
+    siteLink: "https://robert-telefony.netlify.app/",
     category: "strony www",
   },
   {
@@ -152,7 +152,7 @@ export const projectsEn = [
     info: "Website of a GSM salon where you can buy, sell or have your smartphone serviced.",
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
-    siteLink: "https://www.telefony-gorlice.pl/",
+    siteLink: "https://robert-telefony.netlify.app/",
     category: "website",
   },
   {
