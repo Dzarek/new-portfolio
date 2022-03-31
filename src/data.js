@@ -20,7 +20,7 @@ export const projects = [
     info: "Strona internetowa salonu GSM, w którym można kupić, sprzedać lub oddać do serwisu swój smartfon.",
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
-    siteLink: "https://robert-telefony.netlify.app/",
+    siteLink: "https://www.telefony-gorlice.pl/",
     category: "strony www",
   },
   {
@@ -68,9 +68,9 @@ export const projects = [
     title: "Lista Zakupów",
     img: buyListImg,
     info: "Aplikacja do zapisywania swojej listy zakupów. Bardzo pomaga w organizacji zakupów.",
-    technology: ["JavaScript"],
-    githubLink: "https://github.com/Dzarek/buyList",
-    siteLink: "https://buylist.netlify.app/",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/buyListReactMy",
+    siteLink: "https://zakupy-lista.netlify.app/",
     category: "aplikacje",
   },
   {
@@ -152,7 +152,7 @@ export const projectsEn = [
     info: "Website of a GSM salon where you can buy, sell or have your smartphone serviced.",
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
-    siteLink: "https://robert-telefony.netlify.app/",
+    siteLink: "https://www.telefony-gorlice.pl/",
     category: "website",
   },
   {
@@ -200,9 +200,9 @@ export const projectsEn = [
     title: "Buy List",
     img: buyListImg,
     info: "Application for saving your shopping list. It helps a lot in organizing purchases.",
-    technology: ["JavaScript"],
-    githubLink: "https://github.com/Dzarek/buyList",
-    siteLink: "https://buylist.netlify.app/",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/buyListReactMy",
+    siteLink: "https://zakupy-lista.netlify.app/",
     category: "app",
   },
   {
