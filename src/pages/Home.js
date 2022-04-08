@@ -19,8 +19,8 @@ const Home = () => {
           <img src={headerImg} alt="me" />
           <div className="info">
             <h2>WITAJ !</h2>
-            <h2>Jestem Jarosław Janas</h2>
-            <h4>Front-End Developer</h4>
+            <h1>Jestem Jarosław Janas</h1>
+            <h1 className="subtitle">Front-End Developer</h1>
             <Link
               className="hireBtn"
               to="contact"
@@ -102,10 +102,11 @@ const Wrapper = styled.div`
         flex-direction: column;
         justify-content: space-around;
         font-family: "Mirza", sans-serif;
-        h2 {
+        h2,
+        h1 {
           font-size: 3rem;
         }
-        h4 {
+        .subtitle {
           font-size: 2rem;
           margin-top: 3vh;
         }
