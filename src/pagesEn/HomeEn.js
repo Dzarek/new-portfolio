@@ -1,12 +1,24 @@
+import React from "react";
 import styled from "styled-components";
 import headerVideo from "../images/headerVideo.mp4";
 import headerImg from "../images/headerImg.png";
 import { Link } from "react-scroll";
+import beforeVideoJJ from "../images/beforeVideoJJ.jpg";
 
 const HomeEn = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
+  const onLoadedData = () => {
+    setIsVideoLoaded(true);
+  };
   return (
     <Wrapper id="home">
       <header className="headerContainer">
+        <img
+          src={beforeVideoJJ}
+          className="video-thumb"
+          alt="thumb"
+          style={{ opacity: isVideoLoaded ? 0 : 1 }}
+        />
         <video
           src={headerVideo}
           autoPlay
@@ -14,6 +26,8 @@ const HomeEn = () => {
           loop
           playsInline
           type="video/mp4"
+          onLoadedData={onLoadedData}
+          style={{ opacity: isVideoLoaded ? 1 : 0 }}
         ></video>
         <div className="headerInfo">
           <img src={headerImg} alt="me" />
@@ -46,7 +60,8 @@ const Wrapper = styled.div`
   .headerContainer {
     width: 100%;
     height: 100vh;
-    video {
+    video,
+    .video-thumb {
       width: 100vw;
       height: 100vh;
       object-fit: fill;
