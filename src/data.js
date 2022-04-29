@@ -1,6 +1,6 @@
 import dorotaSzydelkujeImg from "./images/dorotaSzydelkujeImg.jpg";
 import robertTelefonyImg from "./images/robertTelefonyImg.jpg";
-import hotelMiodzioImg from "./images/hotelMiodzioImg.jpg";
+import hotelMiodowaImg from "./images/hotelMiodowaImg.jpg";
 import jaroslawGotujeImg from "./images/jaroslawGotujeImg.jpg";
 import buyListImg from "./images/buyListImg.jpg";
 import cocktailsChillImg from "./images/cocktailsChillImg.jpg";
@@ -15,22 +15,22 @@ import fotografImg from "./images/fotografIMG.jpg";
 export const projects = [
   {
     id: 1,
+    title: "Hotel Miodowa",
+    img: hotelMiodowaImg,
+    info: "Strona internetowa hotelu *** z Krakowa. Umożliwia sprawdzenie pokoi i ich filtrowanie, oglądanie galerii zdjęć oraz zarezerwowanie pokoju.",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/hotel-miodowa",
+    siteLink: "https://www.hotelmiodowa.pl",
+    category: "strony www",
+  },
+  {
+    id: 2,
     title: "Telefony Gorlice",
     img: robertTelefonyImg,
     info: "Strona internetowa salonu GSM, w którym można kupić, sprzedać lub oddać do serwisu swój smartfon.",
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
     siteLink: "https://www.telefony-gorlice.pl/",
-    category: "strony www",
-  },
-  {
-    id: 2,
-    title: "Hotel Miodzio",
-    img: hotelMiodzioImg,
-    info: "Strona internetowa hotelu *** do wynajęcia. Umożliwia sprawdzenie pokoi i ich filtrowanie,oglądnięcie galerii zdjęć oraz zarezerwowanie pokoju poprzez przekierowanie do booking.com",
-    technology: ["React"],
-    githubLink: "https://github.com/Dzarek/hotelMiodzio",
-    siteLink: "https://miodzio-hotel.netlify.app/",
     category: "strony www",
   },
   {
@@ -147,22 +147,22 @@ export const projects = [
 export const projectsEn = [
   {
     id: 1,
+    title: "Hotel Miodowa",
+    img: hotelMiodowaImg,
+    info: "Website of the 3 stars hotel. It allows you to check rooms and filter them, view the photo gallery and book a room.",
+    technology: ["React"],
+    githubLink: "https://github.com/Dzarek/hotel-miodowa",
+    siteLink: "https://www.hotelmiodowa.pl",
+    category: "website",
+  },
+  {
+    id: 2,
     title: "Telefony Gorlice",
     img: robertTelefonyImg,
     info: "Website of a GSM salon where you can buy, sell or have your smartphone serviced.",
     technology: ["React"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
     siteLink: "https://www.telefony-gorlice.pl/",
-    category: "website",
-  },
-  {
-    id: 2,
-    title: "Hotel Miodzio",
-    img: hotelMiodzioImg,
-    info: "Website of the hotel / apartments for rent. It allows you to check rooms and filter them, view the photo gallery and book a room by redirecting to booking.com",
-    technology: ["React"],
-    githubLink: "https://github.com/Dzarek/hotelMiodzio",
-    siteLink: "https://miodzio-hotel.netlify.app/",
     category: "website",
   },
   {
