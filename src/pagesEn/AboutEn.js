@@ -7,8 +7,9 @@ import { MdWork } from "react-icons/md";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import resume from "../JarosławJanasCVEN.pdf";
+import SkillsContainer from "../components/SkillsContainer";
 
-const AboutEn = () => {
+const AboutEn = ({ language }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -81,14 +82,14 @@ const AboutEn = () => {
         </div>
         <div className="skills">
           <h4 className="subTitle">My Skills</h4>
-          <div className="skills-container">
+          <SkillsContainer language={language} />
+          {/* <div className="skills-container">
             <section className="personal-skills">
               <h5>Personal</h5>
               <div className="one-skill">
                 <p>Teamwork</p>
                 <div className="container">
                   <div data-aos="teamWork" className="skillItem teamWork">
-                    {/* <p>85%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -98,7 +99,6 @@ const AboutEn = () => {
                 <p>Creativity</p>
                 <div className="container">
                   <div data-aos="creative" className="skillItem creative">
-                    {/* <p>75%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -108,7 +108,6 @@ const AboutEn = () => {
                 <p>Self-motivation</p>
                 <div className="container">
                   <div data-aos="passion" className="skillItem passion">
-                    {/* <p>95%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -124,7 +123,6 @@ const AboutEn = () => {
                     data-aos="htmlCssSkill"
                     className="skillItem htmlCssSkill"
                   >
-                    {/* <p>75%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -134,7 +132,6 @@ const AboutEn = () => {
                 <p>JAVASCRIPT*</p>
                 <div className="container">
                   <div data-aos="jsSkill" className="skillItem jsSkill">
-                    {/* <p>65%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -144,7 +141,6 @@ const AboutEn = () => {
                 <p>REACT*</p>
                 <div className="container">
                   <div data-aos="reactSkill" className="skillItem reactSkill">
-                    {/* <p>55%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -155,11 +151,28 @@ const AboutEn = () => {
               *Why are skill bars getting smaller and bigger? Every day I know
               more, but programming languages are also evolving.
             </p>
-          </div>
+          </div> */}
         </div>
         <h4 className="subTitle">Experience & Education</h4>
         <div data-aos="fade-left" className="experienceAndEducation">
           <div className="EandE">
+            <div className="oneEandE">
+              <div className="borderEandE">
+                <p>
+                  <MdWork />
+                </p>
+              </div>
+              <div className="infoEandE">
+                <h6>2021-NOW</h6>
+                <h4>Front-End Developer – Freelancer</h4>
+                <p>
+                  - https://www.hotelmiodowa.pl <br />
+                  - https://www.dorotaszydelkuje.pl <br />
+                  - https://www.telefony-gorlice.pl <br />-
+                  https://zakupy-lista.netlify.app/
+                </p>
+              </div>
+            </div>
             <div className="oneEandE">
               <div className="borderEandE">
                 <p>
@@ -196,22 +209,6 @@ const AboutEn = () => {
                 </p>
               </div>
             </div>
-            <div className="oneEandE">
-              <div className="borderEandE">
-                <p>
-                  <MdWork />
-                </p>
-              </div>
-              <div className="infoEandE">
-                <h6>2017-2018</h6>
-                <h4>Hostel Menager</h4>
-                <p>
-                  hostel administrations, marketing, recruitment and management
-                  of new employees, operating reservation systems, taking care
-                  of the positive image of the hostel
-                </p>
-              </div>
-            </div>
           </div>
           <div className="EandE">
             <div className="oneEandE">
@@ -225,7 +222,7 @@ const AboutEn = () => {
                 <h4>
                   Front-End Developer - Courses on the UDEMY e-learning platform
                 </h4>
-                <p>HTML, CSS, JAVASRIPT, REACT, NODE, GATSBY</p>
+                <p>HTML, CSS, JAVASRIPT, REACT, REDUX, NEXT.JS</p>
               </div>
             </div>
             <div className="oneEandE">
@@ -393,19 +390,20 @@ const Wrapper = styled.div`
       }
       .skills-container {
         width: 90%;
-        background: rgb(23, 22, 36);
+        /* background: rgb(23, 22, 36); */
+        border: 5px solid rgb(23, 22, 36);
         margin: 10vh auto;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
         align-items: center;
-        padding: 2vh 2vw;
+        /* padding: 2vh 1vw; */
         position: relative;
         min-height: 60vh;
         @media screen and (max-width: 800px) {
           width: 100%;
           flex-direction: column;
-          padding: 20px;
+          /* padding: 0px; */
           height: auto;
         }
         .skillsInfoStar {
@@ -599,7 +597,7 @@ const Wrapper = styled.div`
           height: 25vh;
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: left;
           @media screen and (max-width: 800px) {
             min-height: 30vh;
             margin: 3vh auto;
@@ -643,6 +641,7 @@ const Wrapper = styled.div`
               text-align: center;
               border-radius: 10px;
               font-family: "Saira Stencil One", sans-serif;
+              font-weight: 400;
             }
             p {
               font-size: 1rem;

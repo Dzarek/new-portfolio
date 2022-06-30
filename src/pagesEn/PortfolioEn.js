@@ -192,6 +192,7 @@ const Wrapper = styled.div`
             text-transform: uppercase;
             font-family: "Saira Stencil One", sans-serif;
             font-size: 0.8rem;
+            font-weight: 400;
           }
         }
         .seeProject {

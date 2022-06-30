@@ -76,6 +76,9 @@ const Wrapper = styled.div`
         font-size: 0.9rem;
         border: 1px solid white;
         font-family: "Saira Stencil One", sans-serif;
+        h2 {
+          font-weight: 400;
+        }
         .icon {
           font-size: 1.6rem;
           color: rgb(197, 103, 40);

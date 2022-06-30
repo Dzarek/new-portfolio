@@ -30,7 +30,7 @@ function App() {
         {language === "polish" ? (
           <div className="appContent">
             <Home />
-            <About />
+            <About language={language} />
             <Offer />
             <Portfolio />
             <Contact />
@@ -38,7 +38,7 @@ function App() {
         ) : (
           <div className="appContent">
             <HomeEn />
-            <AboutEn />
+            <AboutEn language={language} />
             <OfferEn />
             <PortfolioEn />
             <ContactEn />

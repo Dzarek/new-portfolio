@@ -62,7 +62,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
-              offset={30}
+              // offset={30}
             >
               <BsPersonFill className="icon" />
               {language === "polish" ? `O mnie` : `About Me`}
@@ -74,6 +74,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
+              // offset={30}
             >
               <FaCode className="icon" />
               {language === "polish" ? `Oferta` : `Service`}

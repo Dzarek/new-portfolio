@@ -69,7 +69,7 @@ const Wrapper = styled.div`
       position: fixed;
       top: 0;
       left: 0;
-      /* filter: brightness(1.5); */
+      filter: brightness(0.4);
     }
     .headerInfo {
       width: 100%;
@@ -78,7 +78,7 @@ const Wrapper = styled.div`
       position: absolute;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.6);
+      /* background: rgba(0, 0, 0, 0.5); */
       img {
         height: 90vh;
         position: absolute;
@@ -158,7 +158,7 @@ const Wrapper = styled.div`
           justify-content: center;
           align-items: center;
           @media screen and (max-width: 800px) {
-            margin: 55vh auto 0;
+            margin: 45vh auto 0;
             padding: 10px 20px;
             font-size: 1rem;
             background: rgba(0, 0, 0, 0.3);

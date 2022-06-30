@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { ImGithub } from "react-icons/im";
-import { FaShareSquare } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import { FaPlayCircle } from "react-icons/fa";
 
 const SingleProjectEn = ({ items }) => {
   useEffect(() => {
@@ -25,10 +25,10 @@ const SingleProjectEn = ({ items }) => {
               </div>
               <div className="seeProject">
                 <a href={githubLink}>
-                  <ImGithub />
+                  <FaCode />
                 </a>
                 <a href={siteLink}>
-                  <FaShareSquare />
+                  <FaPlayCircle />
                 </a>
               </div>
             </div>

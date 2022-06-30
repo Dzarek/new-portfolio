@@ -8,7 +8,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import resume from "../JarosławJanasCV.pdf";
 
-const About = () => {
+import SkillsContainer from "../components/SkillsContainer";
+
+const About = ({ language }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -79,6 +81,10 @@ const About = () => {
         </div>
         <div className="skills">
           <h4 className="subTitle">Moje Umiejętności</h4>
+          <SkillsContainer language={language} />
+        </div>
+        {/* <div className="skills">
+          <h4 className="subTitle">Moje Umiejętności</h4>
           <div className="skills-container">
             <section className="personal-skills">
               <h5>Personalne</h5>
@@ -86,7 +92,6 @@ const About = () => {
                 <p>Praca Zespołowa</p>
                 <div className="container">
                   <div data-aos="teamWork" className="skillItem teamWork">
-                    {/* <p>85%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -96,7 +101,6 @@ const About = () => {
                 <p>Kreatywność</p>
                 <div className="container">
                   <div data-aos="creative" className="skillItem creative">
-                    {/* <p>75%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -106,7 +110,6 @@ const About = () => {
                 <p>Zaangażowanie</p>
                 <div className="container">
                   <div data-aos="passion" className="skillItem passion">
-                    {/* <p>95%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -122,7 +125,6 @@ const About = () => {
                     data-aos="htmlCssSkill"
                     className="skillItem htmlCssSkill"
                   >
-                    {/* <p>75%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -132,7 +134,6 @@ const About = () => {
                 <p>JAVASCRIPT*</p>
                 <div className="container">
                   <div data-aos="jsSkill" className="skillItem jsSkill">
-                    {/* <p>65%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -142,7 +143,6 @@ const About = () => {
                 <p>REACT*</p>
                 <div className="container">
                   <div data-aos="reactSkill" className="skillItem reactSkill">
-                    {/* <p>55%</p> */}
                   </div>
                   <p>0%</p>
                   <p>100%</p>
@@ -154,10 +154,27 @@ const About = () => {
               umiem więcej to również i języki programowania się rozwijają.
             </p>
           </div>
-        </div>
+        </div> */}
         <h4 className="subTitle">Doświadczenie i Edukacja</h4>
         <div data-aos="fade-left" className="experienceAndEducation">
           <div className="EandE">
+            <div className="oneEandE">
+              <div className="borderEandE">
+                <p>
+                  <MdWork />
+                </p>
+              </div>
+              <div className="infoEandE">
+                <h6>2021-OBECNIE</h6>
+                <h4>Front-End Developer – Freelancer</h4>
+                <p>
+                  - https://www.hotelmiodowa.pl <br />
+                  - https://www.dorotaszydelkuje.pl <br />
+                  - https://www.telefony-gorlice.pl <br />-
+                  https://zakupy-lista.netlify.app/
+                </p>
+              </div>
+            </div>
             <div className="oneEandE">
               <div className="borderEandE">
                 <p>
@@ -193,7 +210,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="oneEandE">
+            {/* <div className="oneEandE">
               <div className="borderEandE">
                 <p>
                   <MdWork />
@@ -208,7 +225,7 @@ const About = () => {
                   oraz obsługa gości, operowanie systemami rezerwacyjnymi
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="EandE">
             <div className="oneEandE">
@@ -220,7 +237,7 @@ const About = () => {
               <div className="infoEandE">
                 <h6>2020-OBECNIE</h6>
                 <h4>Programista - Kursy na platformie e-learningowej UDEMY</h4>
-                <p>HTML, CSS, JAVASRIPT, REACT, NODE, GATSBY</p>
+                <p>HTML, CSS, JAVASRIPT, REACT, REDUX, NEXT.JS</p>
               </div>
             </div>
             <div className="oneEandE">
@@ -391,19 +408,20 @@ const Wrapper = styled.div`
       }
       .skills-container {
         width: 90%;
-        background: rgb(23, 22, 36);
+        /* background: rgb(23, 22, 36); */
+        border: 5px solid rgb(23, 22, 36);
         margin: 10vh auto;
         display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
         align-items: center;
-        padding: 2vh 2vw;
+        /* padding: 2vh 1vw; */
         position: relative;
         min-height: 60vh;
         @media screen and (max-width: 800px) {
           width: 100%;
           flex-direction: column;
-          padding: 20px;
+          /* padding: 0px; */
           height: auto;
         }
         .skillsInfoStar {
@@ -477,7 +495,7 @@ const Wrapper = styled.div`
               } */
             }
 
-            [data-aos="teamWork"] {
+            /* [data-aos="teamWork"] {
               width: 0;
               transition-property: width;
               &.aos-animate {
@@ -497,7 +515,7 @@ const Wrapper = styled.div`
               &.aos-animate {
                 width: 95%;
               }
-            }
+            } */
             /* [data-aos="htmlCssSkill"] {
               width: 0;
               transition-property: width;
@@ -520,7 +538,7 @@ const Wrapper = styled.div`
               }
             } */
           }
-          .htmlCssSkill {
+          /* .htmlCssSkill {
             animation: htmlCssUpAndDown 5s linear infinite;
             @keyframes htmlCssUpAndDown {
               0% {
@@ -561,7 +579,7 @@ const Wrapper = styled.div`
                 width: 70%;
               }
             }
-          }
+          } */
         }
       }
     }
@@ -598,7 +616,7 @@ const Wrapper = styled.div`
           height: 25vh;
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: left;
           @media screen and (max-width: 800px) {
             min-height: 35vh;
             margin: 3vh auto;
@@ -642,6 +660,7 @@ const Wrapper = styled.div`
               text-align: center;
               border-radius: 10px;
               font-family: "Saira Stencil One", sans-serif;
+              font-weight: 400;
             }
             p {
               font-size: 1rem;
