@@ -23,6 +23,18 @@ const Navbar = ({ setLanguage, language }) => {
     setShowPhone(false);
     setShowEmail(!showEmail);
   };
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 800;
 
   return (
     <>
@@ -62,7 +74,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
-              // offset={30}
+              offset={isMobile && 30}
             >
               <BsPersonFill className="icon" />
               {language === "polish" ? `O mnie` : `About Me`}
@@ -74,7 +86,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
-              // offset={30}
+              offset={isMobile && 30}
             >
               <FaCode className="icon" />
               {language === "polish" ? `Oferta` : `Service`}
@@ -86,6 +98,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
+              offset={isMobile && 30}
             >
               <AiFillFolderOpen className="icon" /> Portfolio
             </Link>
@@ -96,6 +109,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
+              offset={isMobile && 30}
             >
               <RiMailOpenFill className="icon" />
               {language === "polish" ? `Kontakt` : `Contact`}
