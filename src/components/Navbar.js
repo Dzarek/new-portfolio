@@ -74,7 +74,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
-              offset={isMobile && 40}
+              offset={isMobile && 50}
             >
               <BsPersonFill className="icon" />
               {language === "polish" ? `O mnie` : `About Me`}
@@ -86,7 +86,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
-              offset={isMobile && 40}
+              offset={isMobile && 50}
             >
               <FaCode className="icon" />
               {language === "polish" ? `Oferta` : `Service`}
@@ -98,7 +98,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
-              offset={isMobile && 40}
+              offset={isMobile && 50}
             >
               <AiFillFolderOpen className="icon" /> Portfolio
             </Link>
@@ -109,7 +109,7 @@ const Navbar = ({ setLanguage, language }) => {
               activeClass="active"
               spy={true}
               onClick={() => setShowMenu(false)}
-              offset={isMobile && 40}
+              offset={isMobile && 50}
             >
               <RiMailOpenFill className="icon" />
               {language === "polish" ? `Kontakt` : `Contact`}
