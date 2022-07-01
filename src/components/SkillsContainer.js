@@ -1,10 +1,10 @@
 import cssIcon from "../images/skillIcons/css.png";
-import gitIcon from "../images/skillIcons/git.png";
 import htmlIcon from "../images/skillIcons/html.png";
 import jsIcon from "../images/skillIcons/js.png";
 import nextjsIcon from "../images/skillIcons/nextJS.png";
 import reactIcon from "../images/skillIcons/react.png";
 import reduxIcon from "../images/skillIcons/redux.png";
+import reactRouterIcon from "../images/skillIcons/reactRouter.png";
 import styleComponentsIcon from "../images/skillIcons/styleComponents.png";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
@@ -26,10 +26,10 @@ const SkillsContainer = ({ language }) => {
   });
   const handleGIT = () => {
     setDetailContent({
-      title: "GIT",
-      info: "System kontroli wersji GIT - niezbędny w pracy programisty. Używany w każdym projekcie.",
+      title: "REACT ROUTER",
+      info: "Jest to biblioteka JS która pomaga web developerom stworzyć Single Page Aplication. Dzięki temu narzędziu łatwo stworzyć szybką i przyjemną navigacje dla całej aplikacji.",
       infoEn:
-        "GIT version control system - it is necessary in the programmer work. Used in every project.",
+        "It is a JS library that helps a web developer to create a Single Page Aplication. With this tool, it's easy to create a quick and comfortable navigation for the entire application.",
       level: 4,
     });
   };
@@ -106,8 +106,8 @@ const SkillsContainer = ({ language }) => {
       >
         <img
           onClick={handleGIT}
-          className={detailContent.title === "GIT" && "activeIMG"}
-          src={gitIcon}
+          className={detailContent.title === "REACT ROUTER" && "activeIMG"}
+          src={reactRouterIcon}
           alt="git"
         />
         <img
