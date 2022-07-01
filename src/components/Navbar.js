@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
 import { ImFacebook2, ImLinkedin, ImMail3, ImPhone } from "react-icons/im";
 import { AiFillHome, AiFillFolderOpen } from "react-icons/ai";
@@ -23,18 +24,25 @@ const Navbar = ({ setLanguage, language }) => {
     setShowPhone(false);
     setShowEmail(!showEmail);
   };
-  const [width, setWidth] = useState(window.innerWidth);
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
+  // const [width, setWidth] = useState(window.innerWidth);
+  // function handleWindowSizeChange() {
+  //   setWidth(window.innerWidth);
+  // }
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleWindowSizeChange);
+  //   return () => {
+  //     window.removeEventListener("resize", handleWindowSizeChange);
+  //   };
+  // }, []);
 
-  const isMobile = width <= 800;
+  const handleScroll = () => {
+    setShowMenu(false);
+    setTimeout(() => {
+      scroll.scrollMore(1);
+    }, 1100);
+  };
+
+  // const isMobile = width <= 800;
 
   return (
     <>
@@ -73,8 +81,8 @@ const Navbar = ({ setLanguage, language }) => {
               duration={1000}
               activeClass="active"
               spy={true}
-              onClick={() => setShowMenu(false)}
-              offset={isMobile && 70}
+              onClick={handleScroll}
+              // offset={isMobile && 70}
             >
               <BsPersonFill className="icon" />
               {language === "polish" ? `O mnie` : `About Me`}
@@ -85,8 +93,8 @@ const Navbar = ({ setLanguage, language }) => {
               duration={1000}
               activeClass="active"
               spy={true}
-              onClick={() => setShowMenu(false)}
-              offset={isMobile && 70}
+              onClick={handleScroll}
+              // offset={isMobile && 70}
             >
               <FaCode className="icon" />
               {language === "polish" ? `Oferta` : `Service`}
@@ -97,8 +105,8 @@ const Navbar = ({ setLanguage, language }) => {
               duration={1000}
               activeClass="active"
               spy={true}
-              onClick={() => setShowMenu(false)}
-              offset={isMobile && 70}
+              onClick={handleScroll}
+              // offset={isMobile && 70}
             >
               <AiFillFolderOpen className="icon" /> Portfolio
             </Link>
@@ -108,8 +116,8 @@ const Navbar = ({ setLanguage, language }) => {
               duration={1000}
               activeClass="active"
               spy={true}
-              onClick={() => setShowMenu(false)}
-              offset={isMobile && 70}
+              onClick={handleScroll}
+              // offset={isMobile && 70}
             >
               <RiMailOpenFill className="icon" />
               {language === "polish" ? `Kontakt` : `Contact`}
