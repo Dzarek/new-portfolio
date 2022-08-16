@@ -24,9 +24,11 @@ const SingleProject = ({ items }) => {
                 })}
               </div>
               <div className="seeProject">
-                <a href={githubLink}>
-                  <FaCode />
-                </a>
+                {githubLink && (
+                  <a href={githubLink}>
+                    <FaCode />
+                  </a>
+                )}
                 <a href={siteLink}>
                   <FaPlayCircle />
                 </a>
