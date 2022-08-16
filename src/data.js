@@ -10,7 +10,7 @@ import ninjaVsZombieImg from "./images/ninjaVsZomnieImg.jpg";
 import wisielecImg from "./images/wisielecImg.jpg";
 import memoryImg from "./images/memoryImg.jpg";
 import movieSearchImg from "./images/movieSearchImg.jpg";
-import fotografImg from "./images/fotografIMG.jpg";
+import focuseyeImg from "./images/focuseyeImg.jpg";
 
 export const projects = [
   {
@@ -36,7 +36,7 @@ export const projects = [
   {
     id: 3,
     title: "FocusEye",
-    img: fotografImg,
+    img: focuseyeImg,
     info: "Strona internetowa fotografa z bogatą ofertą, galerią zdjęć w układzie Mansory oraz blogiem. Strona pobiera API z CMS Wordpress.",
     technology: ["Next.js, Wordpress"],
     githubLink: "",
@@ -168,7 +168,7 @@ export const projectsEn = [
   {
     id: 3,
     title: "FocusEye",
-    img: fotografImg,
+    img: focuseyeImg,
     info: "Website created for a photographer with offers, gallery in Mansory type and blog. It takes API from CMS Wordpress.",
     technology: ["Next.js, Wordpress"],
     githubLink: "",
