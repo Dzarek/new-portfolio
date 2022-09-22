@@ -166,10 +166,20 @@ const AboutEn = ({ language }) => {
                 <h6>2021-NOW</h6>
                 <h4>Front-End Developer – Freelancer</h4>
                 <p>
-                  - https://www.hotelmiodowa.pl <br />
-                  - https://www.dorotaszydelkuje.pl <br />
-                  - https://www.telefony-gorlice.pl <br />-
-                  https://zakupy-lista.netlify.app/
+                  <a href="https://www.hotelmiodowa.pl">
+                    - https://www.hotelmiodowa.pl
+                  </a>
+                  <a href="https://www.focuseye.pl">
+                    - https://www.focuseye.pl
+                  </a>
+                  <a href="https://www.dorotaszydelkuje.pl ">
+                    - https://www.dorotaszydelkuje.pl{" "}
+                  </a>
+                  <a href="https://www.telefony-gorlice.pl">
+                    - https://www.telefony-gorlice.pl
+                  </a>
+                  {/* - https://www.pyszotka.pl */}
+                  {/*- https://zakupy-lista.netlify.app/ */}
                 </p>
               </div>
             </div>
@@ -645,6 +655,13 @@ const Wrapper = styled.div`
             }
             p {
               font-size: 1rem;
+              display: flex;
+              flex-direction: column;
+              a {
+                color: #fff;
+                text-decoration: none;
+                cursor: pointer;
+              }
             }
             @media screen and (max-width: 800px) {
               h4 {
