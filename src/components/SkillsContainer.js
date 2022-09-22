@@ -7,7 +7,6 @@ import reduxIcon from "../images/skillIcons/redux.png";
 import reactRouterIcon from "../images/skillIcons/reactRouter.png";
 import styleComponentsIcon from "../images/skillIcons/styleComponents.png";
 import { FaStar, FaRegStar } from "react-icons/fa";
-
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import Aos from "aos";
@@ -252,9 +251,6 @@ const Wrapper = styled.div`
     }
     @media screen and (max-width: 800px) {
       width: 90vw;
-      /* position: absolute;
-      top: 0;
-      left: 0; */
       height: 40vh;
     }
   }

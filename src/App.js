@@ -2,21 +2,13 @@ import "./App.css";
 import styled from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useState } from "react";
-
 import Navbar from "./components/Navbar";
 import NavbarEn from "./components/NavbarEn";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Offer from "./pages/Offer";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-
-// import HomeEn from "./pagesEn/HomeEn";
-// import AboutEn from "./pagesEn/AboutEn";
-// import OfferEn from "./pagesEn/OfferEn";
-// import PortfolioEn from "./pagesEn/PortfolioEn";
-// import ContactEn from "./pagesEn/ContactEn";
 
 function App() {
   const [language, setLanguage] = useState(true);
@@ -28,7 +20,6 @@ function App() {
         ) : (
           <NavbarEn className="navbar" setLanguage={setLanguage} />
         )}
-        {/* {language === "polish" ? ( */}
         <div className="appContent">
           <Home language={language} />
           <About language={language} />
@@ -36,15 +27,6 @@ function App() {
           <Portfolio language={language} />
           <Contact language={language} />
         </div>
-        {/* ) : (
-          <div className="appContent">
-            <HomeEn />
-            <AboutEn language={language} />
-            <OfferEn />
-            <PortfolioEn />
-            <ContactEn />
-          </div>
-        )} */}
       </Router>
     </Wrapper>
   );

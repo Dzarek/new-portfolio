@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
-
 import { ImFacebook2, ImLinkedin, ImMail3, ImPhone } from "react-icons/im";
 import { AiFillHome, AiFillFolderOpen } from "react-icons/ai";
 import { BsPersonFill } from "react-icons/bs";
@@ -24,16 +23,6 @@ const Navbar = ({ setLanguage }) => {
     setShowPhone(false);
     setShowEmail(!showEmail);
   };
-  // const [width, setWidth] = useState(window.innerWidth);
-  // function handleWindowSizeChange() {
-  //   setWidth(window.innerWidth);
-  // }
-  // useEffect(() => {
-  //   window.addEventListener("resize", handleWindowSizeChange);
-  //   return () => {
-  //     window.removeEventListener("resize", handleWindowSizeChange);
-  //   };
-  // }, []);
 
   const handleScroll = () => {
     setShowMenu(false);
@@ -41,8 +30,6 @@ const Navbar = ({ setLanguage }) => {
       scroll.scrollMore(1);
     }, 1100);
   };
-
-  // const isMobile = width <= 800;
 
   return (
     <>
@@ -81,7 +68,6 @@ const Navbar = ({ setLanguage }) => {
               activeClass="active"
               spy={true}
               onClick={handleScroll}
-              // offset={isMobile && 70}
             >
               <BsPersonFill className="icon" />O mnie
             </Link>
@@ -92,7 +78,6 @@ const Navbar = ({ setLanguage }) => {
               activeClass="active"
               spy={true}
               onClick={handleScroll}
-              // offset={isMobile && 70}
             >
               <FaCode className="icon" />
               Oferta
@@ -104,7 +89,6 @@ const Navbar = ({ setLanguage }) => {
               activeClass="active"
               spy={true}
               onClick={handleScroll}
-              // offset={isMobile && 70}
             >
               <AiFillFolderOpen className="icon" /> Portfolio
             </Link>
