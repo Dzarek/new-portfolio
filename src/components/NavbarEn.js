@@ -11,7 +11,7 @@ import { RiMailOpenFill } from "react-icons/ri";
 import { HiMenu } from "react-icons/hi";
 import { FaArrowUp } from "react-icons/fa";
 
-const Navbar = ({ setLanguage }) => {
+const NavbarEn = ({ setLanguage }) => {
   const [showPhone, setShowPhone] = useState(false);
   const [showEmail, setShowEmail] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -72,7 +72,7 @@ const Navbar = ({ setLanguage }) => {
               spy={true}
               onClick={() => setShowMenu(false)}
             >
-              <AiFillHome className="icon" /> Strona Główna
+              <AiFillHome className="icon" /> Home
             </Link>
             <Link
               to="aboutMe"
@@ -83,7 +83,8 @@ const Navbar = ({ setLanguage }) => {
               onClick={handleScroll}
               // offset={isMobile && 70}
             >
-              <BsPersonFill className="icon" />O mnie
+              <BsPersonFill className="icon" />
+              About Me
             </Link>
             <Link
               to="offer"
@@ -95,7 +96,7 @@ const Navbar = ({ setLanguage }) => {
               // offset={isMobile && 70}
             >
               <FaCode className="icon" />
-              Oferta
+              Service
             </Link>
             <Link
               to="portfolio"
@@ -118,7 +119,7 @@ const Navbar = ({ setLanguage }) => {
               offset={10}
             >
               <RiMailOpenFill className="icon" />
-              Kontakt
+              Contact
             </Link>
             <div className="languages">
               <button onClick={() => setLanguage(true)}>PL</button>
@@ -130,7 +131,7 @@ const Navbar = ({ setLanguage }) => {
             <p>
               &copy; {new Date().getFullYear()} Jarosław Janas <br /> Front-End
               Developer <br />
-              Wszelkie Prawa Zastrzeżone
+              All Right Reserved
             </p>
           </footer>
         </div>
@@ -309,4 +310,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export default Navbar;
+export default NavbarEn;

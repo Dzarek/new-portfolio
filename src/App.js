@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { useState } from "react";
 
 import Navbar from "./components/Navbar";
+import NavbarEn from "./components/NavbarEn";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -11,31 +12,31 @@ import Offer from "./pages/Offer";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
-import HomeEn from "./pagesEn/HomeEn";
-import AboutEn from "./pagesEn/AboutEn";
-import OfferEn from "./pagesEn/OfferEn";
-import PortfolioEn from "./pagesEn/PortfolioEn";
-import ContactEn from "./pagesEn/ContactEn";
+// import HomeEn from "./pagesEn/HomeEn";
+// import AboutEn from "./pagesEn/AboutEn";
+// import OfferEn from "./pagesEn/OfferEn";
+// import PortfolioEn from "./pagesEn/PortfolioEn";
+// import ContactEn from "./pagesEn/ContactEn";
 
 function App() {
-  const [language, setLanguage] = useState("polish");
+  const [language, setLanguage] = useState(true);
   return (
     <Wrapper className="App">
       <Router>
-        <Navbar
-          className="navbar"
-          setLanguage={setLanguage}
-          language={language}
-        />
-        {language === "polish" ? (
-          <div className="appContent">
-            <Home />
-            <About language={language} />
-            <Offer />
-            <Portfolio />
-            <Contact />
-          </div>
+        {language ? (
+          <Navbar className="navbar" setLanguage={setLanguage} />
         ) : (
+          <NavbarEn className="navbar" setLanguage={setLanguage} />
+        )}
+        {/* {language === "polish" ? ( */}
+        <div className="appContent">
+          <Home language={language} />
+          <About language={language} />
+          <Offer language={language} />
+          <Portfolio language={language} />
+          <Contact language={language} />
+        </div>
+        {/* ) : (
           <div className="appContent">
             <HomeEn />
             <AboutEn language={language} />
@@ -43,7 +44,7 @@ function App() {
             <PortfolioEn />
             <ContactEn />
           </div>
-        )}
+        )} */}
       </Router>
     </Wrapper>
   );

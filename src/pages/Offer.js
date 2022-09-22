@@ -6,42 +6,77 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Offer = () => {
+const Offer = ({ language }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
     <Wrapper id="offer" className="main-page">
-      <div className="title">
-        <h1>Co oferuje?</h1>
-        <h2>Oferta</h2>
-      </div>
-      <div data-aos="fade-down" className="offerContent">
-        <div className="singleOffer">
-          <FaEdit className="icon" />
-          <h3>kreatywny i intuicyjny interface</h3>
-          <p>
-            Interfejs stron internetowych i aplikacji przygotowuję tak, aby był
-            jednocześnie interesujący jak i łatwy w obsłudze.
-          </p>
+      {language ? (
+        <div className="title">
+          <h1>Co oferuje?</h1>
+          <h2>Oferta</h2>
         </div>
-        <div className="singleOffer">
-          <MdMobileFriendly className="icon" />
-          <h3>dobrze wyglądających w rozdzielczości desktopowej i mobilnej</h3>
-          <p>
-            Dokładam starań, aby interfejs prezentował się jak najlepiej w
-            każdej rozdzielczości.
-          </p>
+      ) : (
+        <div className="title">
+          <h1>What I Do?</h1>
+          <h2>Service</h2>
         </div>
-        <div className="singleOffer">
-          <HiOutlineSupport className="icon" />
-          <h3>szybkie wsparcie</h3>
-          <p>
-            Najszybciej jak to tylko możliwe, pomagam w naprawieniu losowo
-            napotkanego błędu.
-          </p>
+      )}
+      {language ? (
+        <div data-aos="fade-down" className="offerContent">
+          <div className="singleOffer">
+            <FaEdit className="icon" />
+            <h3>kreatywny i intuicyjny interface</h3>
+            <p>
+              Interfejs stron internetowych i aplikacji przygotowuję tak, aby
+              był jednocześnie interesujący jak i łatwy w obsłudze.
+            </p>
+          </div>
+          <div className="singleOffer">
+            <MdMobileFriendly className="icon" />
+            <h3>
+              dobrze wyglądających w rozdzielczości desktopowej i mobilnej
+            </h3>
+            <p>
+              Dokładam starań, aby interfejs prezentował się jak najlepiej w
+              każdej rozdzielczości.
+            </p>
+          </div>
+          <div className="singleOffer">
+            <HiOutlineSupport className="icon" />
+            <h3>szybkie wsparcie</h3>
+            <p>
+              Najszybciej jak to tylko możliwe, pomagam w naprawieniu losowo
+              napotkanego błędu.
+            </p>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div data-aos="fade-down" className="offerContent">
+          <div className="singleOffer">
+            <FaEdit className="icon" />
+            <h3>creative and intuitive interface</h3>
+            <p>
+              My interface of websites and applications is interesting and easy
+              to use at the same time.
+            </p>
+          </div>
+          <div className="singleOffer">
+            <MdMobileFriendly className="icon" />
+            <h3>looking good in desktop and mobile resolutions</h3>
+            <p>
+              I try to make the interface look as good as possible in any
+              resolution.
+            </p>
+          </div>
+          <div className="singleOffer">
+            <HiOutlineSupport className="icon" />
+            <h3>fast support</h3>
+            <p>As soon as possible, I help to fix any random error.</p>
+          </div>
+        </div>
+      )}
     </Wrapper>
   );
 };

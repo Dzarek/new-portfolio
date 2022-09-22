@@ -11,7 +11,7 @@ const HomeEn = () => {
     setIsVideoLoaded(true);
   };
   return (
-    <Wrapper id="home">
+    <Wrapper id="homeEn">
       <header className="headerContainer">
         <img
           src={beforeVideoJJ}

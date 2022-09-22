@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
 import aboutImg from "../images/aboutImg.jpg";
 import { FaGraduationCap } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import resume from "../JarosławJanasCV.pdf";
-
+import resumeEn from "../JarosławJanasCVEN.pdf";
 import SkillsContainer from "../components/SkillsContainer";
 
 const About = ({ language }) => {
@@ -26,260 +25,337 @@ const About = ({ language }) => {
     <Wrapper id="aboutMe" className="main-page">
       <div className="title">
         <h1>Curriculum Vitae</h1>
-        <h2>Kim jestem?</h2>
+        <h2>{language ? "Kim jestem?" : "About Me"}</h2>
       </div>
-      <div className="main-info">
-        <div data-aos="fade-left" className="pictureAndCv">
-          <img src={aboutImg} alt="about me" />
-          <div className="personal-info">
-            <h3>
-              Nazywam się Jarosław Janas i jestem <br /> Front-End Developerem.
-            </h3>
+      {language ? (
+        <div className="main-info">
+          <div data-aos="fade-left" className="pictureAndCv">
+            <img src={aboutImg} alt="about me" />
+            <div className="personal-info">
+              <h3>
+                Nazywam się Jarosław Janas i jestem <br /> Front-End
+                Developerem.
+              </h3>
+              <p>
+                Swoją pracę z kodem rozpocząłem w 2020 roku. Programowanie
+                sprawia mi ogromną przyjemność i chcę być w tym lepszy każdego
+                dnia. Specjalizuje się w tworzeniu stron internetowych i
+                aplikacji w języku JavaScript.
+              </p>
+              <a href={resume} download="Jarosław Janas CV.pdf">
+                {" "}
+                Pobierz CV{" "}
+              </a>
+            </div>
+          </div>
+          <div data-aos="fade-left" className="personal-info-list">
+            <h4 className="subTitle">Informacje:</h4>
             <p>
-              Swoją pracę z kodem rozpocząłem w 2020 roku. Programowanie sprawia
-              mi ogromną przyjemność i chcę być w tym lepszy każdego dnia.
-              Specjalizuje się w tworzeniu stron internetowych i aplikacji w
-              języku JavaScript.
+              Imię i Nazwisko: <span>Jarosław Janas</span>
             </p>
-
-            {/* <Link to="../JarosławJanasCV.pdf" target="_blank" download>
-              Pobierz CV
-            </Link> */}
-
-            <a href={resume} download="Jarosław Janas CV.pdf">
-              {" "}
-              Pobierz CV{" "}
-            </a>
-          </div>
-        </div>
-        <div data-aos="fade-left" className="personal-info-list">
-          <h4 className="subTitle">Informacje:</h4>
-          <p>
-            Imię i Nazwisko: <span>Jarosław Janas</span>
-          </p>
-          <p>
-            Wiek: <span>{calculate_age(new Date(1995, 7, 21))} lat</span>
-          </p>
-          <p>
-            Narodowość: <span>Polska</span>
-          </p>
-          <p>
-            Adres: <span>Kraków, Polska</span>
-          </p>
-          <p>
-            Języki: <span>Polski, Angielski</span>
-          </p>
-          <p>
-            Telefon: <span>798 194 305</span>
-          </p>
-          <p>
-            Email: <span>jarekjanas95@gmail.com</span>
-          </p>
-          <p>
-            Zatrudnienie: <span>Dostępny</span>
-          </p>
-        </div>
-        <div className="skills">
-          <h4 className="subTitle">Moje Umiejętności</h4>
-          <SkillsContainer language={language} />
-        </div>
-        {/* <div className="skills">
-          <h4 className="subTitle">Moje Umiejętności</h4>
-          <div className="skills-container">
-            <section className="personal-skills">
-              <h5>Personalne</h5>
-              <div className="one-skill">
-                <p>Praca Zespołowa</p>
-                <div className="container">
-                  <div data-aos="teamWork" className="skillItem teamWork">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-              <div className="one-skill">
-                <p>Kreatywność</p>
-                <div className="container">
-                  <div data-aos="creative" className="skillItem creative">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-              <div className="one-skill">
-                <p>Zaangażowanie</p>
-                <div className="container">
-                  <div data-aos="passion" className="skillItem passion">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-            </section>
-            <section className="professional-skills">
-              <h5>Zawodowe</h5>
-              <div className="one-skill">
-                <p>HTML & CSS*</p>
-                <div className="container">
-                  <div
-                    data-aos="htmlCssSkill"
-                    className="skillItem htmlCssSkill"
-                  >
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-              <div className="one-skill">
-                <p>JAVASCRIPT*</p>
-                <div className="container">
-                  <div data-aos="jsSkill" className="skillItem jsSkill">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-              <div className="one-skill">
-                <p>REACT*</p>
-                <div className="container">
-                  <div data-aos="reactSkill" className="skillItem reactSkill">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-            </section>
-            <p className="skillsInfoStar">
-              *Dlaczego paski umiejętności maleją i rosną? Choć każdego dnia
-              umiem więcej to również i języki programowania się rozwijają.
+            <p>
+              Wiek: <span>{calculate_age(new Date(1995, 7, 21))} lat</span>
+            </p>
+            <p>
+              Narodowość: <span>Polska</span>
+            </p>
+            <p>
+              Adres: <span>Kraków, Polska</span>
+            </p>
+            <p>
+              Języki: <span>Polski, Angielski</span>
+            </p>
+            <p>
+              Telefon: <span>798 194 305</span>
+            </p>
+            <p>
+              Email: <span>jarekjanas95@gmail.com</span>
+            </p>
+            <p>
+              Zatrudnienie: <span>Dostępny</span>
             </p>
           </div>
-        </div> */}
-        <h4 className="subTitle">Doświadczenie i Edukacja</h4>
-        <div data-aos="fade-left" className="experienceAndEducation">
-          <div className="EandE">
-            <div className="oneEandE">
-              <div className="borderEandE">
-                <p>
-                  <MdWork />
-                </p>
-              </div>
-              <div className="infoEandE">
-                <h6>2021-OBECNIE</h6>
-                <h4>Front-End Developer – Freelancer</h4>
-                <p>
-                  <a href="https://www.hotelmiodowa.pl">
-                    - https://www.hotelmiodowa.pl
-                  </a>
-                  <a href="https://www.focuseye.pl">
-                    - https://www.focuseye.pl
-                  </a>
-                  <a href="https://www.dorotaszydelkuje.pl ">
-                    - https://www.dorotaszydelkuje.pl{" "}
-                  </a>
-                  <a href="https://www.telefony-gorlice.pl">
-                    - https://www.telefony-gorlice.pl
-                  </a>
-                  {/* - https://www.pyszotka.pl */}
-                  {/*- https://zakupy-lista.netlify.app/ */}
-                </p>
-              </div>
-            </div>
-            <div className="oneEandE">
-              <div className="borderEandE">
-                <p>
-                  <MdWork />
-                </p>
-              </div>
-              <div className="infoEandE">
-                <h6>2019-OBECNIE</h6>
-                <h4>
-                  Recepcjonista Hotelu - Aparthotel Miodowa, Blue Aparthotel
-                </h4>
-                <p>
-                  przyjmowanie rezerwacji, obsługa gości hotelowych,
-                  reprezentowanie obiektu
-                </p>
-              </div>
-            </div>
-            <div className="oneEandE">
-              <div className="borderEandE">
-                <p>
-                  <MdWork />
-                </p>
-              </div>
-              <div className="infoEandE">
-                <h6>2018-2018</h6>
-                <h4>
-                  Żołnierz Wojska Polskiego - 22 Karpacki Batalion Piechoty
-                  Górskiej w Kłodzku
-                </h4>
-                <p>
-                  służba wojskowa i kształcenie się w zakresie działań Sił
-                  Zbrojnych RP, stopień kaprala
-                </p>
-              </div>
-            </div>
-            {/* <div className="oneEandE">
-              <div className="borderEandE">
-                <p>
-                  <MdWork />
-                </p>
-              </div>
-              <div className="infoEandE">
-                <h6>2017-2018</h6>
-                <h4>Menager Hostelu - Hostel Heynow</h4>
-                <p>
-                  administracja hostelu, rekrutacja pracowników, zarządzanie
-                  personelem, ustalanie grafiku zmian, przyjmowanie rezerwacji
-                  oraz obsługa gości, operowanie systemami rezerwacyjnymi
-                </p>
-              </div>
-            </div> */}
+          <div className="skills">
+            <h4 className="subTitle">Moje Umiejętności</h4>
+            <SkillsContainer language={language} />
           </div>
-          <div className="EandE">
-            <div className="oneEandE">
-              <div className="borderEandE">
-                <p>
-                  <FaGraduationCap />
-                </p>
+
+          <h4 className="subTitle">Doświadczenie i Edukacja</h4>
+          <div data-aos="fade-left" className="experienceAndEducation">
+            <div className="EandE">
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <MdWork />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2021-OBECNIE</h6>
+                  <h4>Front-End Developer – Freelancer</h4>
+                  <p>
+                    <a href="https://www.hotelmiodowa.pl">
+                      - https://www.hotelmiodowa.pl
+                    </a>
+                    <a href="https://www.focuseye.pl">
+                      - https://www.focuseye.pl
+                    </a>
+                    <a href="https://www.dorotaszydelkuje.pl ">
+                      - https://www.dorotaszydelkuje.pl{" "}
+                    </a>
+                    <a href="https://www.telefony-gorlice.pl">
+                      - https://www.telefony-gorlice.pl
+                    </a>
+                    {/* - https://www.pyszotka.pl */}
+                    {/*- https://zakupy-lista.netlify.app/ */}
+                  </p>
+                </div>
               </div>
-              <div className="infoEandE">
-                <h6>2020-OBECNIE</h6>
-                <h4>Programista - Kursy na platformie e-learningowej UDEMY</h4>
-                <p>HTML, CSS, JAVASRIPT, REACT, REDUX, NEXT.JS</p>
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <MdWork />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2019-OBECNIE</h6>
+                  <h4>
+                    Recepcjonista Hotelu - Aparthotel Miodowa, Blue Aparthotel
+                  </h4>
+                  <p>
+                    przyjmowanie rezerwacji, obsługa gości hotelowych,
+                    reprezentowanie obiektu
+                  </p>
+                </div>
+              </div>
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <MdWork />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2018-2018</h6>
+                  <h4>
+                    Żołnierz Wojska Polskiego - 22 Karpacki Batalion Piechoty
+                    Górskiej w Kłodzku
+                  </h4>
+                  <p>
+                    służba wojskowa i kształcenie się w zakresie działań Sił
+                    Zbrojnych RP, stopień kaprala
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="oneEandE">
-              <div className="borderEandE">
-                <p>
-                  <FaGraduationCap />
-                </p>
+            <div className="EandE">
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <FaGraduationCap />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2020-OBECNIE</h6>
+                  <h4>
+                    Programista - Kursy na platformie e-learningowej UDEMY
+                  </h4>
+                  <p>HTML, CSS, JAVASRIPT, REACT, REDUX, NEXT.JS</p>
+                </div>
               </div>
-              <div className="infoEandE">
-                <h6>2017-2019</h6>
-                <h4>Magister - Uniwersytet Pedagogiczny im. KEN w Krakowie</h4>
-                <p>
-                  pedagogika, edukacja dla bezpieczeństwa i zarządzanie
-                  kryzysowe
-                </p>
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <FaGraduationCap />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2017-2019</h6>
+                  <h4>
+                    Magister - Uniwersytet Pedagogiczny im. KEN w Krakowie
+                  </h4>
+                  <p>
+                    pedagogika, edukacja dla bezpieczeństwa i zarządzanie
+                    kryzysowe
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="oneEandE">
-              <div className="borderEandE">
-                <p>
-                  <FaGraduationCap />
-                </p>
-              </div>
-              <div className="infoEandE">
-                <h6>2014-2017</h6>
-                <h4>Licencjat - Uniwersytet Pedagogiczny im. KEN w Krakowie</h4>
-                <p>bezpieczeństwo narodowe</p>
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <FaGraduationCap />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2014-2017</h6>
+                  <h4>
+                    Licencjat - Uniwersytet Pedagogiczny im. KEN w Krakowie
+                  </h4>
+                  <p>bezpieczeństwo narodowe</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="main-info">
+          <div data-aos="fade-left" className="pictureAndCv">
+            <img src={aboutImg} alt="about me" />
+            <div className="personal-info">
+              <h3>
+                My name is Jarosław Janas and I'm a <br /> Front-End Developer.
+              </h3>
+              <p>
+                I started my work with code in 2020. I really enjoy it and I
+                want to be a better Web-Developer every day. My specialization
+                is creating websites and applications in JavaScript language.
+              </p>
+              <a href={resumeEn} download="Jarosław Janas CVEN.pdf">
+                {" "}
+                Download CV
+              </a>
+            </div>
+          </div>
+          <div data-aos="fade-left" className="personal-info-list">
+            <h4 className="subTitle">Information:</h4>
+            <p>
+              Name: <span>Jarosław Janas</span>
+            </p>
+            <p>
+              Age: <span>{calculate_age(new Date(1995, 7, 21))} years</span>
+            </p>
+            <p>
+              Nationality: <span>Polish</span>
+            </p>
+            <p>
+              Address: <span>Cracow, Poland</span>
+            </p>
+            <p>
+              Languages: <span>Polish, English</span>
+            </p>
+            <p>
+              Phone: <span>+48 798 194 305</span>
+            </p>
+            <p>
+              Email: <span>jarekjanas95@gmail.com</span>
+            </p>
+            <p>
+              Freelance: <span>Dostępny</span>
+            </p>
+          </div>
+          <div className="skills">
+            <h4 className="subTitle">My Skills</h4>
+            <SkillsContainer language={language} />
+          </div>
+          <h4 className="subTitle">Experience & Education</h4>
+          <div data-aos="fade-left" className="experienceAndEducation">
+            <div className="EandE">
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <MdWork />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2021-NOW</h6>
+                  <h4>Front-End Developer – Freelancer</h4>
+                  <p>
+                    <a href="https://www.hotelmiodowa.pl">
+                      - https://www.hotelmiodowa.pl
+                    </a>
+                    <a href="https://www.focuseye.pl">
+                      - https://www.focuseye.pl
+                    </a>
+                    <a href="https://www.dorotaszydelkuje.pl ">
+                      - https://www.dorotaszydelkuje.pl{" "}
+                    </a>
+                    <a href="https://www.telefony-gorlice.pl">
+                      - https://www.telefony-gorlice.pl
+                    </a>
+                    {/* - https://www.pyszotka.pl */}
+                    {/*- https://zakupy-lista.netlify.app/ */}
+                  </p>
+                </div>
+              </div>
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <MdWork />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2019-NOW</h6>
+                  <h4>
+                    Hotel receptionist - Aparthotel Miodowa, Blue Aparthotel
+                  </h4>
+                  <p>
+                    checking reservations, service for hotel guests, taking care
+                    of the positive image of the hotel
+                  </p>
+                </div>
+              </div>
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <MdWork />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2018-2018</h6>
+                  <h4>
+                    Soldier of Polish Army - 22nd Mountain Infantry Battalion,
+                    Kłodzko
+                  </h4>
+                  <p>
+                    military service for the country, improvement in: strategy,
+                    military leadership, shooting, rescue and defense against
+                    weapons of mass destruction
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="EandE">
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <FaGraduationCap />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2020-NOW</h6>
+                  <h4>
+                    Front-End Developer - Courses on the UDEMY e-learning
+                    platform
+                  </h4>
+                  <p>HTML, CSS, JAVASRIPT, REACT, REDUX, NEXT.JS</p>
+                </div>
+              </div>
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <FaGraduationCap />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2017-2019</h6>
+                  <h4>Master Degree - Pedagogical University of Cracow</h4>
+                  <p>education for security and crisis management</p>
+                </div>
+              </div>
+              <div className="oneEandE">
+                <div className="borderEandE">
+                  <p>
+                    <FaGraduationCap />
+                  </p>
+                </div>
+                <div className="infoEandE">
+                  <h6>2014-2017</h6>
+                  <h4>Bachelor Degree - Pedagogical University of Cracow</h4>
+                  <p>national security</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </Wrapper>
   );
 };

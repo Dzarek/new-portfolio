@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { projects } from "../data";
+import { projects, projectsEn } from "../data";
 import SingleProject from "../components/SingleProject";
+import SingleProjectEn from "../components/SingleProjectEn";
 
 const allCategories = [
   ...new Set(projects.map((item) => item.category)),
@@ -11,11 +12,22 @@ const allCategories = [
 const websiteCategory = projects.filter(
   (item) => item.category === "strony www"
 );
+const allCategoriesEn = [
+  ...new Set(projectsEn.map((item) => item.category)),
+  "all",
+];
 
-const Portfolio = () => {
+const websiteCategoryEn = projectsEn.filter(
+  (item) => item.category === "website"
+);
+
+const Portfolio = ({ language }) => {
   const [menuItems, setMenuItems] = useState(websiteCategory);
   const [categories] = useState(allCategories);
   const [activeBtn, setActiveBtn] = useState("strony www");
+  const [menuItemsEn, setMenuItemsEn] = useState(websiteCategoryEn);
+  const [categoriesEn] = useState(allCategoriesEn);
+  const [activeBtnEn, setActiveBtnEn] = useState("website");
 
   const filterItems = (category) => {
     if (category === "wszystkie") {
@@ -27,28 +39,66 @@ const Portfolio = () => {
     setMenuItems(newItems);
     setActiveBtn(category);
   };
+
+  const filterItemsEn = (category) => {
+    if (category === "all") {
+      setMenuItems(projectsEn);
+      setActiveBtn(category);
+      return;
+    }
+    const newItems = projectsEn.filter((item) => item.category === category);
+    setMenuItemsEn(newItems);
+    setActiveBtnEn(category);
+  };
   return (
     <Wrapper id="portfolio" className="main-page">
-      <div className="title">
-        <h1>Moje Projekty</h1>
-        <h2>Portfolio</h2>
-      </div>
-      <div className="portfolioCategory">
-        {categories.map((category, index) => {
-          return (
-            <button
-              key={index}
-              onClick={() => filterItems(category)}
-              className={activeBtn === category ? "activeBtn" : null}
-            >
-              {category}
-            </button>
-          );
-        })}
-      </div>
-      <div className="projects">
-        <SingleProject className="singleProject" items={menuItems} />
-      </div>
+      {language ? (
+        <>
+          <div className="title">
+            <h1>Moje Projekty</h1>
+            <h2>Portfolio</h2>
+          </div>
+          <div className="portfolioCategory">
+            {categories.map((category, index) => {
+              return (
+                <button
+                  key={index}
+                  onClick={() => filterItems(category)}
+                  className={activeBtn === category ? "activeBtn" : null}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
+          <div className="projects">
+            <SingleProject className="singleProject" items={menuItems} />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="title">
+            <h1>My Projects</h1>
+            <h2>Portfolio</h2>
+          </div>
+          <div className="portfolioCategory">
+            {categoriesEn.map((category, index) => {
+              return (
+                <button
+                  key={index}
+                  onClick={() => filterItemsEn(category)}
+                  className={activeBtnEn === category ? "activeBtn" : null}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
+          <div className="projects">
+            <SingleProjectEn className="singleProject" items={menuItemsEn} />
+          </div>
+        </>
+      )}
     </Wrapper>
   );
 };

@@ -5,39 +5,73 @@ import "aos/dist/aos.css";
 import { ImMail3, ImPhone } from "react-icons/im";
 import { IoLocationSharp } from "react-icons/io5";
 import MyForm from "../components/MyForm";
+import MyFormEn from "../components/MyFormEn";
 
-const Contact = () => {
+const Contact = ({ language }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
     <Wrapper id="contact" className="main-page">
-      <div className="title">
-        <h1>Napisz do mnie</h1>
-        <h2>Kontakt</h2>
-      </div>
-      <div data-aos="fade-up" className="contactContainer">
-        <div className="phoneAndMail">
-          <div>
-            <ImPhone className="icon" />
-            <h2>Telefon:</h2>
-            <p>798 194 305</p>
+      {language ? (
+        <>
+          <div className="title">
+            <h1>Napisz do mnie</h1>
+            <h2>Kontakt</h2>
           </div>
-          <div>
-            <ImMail3 className="icon" />
-            <h2>Email:</h2>
-            <p>jarekjanas95@gmail.com</p>
+          <div data-aos="fade-up" className="contactContainer">
+            <div className="phoneAndMail">
+              <div>
+                <ImPhone className="icon" />
+                <h2>Telefon:</h2>
+                <p>798 194 305</p>
+              </div>
+              <div>
+                <ImMail3 className="icon" />
+                <h2>Email:</h2>
+                <p>jarekjanas95@gmail.com</p>
+              </div>
+              <div>
+                <IoLocationSharp className="icon" />
+                <h2>Adres:</h2>
+                <p>31-222 Kraków, Polska</p>
+              </div>
+            </div>
+            <div className="form">
+              <MyForm />
+            </div>
           </div>
-          <div>
-            <IoLocationSharp className="icon" />
-            <h2>Adres:</h2>
-            <p>31-222 Kraków, Polska</p>
+        </>
+      ) : (
+        <>
+          <div className="title">
+            <h1>Get in Touch</h1>
+            <h2>Contact</h2>
           </div>
-        </div>
-        <div className="form">
-          <MyForm />
-        </div>
-      </div>
+          <div data-aos="fade-up" className="contactContainer">
+            <div className="phoneAndMail">
+              <div>
+                <ImPhone className="icon" />
+                <h2>Phone:</h2>
+                <p>+48 798 194 305</p>
+              </div>
+              <div>
+                <ImMail3 className="icon" />
+                <h2>Email:</h2>
+                <p>jarekjanas95@gmail.com</p>
+              </div>
+              <div>
+                <IoLocationSharp className="icon" />
+                <h2>Address:</h2>
+                <p>31-222 Cracow, Poland</p>
+              </div>
+            </div>
+            <div className="form">
+              <MyFormEn />
+            </div>
+          </div>
+        </>
+      )}
     </Wrapper>
   );
 };

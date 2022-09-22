@@ -5,7 +5,7 @@ import headerImg from "../images/headerImg.png";
 import { Link } from "react-scroll";
 import beforeVideoJJ from "../images/beforeVideoJJ.jpg";
 
-const Home = () => {
+const Home = ({ language }) => {
   const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
   const onLoadedData = () => {
     setIsVideoLoaded(true);
@@ -32,8 +32,8 @@ const Home = () => {
         <div className="headerInfo">
           <img src={headerImg} alt="me" />
           <div className="info">
-            <h2>WITAJ !</h2>
-            <h1>Jestem Jarosław Janas</h1>
+            <h2>{language ? "WITAJ !" : "Hello !"}</h2>
+            <h1>{language ? `Jestem Jarosław Janas` : `I'm Jarosław Janas`}</h1>
             <h1 className="subtitle">Front-End Developer</h1>
             <Link
               className="hireBtn"
@@ -41,7 +41,7 @@ const Home = () => {
               smooth={true}
               duration={1000}
             >
-              zatrudnij mnie
+              {language ? `zatrudnij mnie` : `hire me`}
             </Link>
           </div>
         </div>

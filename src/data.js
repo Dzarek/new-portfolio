@@ -173,7 +173,7 @@ export const projectsEn = [
     technology: ["Next.js, Wordpress"],
     githubLink: "",
     siteLink: "https://www.focuseye.pl",
-    category: "strony www",
+    category: "website",
   },
   {
     id: 4,

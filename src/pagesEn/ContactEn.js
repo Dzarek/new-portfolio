@@ -11,7 +11,7 @@ const ContactEn = () => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <Wrapper id="contact" className="main-page">
+    <Wrapper id="contactEn" className="main-page">
       <div className="title">
         <h1>Get in Touch</h1>
         <h2>Contact</h2>

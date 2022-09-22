@@ -23,7 +23,7 @@ const AboutEn = ({ language }) => {
   }
 
   return (
-    <Wrapper id="aboutMe" className="main-page">
+    <Wrapper id="aboutMeEn" className="main-page">
       <div className="title">
         <h1>Curriculum Vitae</h1>
         <h2>About Me</h2>
@@ -40,13 +40,6 @@ const AboutEn = ({ language }) => {
               to be a better Web-Developer every day. My specialization is
               creating websites and applications in JavaScript language.
             </p>
-            {/* <Link
-              to="../images/CV - Jarek - Angielski.pdf"
-              target="_blank"
-              download
-            >
-              Download CV
-            </Link> */}
             <a href={resume} download="Jarosław Janas CVEN.pdf">
               {" "}
               Download CV
@@ -83,75 +76,6 @@ const AboutEn = ({ language }) => {
         <div className="skills">
           <h4 className="subTitle">My Skills</h4>
           <SkillsContainer language={language} />
-          {/* <div className="skills-container">
-            <section className="personal-skills">
-              <h5>Personal</h5>
-              <div className="one-skill">
-                <p>Teamwork</p>
-                <div className="container">
-                  <div data-aos="teamWork" className="skillItem teamWork">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-              <div className="one-skill">
-                <p>Creativity</p>
-                <div className="container">
-                  <div data-aos="creative" className="skillItem creative">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-              <div className="one-skill">
-                <p>Self-motivation</p>
-                <div className="container">
-                  <div data-aos="passion" className="skillItem passion">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-            </section>
-            <section className="professional-skills">
-              <h5>Professional</h5>
-              <div className="one-skill">
-                <p>HTML & CSS*</p>
-                <div className="container">
-                  <div
-                    data-aos="htmlCssSkill"
-                    className="skillItem htmlCssSkill"
-                  >
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-              <div className="one-skill">
-                <p>JAVASCRIPT*</p>
-                <div className="container">
-                  <div data-aos="jsSkill" className="skillItem jsSkill">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-              <div className="one-skill">
-                <p>REACT*</p>
-                <div className="container">
-                  <div data-aos="reactSkill" className="skillItem reactSkill">
-                  </div>
-                  <p>0%</p>
-                  <p>100%</p>
-                </div>
-              </div>
-            </section>
-            <p className="skillsInfoStar">
-              *Why are skill bars getting smaller and bigger? Every day I know
-              more, but programming languages are also evolving.
-            </p>
-          </div> */}
         </div>
         <h4 className="subTitle">Experience & Education</h4>
         <div data-aos="fade-left" className="experienceAndEducation">

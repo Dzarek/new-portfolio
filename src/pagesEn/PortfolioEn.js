@@ -28,7 +28,7 @@ const PortfolioEn = () => {
     setActiveBtn(category);
   };
   return (
-    <Wrapper id="portfolio" className="main-page">
+    <Wrapper id="portfolioEn" className="main-page">
       <div className="title">
         <h1>My Projects</h1>
         <h2>Portfolio</h2>
