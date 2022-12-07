@@ -11,6 +11,7 @@ import wisielecImg from "./images/wisielecImg.jpg";
 import memoryImg from "./images/memoryImg.jpg";
 import movieSearchImg from "./images/movieSearchImg.jpg";
 import focuseyeImg from "./images/focuseyeImg.jpg";
+import velowayImg from "./images/velowayImg.jpg";
 
 export const projects = [
   {
@@ -41,6 +42,16 @@ export const projects = [
     technology: ["Next.js, Wordpress"],
     githubLink: "",
     siteLink: "https://www.focuseye.pl",
+    category: "strony www",
+  },
+  {
+    id: 33,
+    title: "Veloway",
+    img: velowayImg,
+    info: "Strona internetowa serwisu rowerowego. Strona pobiera API poprzez funkcję getStaticProps z FireBase.",
+    technology: ["Next.js, FireBase"],
+    githubLink: "",
+    siteLink: "https://www.veloway.pl",
     category: "strony www",
   },
   {
@@ -173,6 +184,16 @@ export const projectsEn = [
     technology: ["Next.js, Wordpress"],
     githubLink: "",
     siteLink: "https://www.focuseye.pl",
+    category: "website",
+  },
+  {
+    id: 33,
+    title: "Veloway",
+    img: velowayImg,
+    info: "Website of bike service. It takes API from FireBase by getStaticProps function.",
+    technology: ["Next.js, FireBase"],
+    githubLink: "",
+    siteLink: "https://www.veloway.pl",
     category: "website",
   },
   {
