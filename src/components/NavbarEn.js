@@ -42,9 +42,12 @@ const NavbarEn = ({ setLanguage }) => {
             <a href="https://pl.linkedin.com/in/jaros%C5%82aw-janas-7b55a3218?trk=people-guest_people_search-card">
               <ImLinkedin className="icon" />
             </a>
-
-            <ImPhone className="icon" onClick={handlePhone} />
-            <ImMail3 className="icon" onClick={handleEmail} />
+            <a href="tel:798194305">
+              <ImPhone className="icon" onClick={handlePhone} />
+            </a>
+            <a href="mailto:jarekjanas95@gmail.com">
+              <ImMail3 className="icon" onClick={handleEmail} />
+            </a>
             <div className="media-info">
               {showPhone && <p>798 194 305</p>}
               {showEmail && <p>jarekjanas95@gmail.com</p>}

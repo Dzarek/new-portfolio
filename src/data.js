@@ -12,6 +12,7 @@ import memoryImg from "./images/memoryImg.jpg";
 import movieSearchImg from "./images/movieSearchImg.jpg";
 import focuseyeImg from "./images/focuseyeImg.jpg";
 import velowayImg from "./images/velowayImg.jpg";
+import pyszotkaImg from "./images/pyszotkaImg.jpg";
 
 export const projects = [
   {
@@ -52,6 +53,16 @@ export const projects = [
     technology: ["Next.js, FireBase"],
     githubLink: "",
     siteLink: "https://www.veloway.pl",
+    category: "strony www",
+  },
+  {
+    id: 333,
+    title: "Pyszotka",
+    img: pyszotkaImg,
+    info: "Strona internetowa sieci piekarni.",
+    technology: ["Next.js"],
+    githubLink: "",
+    siteLink: "https://www.pyszotka.pl",
     category: "strony www",
   },
   {
@@ -194,6 +205,16 @@ export const projectsEn = [
     technology: ["Next.js, FireBase"],
     githubLink: "",
     siteLink: "https://www.veloway.pl",
+    category: "website",
+  },
+  {
+    id: 333,
+    title: "Pyszotka",
+    img: pyszotkaImg,
+    info: "Bakery website.",
+    technology: ["Next.js"],
+    githubLink: "",
+    siteLink: "https://www.pyszotka.pl",
     category: "website",
   },
   {

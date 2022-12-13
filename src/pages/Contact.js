@@ -21,16 +21,16 @@ const Contact = ({ language }) => {
           </div>
           <div data-aos="fade-up" className="contactContainer">
             <div className="phoneAndMail">
-              <div>
+              <a href="tel:798194305">
                 <ImPhone className="icon" />
                 <h2>Telefon:</h2>
                 <p>798 194 305</p>
-              </div>
-              <div>
+              </a>
+              <a href="mailto:jarekjanas95@gmail.com">
                 <ImMail3 className="icon" />
                 <h2>Email:</h2>
                 <p>jarekjanas95@gmail.com</p>
-              </div>
+              </a>
               <div>
                 <IoLocationSharp className="icon" />
                 <h2>Adres:</h2>
@@ -50,16 +50,16 @@ const Contact = ({ language }) => {
           </div>
           <div data-aos="fade-up" className="contactContainer">
             <div className="phoneAndMail">
-              <div>
+              <a href="tel:798194305">
                 <ImPhone className="icon" />
                 <h2>Phone:</h2>
                 <p>+48 798 194 305</p>
-              </div>
-              <div>
+              </a>
+              <a href="mailto:jarekjanas95@gmail.com">
                 <ImMail3 className="icon" />
                 <h2>Email:</h2>
                 <p>jarekjanas95@gmail.com</p>
-              </div>
+              </a>
               <div>
                 <IoLocationSharp className="icon" />
                 <h2>Address:</h2>
@@ -95,7 +95,9 @@ const Wrapper = styled.div`
       justify-content: space-around;
       align-items: center;
 
-      div {
+      div,
+      a {
+        text-decoration: none;
         width: 65%;
         height: 20vh;
         margin: 2vh auto;
@@ -110,6 +112,9 @@ const Wrapper = styled.div`
         font-size: 0.9rem;
         border: 1px solid white;
         font-family: "Saira Stencil One", sans-serif;
+        p {
+          font-size: 0.9rem;
+        }
         h2 {
           font-weight: 400;
         }
@@ -122,7 +127,8 @@ const Wrapper = styled.div`
         width: 100vw;
         flex-direction: row;
         flex-wrap: wrap;
-        div {
+        div,
+        a {
           width: 80%;
           padding: 15px;
           font-size: 1rem;

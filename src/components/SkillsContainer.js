@@ -65,7 +65,7 @@ const SkillsContainer = ({ language }) => {
       info: "Framework, pozwalający budować nowoczesne aplikacje po stronie serwera korzystając z biblioteki React. Dzięki niemu, przeglądarki widzą wyrednerowany cały kod HTML co jest świetne dla SEO. Potężne narzędzie w rękach front-end developera.",
       infoEn:
         "Framework that allows you to build modern server-side applications using the React. Thanks to it, browsers can see all HTML code, which is great for SEO. A powerful tool in the hands of a front-end developer.",
-      level: 2,
+      level: 3,
     });
   };
   const handleSTYLE = () => {

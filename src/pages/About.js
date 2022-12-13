@@ -99,14 +99,18 @@ const About = ({ language }) => {
                     <a href="https://www.focuseye.pl">
                       - https://www.focuseye.pl
                     </a>
-                    <a href="https://www.dorotaszydelkuje.pl ">
-                      - https://www.dorotaszydelkuje.pl{" "}
+                    <a href="https://www.veloway.pl">
+                      - https://www.veloway.pl
+                    </a>
+                    <a href="https://www.pyszotka.pl">
+                      - https://www.pyszotka.pl
                     </a>
                     <a href="https://www.telefony-gorlice.pl">
                       - https://www.telefony-gorlice.pl
                     </a>
-                    {/* - https://www.pyszotka.pl */}
-                    {/*- https://zakupy-lista.netlify.app/ */}
+                    <a href="https://www.dorotaszydelkuje.pl ">
+                      - https://www.dorotaszydelkuje.pl{" "}
+                    </a>
                   </p>
                 </div>
               </div>
@@ -118,9 +122,7 @@ const About = ({ language }) => {
                 </div>
                 <div className="infoEandE">
                   <h6>2019-OBECNIE</h6>
-                  <h4>
-                    Recepcjonista Hotelu - Aparthotel Miodowa, Blue Aparthotel
-                  </h4>
+                  <h4>Recepcjonista Hotelu - Hotel Miodowa, Blue Aparthotel</h4>
                   <p>
                     przyjmowanie rezerwacji, obsługa gości hotelowych,
                     reprezentowanie obiektu
@@ -264,14 +266,18 @@ const About = ({ language }) => {
                     <a href="https://www.focuseye.pl">
                       - https://www.focuseye.pl
                     </a>
-                    <a href="https://www.dorotaszydelkuje.pl ">
-                      - https://www.dorotaszydelkuje.pl{" "}
+                    <a href="https://www.veloway.pl">
+                      - https://www.veloway.pl
+                    </a>
+                    <a href="https://www.pyszotka.pl">
+                      - https://www.pyszotka.pl
                     </a>
                     <a href="https://www.telefony-gorlice.pl">
                       - https://www.telefony-gorlice.pl
                     </a>
-                    {/* - https://www.pyszotka.pl */}
-                    {/*- https://zakupy-lista.netlify.app/ */}
+                    <a href="https://www.dorotaszydelkuje.pl ">
+                      - https://www.dorotaszydelkuje.pl
+                    </a>
                   </p>
                 </div>
               </div>
@@ -283,9 +289,7 @@ const About = ({ language }) => {
                 </div>
                 <div className="infoEandE">
                   <h6>2019-NOW</h6>
-                  <h4>
-                    Hotel receptionist - Aparthotel Miodowa, Blue Aparthotel
-                  </h4>
+                  <h4>Hotel receptionist - Hotel Miodowa, Blue Aparthotel</h4>
                   <p>
                     checking reservations, service for hotel guests, taking care
                     of the positive image of the hotel
@@ -673,7 +677,7 @@ const Wrapper = styled.div`
       margin-top: 5vh;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       width: 80%;
       position: relative;
       @media screen and (max-width: 800px) {
@@ -697,23 +701,26 @@ const Wrapper = styled.div`
           width: 100%;
         }
         .oneEandE {
-          margin: 2vh auto;
+          margin: 0vh auto 5vh;
           width: 100%;
-          height: 25vh;
+          min-height: 32vh;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: left;
+          border-left: 2px solid #eee;
+          padding-left: 2rem;
+          position: relative;
+
           @media screen and (max-width: 800px) {
-            min-height: 35vh;
+            min-height: auto;
             margin: 3vh auto;
             width: 90%;
           }
+
           .borderEandE {
-            width: 2px;
-            height: 80%;
-            background: #eee;
-            margin-right: 2rem;
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
             p {
               position: absolute;
               left: 50%;
@@ -733,9 +740,9 @@ const Wrapper = styled.div`
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             h4 {
-              margin: 1rem 0;
+              margin: 1rem 0 1.5rem;
               font-size: 1.5rem;
             }
             h6 {
@@ -749,7 +756,7 @@ const Wrapper = styled.div`
               font-weight: 400;
             }
             p {
-              font-size: 1rem;
+              font-size: 1.2rem;
               display: flex;
               flex-direction: column;
               a {
@@ -764,6 +771,9 @@ const Wrapper = styled.div`
               }
               h6 {
                 width: 55%;
+              }
+              p {
+                font-size: 1.1rem;
               }
             }
           }
