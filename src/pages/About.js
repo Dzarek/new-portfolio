@@ -106,7 +106,7 @@ const About = ({ language }) => {
                       - https://www.pyszotka.pl
                     </a>
                     <a href="https://www.telefony-gorlice.pl">
-                      - https://www.telefony-gorlice.pl
+                      - https://www.telefonygorlice.pl
                     </a>
                     <a href="https://www.dorotaszydelkuje.pl ">
                       - https://www.dorotaszydelkuje.pl{" "}
@@ -273,7 +273,7 @@ const About = ({ language }) => {
                       - https://www.pyszotka.pl
                     </a>
                     <a href="https://www.telefony-gorlice.pl">
-                      - https://www.telefony-gorlice.pl
+                      - https://www.telefonygorlice.pl
                     </a>
                     <a href="https://www.dorotaszydelkuje.pl ">
                       - https://www.dorotaszydelkuje.pl

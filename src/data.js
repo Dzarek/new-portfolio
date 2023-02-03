@@ -32,7 +32,7 @@ export const projects = [
     info: "Strona internetowa salonu GSM, w którym można kupić, sprzedać lub oddać do serwisu swój smartfon.",
     technology: ["Next.js"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
-    siteLink: "https://www.telefony-gorlice.pl/",
+    siteLink: "https://www.telefonygorlice.pl/",
     category: "strony www",
   },
   {
@@ -184,7 +184,7 @@ export const projectsEn = [
     info: "Website of a GSM salon where you can buy, sell or have your smartphone serviced.",
     technology: ["Next.js"],
     githubLink: "https://github.com/Dzarek/RobertTelefony",
-    siteLink: "https://www.telefony-gorlice.pl/",
+    siteLink: "https://www.telefonygorlice.pl/",
     category: "website",
   },
   {
