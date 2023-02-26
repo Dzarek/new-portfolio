@@ -1,7 +1,7 @@
 import dorotaSzydelkujeImg from "./images/dorotaSzydelkujeImg.jpg";
 import robertTelefonyImg from "./images/robertTelefonyImg.jpg";
 import hotelMiodowaImg from "./images/hotelMiodowaImg.jpg";
-import jaroslawGotujeImg from "./images/jaroslawGotujeImg.jpg";
+// import jaroslawGotujeImg from "./images/jaroslawGotujeImg.jpg";
 import buyListImg from "./images/buyListImg.jpg";
 import cocktailsChillImg from "./images/cocktailsChillImg.jpg";
 import weatherImg from "./images/weatherImg.jpg";
