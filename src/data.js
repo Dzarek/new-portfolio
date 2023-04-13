@@ -13,6 +13,7 @@ import movieSearchImg from "./images/movieSearchImg.jpg";
 import focuseyeImg from "./images/focuseyeImg.jpg";
 import velowayImg from "./images/velowayImg.jpg";
 import pyszotkaImg from "./images/pyszotkaImg.jpg";
+import sosnieGorneImg from "./images/sosnieGorneImg.jpg";
 
 export const projects = [
   {
@@ -46,7 +47,7 @@ export const projects = [
     category: "strony www",
   },
   {
-    id: 33,
+    id: 4,
     title: "Veloway",
     img: velowayImg,
     info: "Strona internetowa serwisu rowerowego. Strona pobiera API poprzez funkcję getStaticProps z FireBase.",
@@ -56,7 +57,7 @@ export const projects = [
     category: "strony www",
   },
   {
-    id: 333,
+    id: 5,
     title: "Pyszotka",
     img: pyszotkaImg,
     info: "Strona internetowa sieci piekarni.",
@@ -66,7 +67,17 @@ export const projects = [
     category: "strony www",
   },
   {
-    id: 4,
+    id: 6,
+    title: "Sośnie Górne",
+    img: sosnieGorneImg,
+    info: "Strona internetowa domków do wynajęcia.",
+    technology: ["Next.js", "Firebase"],
+    githubLink: "",
+    siteLink: "https://www.sosniegorne.pl",
+    category: "strony www",
+  },
+  {
+    id: 7,
     title: "Dorota Szydełkuje",
     img: dorotaSzydelkujeImg,
     info: "Strona internetowa stworzona dla osoby, która zajmuje się szydełkowaniem. Można tam zamówić produkty wykonane z włóczki takie jak: zabawki, pufy, koce itd.",
@@ -86,7 +97,7 @@ export const projects = [
   //   category: "strony www",
   // },
   {
-    id: 5,
+    id: 8,
     title: "Lista Zakupów",
     img: buyListImg,
     info: "Aplikacja do zapisywania swojej listy zakupów. Bardzo pomaga w organizacji zakupów.",
@@ -96,7 +107,7 @@ export const projects = [
     category: "aplikacje",
   },
   {
-    id: 6,
+    id: 9,
     title: "Cocktails-Chill",
     img: cocktailsChillImg,
     info: "Aplikacja do szukania przepisów na swoje ulubione drinki. Niezwykle przydatna na imprezach.",
@@ -106,7 +117,7 @@ export const projects = [
     category: "aplikacje",
   },
   {
-    id: 7,
+    id: 10,
     title: "Aplikacja Pogodowa",
     img: weatherImg,
     info: "Aplikacja do sprawdzania pogody prawie dla każdego miasta na świecie.",
@@ -116,7 +127,7 @@ export const projects = [
     category: "aplikacje",
   },
   {
-    id: 8,
+    id: 11,
     title: "Serialowe Quizowanie",
     img: serialQuizImg,
     info: "Coś dla fanów oglądania seriali! Pochwal się swoją wiedzą z różnych serialowych hitów i zdobądź jak najwięcej punktów.",
@@ -126,7 +137,7 @@ export const projects = [
     category: "gry",
   },
   {
-    id: 9,
+    id: 12,
     title: "Ninja Vs Zombie",
     img: ninjaVsZombieImg,
     info: "Pozabijaj wszystkie zombiaki bo inaczej Cię zjedzą...",
@@ -136,7 +147,7 @@ export const projects = [
     category: "gry",
   },
   {
-    id: 10,
+    id: 13,
     title: "Wisielec",
     img: wisielecImg,
     info: "Pamiętacie czasy gdy na nudnych lekcjach w szkole wraz z kolegami graliście w różne gry na kartce papieru? Jeśli macie ochotę zabić nudę to proponuję wam moją wersję gry WISIELEC.",
@@ -146,7 +157,7 @@ export const projects = [
     category: "gry",
   },
   {
-    id: 11,
+    id: 14,
     title: "Memory",
     img: memoryImg,
     info: "Czy dobrą masz pamięć? Sprawdź i zagraj w MEMORY uzyskując jak najlepszy czas!",
@@ -156,7 +167,7 @@ export const projects = [
     category: "gry",
   },
   {
-    id: 12,
+    id: 15,
     title: "Wyszukiwarka Filmów",
     img: movieSearchImg,
     info: "Nie wiesz co oglądać dzisiejszego wieczoru? Sprawdź jakie filmy są teraz na topie!",
@@ -198,7 +209,7 @@ export const projectsEn = [
     category: "website",
   },
   {
-    id: 33,
+    id: 4,
     title: "Veloway",
     img: velowayImg,
     info: "Website of bike service. It takes API from FireBase by getStaticProps function.",
@@ -208,7 +219,7 @@ export const projectsEn = [
     category: "website",
   },
   {
-    id: 333,
+    id: 5,
     title: "Pyszotka",
     img: pyszotkaImg,
     info: "Bakery website.",
@@ -218,7 +229,17 @@ export const projectsEn = [
     category: "website",
   },
   {
-    id: 4,
+    id: 6,
+    title: "Sośnie Górne",
+    img: sosnieGorneImg,
+    info: "Website to rent a house.",
+    technology: ["Next.js", "Firebase"],
+    githubLink: "",
+    siteLink: "https://www.sosniegorne.pl",
+    category: "website",
+  },
+  {
+    id: 7,
     title: "Dorota Szydełkuje",
     img: dorotaSzydelkujeImg,
     info: "Website created for a person who does crocheting. There you can order yarn products such as toys, pouffes, blankets, etc.",
@@ -239,7 +260,7 @@ export const projectsEn = [
   //   category: "website",
   // },
   {
-    id: 5,
+    id: 8,
     title: "Buy List",
     img: buyListImg,
     info: "Application for saving your shopping list. It helps a lot in organizing purchases.",
@@ -249,7 +270,7 @@ export const projectsEn = [
     category: "app",
   },
   {
-    id: 6,
+    id: 9,
     title: "Cocktails-Chill",
     img: cocktailsChillImg,
     info: "Application for finding recipes for your favorite drinks. Extremely useful at parties.",
@@ -259,7 +280,7 @@ export const projectsEn = [
     category: "app",
   },
   {
-    id: 7,
+    id: 10,
     title: "Weather App",
     img: weatherImg,
     info: "The weather checker app for almost every city in the world.",
@@ -269,7 +290,7 @@ export const projectsEn = [
     category: "app",
   },
   {
-    id: 8,
+    id: 11,
     title: "Quiz Series",
     img: serialQuizImg,
     info: "Something for fans of watching series! Show off your knowledge of the various hit series and score as many points as possible.",
@@ -279,7 +300,7 @@ export const projectsEn = [
     category: "game",
   },
   {
-    id: 9,
+    id: 12,
     title: "Ninja Vs Zombie",
     img: ninjaVsZombieImg,
     info: "Kill all the zombies or they'll eat you ...",
@@ -289,7 +310,7 @@ export const projectsEn = [
     category: "game",
   },
   {
-    id: 10,
+    id: 13,
     title: "Wisielec",
     img: wisielecImg,
     info: "Do you remember the times when you and your friends played various games on a piece of paper during boring lessons at school? If you want to kill boredom, I suggest you my version of the game WISIELEC.",
@@ -299,7 +320,7 @@ export const projectsEn = [
     category: "game",
   },
   {
-    id: 11,
+    id: 14,
     title: "Memory",
     img: memoryImg,
     info: "Do you have a good memory? Check and play MEMORY while getting the best time!",
@@ -309,7 +330,7 @@ export const projectsEn = [
     category: "game",
   },
   {
-    id: 12,
+    id: 15,
     title: "Movie Search",
     img: movieSearchImg,
     info: "If you don't know what watching this evening you can check this list!",
