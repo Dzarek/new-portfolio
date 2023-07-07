@@ -154,11 +154,9 @@ const SkillsContainer = ({ language }) => {
       </div>
       <div className="detailsContainer">
         <h2>{detailContent.title}</h2>
-        <p>
-          {language === "polish" ? detailContent.info : detailContent.infoEn}
-        </p>
+        <p>{language ? detailContent.info : detailContent.infoEn}</p>
         <div className="levelContainer">
-          <h4>POZIOM: </h4>
+          <h4>{language ? "POZIOM:" : "LEVEL"}</h4>
 
           {[...Array(detailContent.level)].map((item, index) => {
             return <FaStar className="starIcon " key={index} />;

@@ -14,6 +14,7 @@ import focuseyeImg from "./images/focuseyeImg.jpg";
 import velowayImg from "./images/velowayImg.jpg";
 import pyszotkaImg from "./images/pyszotkaImg.jpg";
 import sosnieGorneImg from "./images/sosnieGorneImg.jpg";
+import transfersImg from "./images/transfersImg.jpg";
 
 export const projects = [
   {
@@ -98,6 +99,16 @@ export const projects = [
   // },
   {
     id: 8,
+    title: "Transfery Lotniskowe",
+    img: transfersImg,
+    info: "Wersja demo aplikacji do rezerwacji transferów lotniskowych dla hoteli. Projekt jest dzierżawiony przez kilka firm.",
+    technology: ["Next.js", "Firebase", "Nodemailer"],
+    githubLink: "",
+    siteLink: "https://demo-transfers.vercel.app/",
+    category: "aplikacje",
+  },
+  {
+    id: 81,
     title: "Lista Zakupów",
     img: buyListImg,
     info: "Aplikacja do zapisywania swojej listy zakupów. Bardzo pomaga w organizacji zakupów.",
@@ -261,6 +272,16 @@ export const projectsEn = [
   // },
   {
     id: 8,
+    title: "Airport Transfers",
+    img: transfersImg,
+    info: "App demo version to make reservation for airport transfers created for hotels. The project was bought by several companies.",
+    technology: ["Next.js", "Firebase", "Nodemailer"],
+    githubLink: "",
+    siteLink: "https://demo-transfers.vercel.app/",
+    category: "app",
+  },
+  {
+    id: 81,
     title: "Buy List",
     img: buyListImg,
     info: "Application for saving your shopping list. It helps a lot in organizing purchases.",
