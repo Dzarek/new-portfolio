@@ -178,7 +178,7 @@ const Wrapper = styled.div`
         left: 0;
         top: 0;
         border-radius: 5px;
-        filter: brightness(0.3);
+        filter: brightness(0.6);
         @media screen and (max-width: 800px) {
           filter: brightness(1);
           width: 100vw;
@@ -216,14 +216,17 @@ const Wrapper = styled.div`
           border-radius: 0 0 5px 5px;
         }
         .titlePortfolio {
-          font-size: 2rem;
+          font-size: 1.6rem;
           text-transform: uppercase;
           color: #333;
+          font-weight: 600;
         }
         .info {
-          font-size: 1.2rem;
+          font-size: 1.05rem;
+          line-height: 1.5;
           @media screen and (max-width: 800px) {
             margin: 3vh auto;
+            font-size: 1rem;
           }
         }
         .technology {

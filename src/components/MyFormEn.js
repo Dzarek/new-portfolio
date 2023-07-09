@@ -106,8 +106,9 @@ const Wrapper = styled.form`
   h1 {
     text-align: center;
     margin-bottom: 5vh;
+    font-size: 1.5rem;
     @media screen and (max-width: 800px) {
-      font-size: 1.7rem;
+      font-size: 1.4rem;
     }
   }
   .inputContainer {
@@ -153,7 +154,8 @@ const Wrapper = styled.form`
     flex-direction: column;
     label {
       margin: 3vh auto 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      line-height: 1.2;
       @media (orientation: portrait) and (max-width: 800px) {
         font-size: 1rem;
       }
@@ -178,12 +180,15 @@ const Wrapper = styled.form`
     transition: 0.5s;
     border: 2px solid rgb(197, 103, 40);
     margin-top: 3vh;
+    font-family: "Saira Stencil One", sans-serif;
     :hover {
       background: rgb(197, 103, 40);
     }
     @media screen and (max-width: 800px) {
       width: 50%;
       background: rgb(197, 103, 40);
+      font-size: 1rem;
+      padding: 7px 0;
     }
   }
 `;

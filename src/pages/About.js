@@ -93,6 +93,12 @@ const About = ({ language }) => {
                   <h6>2021-OBECNIE</h6>
                   <h4>Front-End Developer – Freelancer</h4>
                   <p>
+                    <a href="https://www.demo-transfers.vercel.app">
+                      - https://www.demo-transfers.vercel.app
+                    </a>
+                    <a href="https://sosniegorne.pl">
+                      - https://sosniegorne.pl
+                    </a>
                     <a href="https://www.hotelmiodowa.pl">
                       - https://www.hotelmiodowa.pl
                     </a>
@@ -260,6 +266,12 @@ const About = ({ language }) => {
                   <h6>2021-NOW</h6>
                   <h4>Front-End Developer – Freelancer</h4>
                   <p>
+                    <a href="https://www.demo-transfers.vercel.app">
+                      - https://www.demo-transfers.vercel.app
+                    </a>
+                    <a href="https://sosniegorne.pl">
+                      - https://sosniegorne.pl
+                    </a>
                     <a href="https://www.hotelmiodowa.pl">
                       - https://www.hotelmiodowa.pl
                     </a>
@@ -406,13 +418,13 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      font-family: "Mirza", sans-serif;
+      /* font-family: "Mirza", sans-serif; */
       position: relative;
       h3 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
       }
       p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         text-align: justify;
         margin: 3vh auto 10vh;
       }
@@ -448,10 +460,17 @@ const Wrapper = styled.div`
           padding: 0;
           margin: -2vh auto 7vh;
         }
+        h3 {
+          line-height: 1.3;
+          font-weight: 600;
+        }
+        p {
+          line-height: 1.5;
+        }
       }
     }
     .personal-info-list {
-      width: 80%;
+      width: 85%;
       margin: 10vh auto;
       display: flex;
       flex-wrap: wrap;
@@ -463,8 +482,8 @@ const Wrapper = styled.div`
       p {
         text-align: left;
         padding-left: 3vw;
-        width: 45%;
-        font-size: 1.4rem;
+        width: 48%;
+        font-size: 1.15rem;
         color: #aaa;
         color: rgb(197, 103, 40);
         font-weight: 500;
@@ -481,10 +500,11 @@ const Wrapper = styled.div`
         p {
           width: auto;
           text-align: center;
-          font-size: 1.3rem;
+          font-size: 1.1rem;
           letter-spacing: 0;
           width: 100%;
           margin: 2vh auto;
+          line-height: 1.4;
         }
       }
     }
@@ -499,7 +519,7 @@ const Wrapper = styled.div`
       .skills-container {
         width: 90%;
         /* background: rgb(23, 22, 36); */
-        border: 5px solid rgb(23, 22, 36);
+        border: 5px solid #222;
         margin: 10vh auto;
         display: flex;
         justify-content: space-between;
@@ -677,9 +697,9 @@ const Wrapper = styled.div`
       margin-top: 5vh;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: stretch;
       width: 80%;
-      position: relative;
+      /* position: relative; */
       @media screen and (max-width: 800px) {
         width: 100%;
         flex-direction: column;
@@ -703,7 +723,7 @@ const Wrapper = styled.div`
         .oneEandE {
           margin: 0vh auto 5vh;
           width: 100%;
-          min-height: 32vh;
+          /* min-height: 35vh; */
           display: flex;
           align-items: flex-start;
           justify-content: left;
@@ -743,7 +763,8 @@ const Wrapper = styled.div`
             justify-content: flex-start;
             h4 {
               margin: 1rem 0 1.5rem;
-              font-size: 1.5rem;
+              font-size: 1.2rem;
+              line-height: 1.5;
             }
             h6 {
               font-size: 0.9rem;
@@ -752,13 +773,14 @@ const Wrapper = styled.div`
               padding: 3px;
               text-align: center;
               border-radius: 10px;
-              font-family: "Saira Stencil One", sans-serif;
-              font-weight: 400;
+              /* font-family: "Saira Stencil One", sans-serif; */
+              font-weight: 500;
             }
             p {
-              font-size: 1.2rem;
+              font-size: 1rem;
               display: flex;
               flex-direction: column;
+              line-height: 1.6;
               a {
                 color: #fff;
                 text-decoration: none;
@@ -767,13 +789,15 @@ const Wrapper = styled.div`
             }
             @media screen and (max-width: 800px) {
               h4 {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
+                font-weight: 600;
               }
               h6 {
                 width: 55%;
               }
               p {
-                font-size: 1.1rem;
+                font-size: 0.9rem;
+                font-weight: 400;
               }
             }
           }

@@ -116,10 +116,11 @@ const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        font-family: "Mirza", sans-serif;
+        font-family: "Changa", serif;
         h2,
         h1 {
-          font-size: 3rem;
+          font-size: 2.5rem;
+          font-weight: 600;
         }
         .subtitle {
           font-size: 2rem;
@@ -134,10 +135,18 @@ const Wrapper = styled.div`
           transform: translateX(-50%);
           top: 10vh;
           h2 {
+            font-size: 1.5rem;
+          }
+          h1 {
             font-size: 2rem;
+            line-height: 1.5;
+          }
+          .subtitle {
+            font-size: 1.5rem;
+            margin-top: 3vh;
           }
           h4 {
-            font-size: 1.7rem;
+            font-size: 1.3rem;
             margin-top: 3vh;
           }
         }

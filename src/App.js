@@ -16,9 +16,17 @@ function App() {
     <Wrapper className="App">
       <Router>
         {language ? (
-          <Navbar className="navbar" setLanguage={setLanguage} />
+          <Navbar
+            className="navbar"
+            setLanguage={setLanguage}
+            language={language}
+          />
         ) : (
-          <NavbarEn className="navbar" setLanguage={setLanguage} />
+          <NavbarEn
+            className="navbar"
+            setLanguage={setLanguage}
+            language={language}
+          />
         )}
         <div className="appContent">
           <Home language={language} />

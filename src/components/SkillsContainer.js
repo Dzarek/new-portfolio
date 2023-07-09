@@ -254,7 +254,7 @@ const Wrapper = styled.div`
   }
   .detailsContainer {
     width: 40%;
-    background: rgb(23, 22, 36);
+    background: #222;
     height: 100%;
     padding: 2vh 3vw;
     display: flex;
@@ -262,13 +262,14 @@ const Wrapper = styled.div`
     justify-content: space-between;
 
     h2 {
-      font-size: 2.6rem;
+      font-size: 2.2rem;
       letter-spacing: 3px;
       text-align: center;
       color: rgb(197, 103, 40);
+      line-height: 1.5;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       text-align: center;
     }
     .levelContainer {

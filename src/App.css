@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700&display=swap');
 
 .App {
     width: 100vw;
@@ -11,12 +12,12 @@
     position: fixed;
     top: 0vh;
     right: 4vw;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     z-index: 999999;
     background: #fff;
     display: none;
-    font-size: 2rem;
+    font-size: 1.7rem;
     border-radius: 0 0 10px 10px;
     justify-content: center;
     align-items: center;
@@ -29,12 +30,12 @@
     position: fixed;
     bottom: 0vh;
     right: 4vw;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     z-index: 999999;
     background: #fff;
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-radius: 10px 10px 0 0;
     justify-content: center;
     align-items: center;
@@ -54,11 +55,12 @@
 .main-page {
     width: 80vw;
     min-height: 100vh;
-    background: rgb(9, 8, 20);
+    /* background: rgb(9, 8, 20); */
+    background: #101010;
     z-index: 1;
     padding: 10vh 0;
     position: relative;
-    font-family: "Mirza", sans-serif;
+    font-family: 'Changa', serif;
 
 }
 

@@ -115,7 +115,7 @@ const Wrapper = styled.div`
     padding: 10px 15px;
     color: white;
     border-radius: 10px;
-    background: rgb(23, 22, 36);
+    background: #222;
     text-align: center;
     transition: 0.3s;
     :hover {
@@ -125,9 +125,14 @@ const Wrapper = styled.div`
       font-size: 3rem;
     }
     h3 {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       text-transform: uppercase;
       color: rgb(197, 103, 40);
+      font-family: "Saira Stencil One", sans-serif;
+      font-weight: 400;
+    }
+    p {
+      font-size: 0.95rem;
     }
     @media screen and (max-width: 800px) {
       width: 100%;
@@ -140,10 +145,10 @@ const Wrapper = styled.div`
         font-size: 2.5rem;
       }
       h3 {
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
       p {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
       }
     }
   }

@@ -10,7 +10,7 @@ import { RiMailOpenFill } from "react-icons/ri";
 import { HiMenu } from "react-icons/hi";
 import { FaArrowUp } from "react-icons/fa";
 
-const Navbar = ({ setLanguage }) => {
+const Navbar = ({ setLanguage, language }) => {
   const [showPhone, setShowPhone] = useState(false);
   const [showEmail, setShowEmail] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -34,7 +34,16 @@ const Navbar = ({ setLanguage }) => {
   return (
     <>
       <Wrapper>
+        <div className="bg"></div>
         <div className={!showMenu ? "main-nav" : "main-nav showMain-Nav"}>
+          {showMenu && (
+            <button
+              onClick={() => setShowMenu(!showMenu)}
+              className="navHamburger2"
+            >
+              <FaArrowUp />
+            </button>
+          )}
           <section className="media-icons">
             <a href="https://pl-pl.facebook.com/jarek.janas.90">
               <ImFacebook2 className="icon" />
@@ -108,7 +117,12 @@ const Navbar = ({ setLanguage }) => {
               Kontakt
             </Link>
             <div className="languages">
-              <button onClick={() => setLanguage(true)}>PL</button>
+              <button
+                className={language ? "activeBtn" : ""}
+                onClick={() => setLanguage(true)}
+              >
+                PL
+              </button>
               <button onClick={() => setLanguage(false)}>EN</button>
             </div>
           </section>
@@ -122,16 +136,9 @@ const Navbar = ({ setLanguage }) => {
           </footer>
         </div>
       </Wrapper>
-      {!showMenu ? (
+      {!showMenu && (
         <button onClick={() => setShowMenu(!showMenu)} className="navHamburger">
           <HiMenu />
-        </button>
-      ) : (
-        <button
-          onClick={() => setShowMenu(!showMenu)}
-          className="navHamburger2"
-        >
-          <FaArrowUp />
         </button>
       )}
     </>
@@ -139,6 +146,19 @@ const Navbar = ({ setLanguage }) => {
 };
 
 const Wrapper = styled.div`
+  .bg {
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    background: #222;
+    opacity: 0.6;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
   .main-nav {
     display: flex;
     flex-direction: column;
@@ -146,13 +166,15 @@ const Wrapper = styled.div`
     align-items: center;
     width: 20vw;
     height: 100vh;
+    height: 100dvh;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgb(7, 8, 18);
+    /* background: rgb(7, 8, 18); */
+    /* background: #222; */
     color: white;
     z-index: 999;
-    opacity: 0.8;
+
     @media screen and (max-width: 800px) {
       display: flex;
       flex-direction: column;
@@ -163,6 +185,7 @@ const Wrapper = styled.div`
       transition: 0.7s;
       transform: translateY(-100vh);
       margin: 0 auto;
+      background: #111;
     }
     .media-icons {
       height: 15vh;
@@ -175,6 +198,7 @@ const Wrapper = styled.div`
       margin: 0 auto;
       flex-wrap: wrap;
       position: relative;
+      z-index: 9999;
       a {
         text-decoration: none;
         display: flex;
@@ -207,13 +231,15 @@ const Wrapper = styled.div`
     .footer {
       height: 15vh;
       width: 80%;
-      font-family: "Saira Stencil One", sans-serif;
+      font-family: "Changa", serif;
+      line-height: 1.4;
+      font-weight: 400;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       margin: 0 auto;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     .nav-list {
       height: 70vh;
@@ -287,12 +313,16 @@ const Wrapper = styled.div`
             color: black;
           }
         }
+        .activeBtn {
+          border: 2px solid rgb(197, 103, 40);
+        }
       }
     }
   }
   .showMain-Nav {
     transition: 0.7s;
     transform: translateY(0vh);
+    height: 100dvh;
   }
 `;
 
