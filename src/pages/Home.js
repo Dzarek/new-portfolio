@@ -94,7 +94,7 @@ const Wrapper = styled.div`
         @keyframes imgMove {
           100% {
             left: 65%;
-            opacity: 0.6;
+            opacity: 0.7;
           }
         }
         @media screen and (max-width: 800px) {
@@ -103,7 +103,7 @@ const Wrapper = styled.div`
           @keyframes imgMove {
             100% {
               left: 50%;
-              opacity: 0.6;
+              opacity: 0.7;
             }
           }
         }
