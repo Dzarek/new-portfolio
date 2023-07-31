@@ -181,6 +181,7 @@ const Wrapper = styled.div`
       justify-content: space-around;
       align-items: center;
       width: 100vw;
+      height: 100dvh;
       opacity: 1;
       transition: 0.7s;
       transform: translateY(-100vh);
@@ -189,6 +190,7 @@ const Wrapper = styled.div`
     }
     .media-icons {
       height: 15vh;
+      height: 15dvh;
       color: white;
       display: flex;
       justify-content: space-around;
@@ -230,6 +232,7 @@ const Wrapper = styled.div`
     }
     .footer {
       height: 15vh;
+      height: 15dvh;
       width: 80%;
       font-family: "Changa", serif;
       line-height: 1.4;
@@ -243,6 +246,7 @@ const Wrapper = styled.div`
     }
     .nav-list {
       height: 70vh;
+      height: 70dvh;
       width: 80%;
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
@@ -294,6 +298,7 @@ const Wrapper = styled.div`
         align-items: center;
         justify-content: space-around;
         margin-top: 3vh;
+        margin-top: 3dvh;
         width: 60%;
         button {
           font-size: 1rem;
@@ -322,6 +327,7 @@ const Wrapper = styled.div`
   .showMain-Nav {
     transition: 0.7s;
     transform: translateY(0vh);
+    transform: translateY(0dvh);
     height: 100dvh;
   }
 `;

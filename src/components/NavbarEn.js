@@ -321,6 +321,7 @@ const Wrapper = styled.div`
   .showMain-Nav {
     transition: 0.7s;
     transform: translateY(0vh);
+    transform: translateY(0dvh);
     height: 100dvh;
   }
 `;

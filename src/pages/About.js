@@ -14,12 +14,15 @@ const About = ({ language }) => {
     Aos.init({ duration: 1000 });
   }, []);
 
-  //wiek
-  function calculate_age(dob) {
-    var diff_ms = Date.now() - dob.getTime();
-    var age_dt = new Date(diff_ms);
-
-    return Math.abs(age_dt.getUTCFullYear() - 1970);
+  function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
   }
   return (
     <Wrapper id="aboutMe" className="main-page">
@@ -54,7 +57,7 @@ const About = ({ language }) => {
               Imię i Nazwisko: <span>Jarosław Janas</span>
             </p>
             <p>
-              Wiek: <span>{calculate_age(new Date(1995, 7, 21))} lat</span>
+              Wiek: <span>{getAge("1995, 7, 21")} lat</span>
             </p>
             <p>
               Narodowość: <span>Polska</span>
@@ -228,7 +231,7 @@ const About = ({ language }) => {
               Name: <span>Jarosław Janas</span>
             </p>
             <p>
-              Age: <span>{calculate_age(new Date(1995, 7, 21))} years</span>
+              Age: <span>{getAge("1995, 7, 21")} years</span>
             </p>
             <p>
               Nationality: <span>Polish</span>

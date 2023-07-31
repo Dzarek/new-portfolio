@@ -53,6 +53,7 @@ const Home = ({ language }) => {
 const Wrapper = styled.div`
   width: 80vw;
   min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   @media screen and (max-width: 800px) {
     width: 100vw;
@@ -60,10 +61,12 @@ const Wrapper = styled.div`
   .headerContainer {
     width: 100%;
     height: 100vh;
+    height: 100dvh;
     video,
     .video-thumb {
       width: 100vw;
       height: 100vh;
+      height: 100dvh;
       object-fit: fill;
       z-index: -1;
       position: fixed;
@@ -81,6 +84,7 @@ const Wrapper = styled.div`
       /* background: rgba(0, 0, 0, 0.5); */
       img {
         height: 90vh;
+        height: 90dvh;
         position: absolute;
         bottom: -2%;
         /* left: 150%; */
@@ -99,6 +103,7 @@ const Wrapper = styled.div`
         }
         @media screen and (max-width: 800px) {
           height: 70vh;
+          height: 70dvh;
           left: 50%;
           @keyframes imgMove {
             100% {
@@ -112,6 +117,7 @@ const Wrapper = styled.div`
         color: white;
         position: absolute;
         top: 20vh;
+        top: 20dvh;
         left: 10%;
         display: flex;
         flex-direction: column;
