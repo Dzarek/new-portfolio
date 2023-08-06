@@ -13,3 +13,26 @@ html {
         overflow-x: hidden;
     }
 }
+
+/* SCROOL BAR */
+
+html::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+    background: rgb(197, 103, 40);
+    border: 2px solid #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+    background: rgb(173, 86, 28);
+}
